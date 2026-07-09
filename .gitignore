@@ -1,0 +1,14 @@
+.agents/
+.codex/
+.codegraph
+.superpowers/
+outputs/
+work/
+
+.DS_Store
+Thumbs.db
+*.log
+
+node_modules/
+dist/
+build/
