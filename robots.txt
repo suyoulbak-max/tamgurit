@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.tamgurit.co.kr/sitemap.xml
