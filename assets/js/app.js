@@ -113,6 +113,25 @@
     });
   }
 
+  function postCategorySlugs(post) {
+    var slugs = [];
+    if (post && post.categorySlug) slugs.push(post.categorySlug);
+    if (post && Array.isArray(post.categorySlugs)) {
+      post.categorySlugs.forEach(function (slug) {
+        if (slugs.indexOf(slug) < 0) slugs.push(slug);
+      });
+    }
+    return slugs;
+  }
+
+  function postInCategory(post, slug) {
+    return postCategorySlugs(post).indexOf(slug) >= 0;
+  }
+
+  function postCategories(post) {
+    return postCategorySlugs(post).map(categoryBySlug).filter(Boolean);
+  }
+
   function postBySlug(slug) {
     return site.posts.find(function (post) {
       return post.slug === slug && post.status === "published";
@@ -249,7 +268,8 @@
   }
 
   function postCard(post) {
-    var category = categoryBySlug(post.categorySlug);
+    var categories = postCategories(post);
+    var category = categories[0];
     return '<article class="card">' +
       metaRow(post) +
       '<h3><a href="' + url("posts/detail.html?slug=" + encodeURIComponent(post.slug)) + '">' + escapeHtml(post.title) + "</a></h3>" +
@@ -319,7 +339,7 @@
     setMeta("분류", "고교학점제 탐구 글을 학년, 과목, 계열, 세특, 면접 기준으로 정리했습니다.");
     layout('<section class="section"><div class="container"><h1>분류별 탐구 가이드</h1><p class="lead">필요한 기준을 먼저 고르면 글을 더 빠르게 찾을 수 있습니다.</p><div class="grid">' +
       site.categories.map(function (category) {
-        var count = publishedPosts().filter(function (post) { return post.categorySlug === category.slug; }).length;
+        var count = publishedPosts().filter(function (post) { return postInCategory(post, category.slug); }).length;
         return '<article class="card"><span class="tag">' + escapeHtml(category.group) + "</span><h3>" +
           '<a href="' + url("categories/index.html?slug=" + encodeURIComponent(category.slug)) + '">' + escapeHtml(category.name) + "</a></h3>" +
           "<p>" + escapeHtml(category.description) + "</p>" +
@@ -331,7 +351,7 @@
     var category = categoryBySlug(slug);
     if (!category) return renderNotFound();
     var posts = publishedPosts().filter(function (post) {
-      return post.categorySlug === slug;
+      return postInCategory(post, slug);
     });
 
     setMeta(category.name, category.description);
@@ -385,7 +405,7 @@
       '<div class="panel"><h3>핵심 포인트</h3>' + list(post.keyPoints) + "</div>" +
       '<div class="panel"><h3>목차</h3>' + orderedList(post.tableOfContents) + "</div>" +
       '<div class="panel"><h3>글 정보</h3><p><a href="' + url("author/index.html") + '">' + escapeHtml(site.config.ownerName || post.authorName || "운영자") + "</a></p><p>" + escapeHtml(site.config.ownerBio || "") + "</p></div>" +
-      '<div class="panel"><h3>분류</h3><p><a href="' + url("categories/index.html?slug=" + encodeURIComponent(post.categorySlug)) + '">' + escapeHtml((categoryBySlug(post.categorySlug) || {}).name || "분류") + "</a></p></div>" +
+      '<div class="panel"><h3>분류</h3><p>' + postCategories(post).map(function (category) { return '<a href="' + url("categories/index.html?slug=" + encodeURIComponent(category.slug)) + '">' + escapeHtml(category.name) + '</a>'; }).join("<br>") + "</p></div>" +
       "</aside></article>");
   }
 
