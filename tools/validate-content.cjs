@@ -114,6 +114,20 @@ const postSlugs = new Set((data.posts || []).map((post) => post.slug));
   if (!categorySlugs.has(post.categorySlug)) {
     errors.push(`post ${post.slug} has unknown category ${post.categorySlug}`);
   }
+  if (post.categorySlugs !== undefined) {
+    if (!Array.isArray(post.categorySlugs) || !post.categorySlugs.length) {
+      errors.push(`post ${post.slug} has invalid categorySlugs`);
+    } else {
+      post.categorySlugs.forEach((slug) => {
+        if (!categorySlugs.has(slug)) {
+          errors.push(`post ${post.slug} has unknown secondary category ${slug}`);
+        }
+      });
+      if (!post.categorySlugs.includes(post.categorySlug)) {
+        errors.push(`post ${post.slug} categorySlugs must include primary categorySlug`);
+      }
+    }
+  }
 
   requireArrayLength(post, "tableOfContents", 3, `post ${post.slug}`);
   requireArrayLength(post, "keyPoints", 3, `post ${post.slug}`);
