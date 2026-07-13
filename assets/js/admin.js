@@ -3,6 +3,7 @@
 
   var storageKey = "researchGuideData";
   var sessionKey = "researchGuideAdmin";
+  var readOnlyDemo = true;
   var defaults = window.SiteData || {};
   var root = document.getElementById("admin-app");
   var state = {
@@ -119,8 +120,8 @@
       '<span class="tag accent">CMS-lite</span>' +
       '<h1>관리자 모드</h1>' +
       '<p class="lead">' + escapeHtml(notice()) + '</p>' +
-      '<p class="admin-help">이 화면은 데모용 브라우저 저장소 관리 화면입니다. 실제 비밀번호 인증이나 서버 보안 기능이 아닙니다.</p>' +
-      '<button class="button primary" id="demo-login" type="button">데모 로그인</button>' +
+      '<p class="admin-help">이 화면은 읽기 전용 데모입니다. 공개 GitHub Pages 환경에서는 실제 관리자 비밀번호를 안전하게 숨길 수 없어 수정·삭제·가져오기는 비활성화했습니다.</p>' +
+      '<button class="button primary" id="demo-login" type="button">데모 보기</button>' +
       '</section>' +
       '</main>';
     document.getElementById("demo-login").addEventListener("click", function () {
@@ -137,7 +138,7 @@
 
     root.innerHTML = '<div class="admin-layout">' +
       '<aside class="admin-sidebar">' +
-      '<div class="admin-brand"><strong>고교학점제 탐구가이드</strong><span>브라우저 저장소 CMS-lite</span></div>' +
+      '<div class="admin-brand"><strong>고교학점제 탐구가이드</strong><span>읽기 전용 데모</span></div>' +
       sidebarButton("dashboard", "대시보드") +
       sidebarButton("posts", "일반 글 관리") +
       sidebarButton("columns", "칼럼 관리") +
@@ -232,15 +233,15 @@
         '<p>' + escapeHtml(item.summary || "") + '</p>' +
         '<div class="meta"><span>' + escapeHtml(item.slug || "") + '</span><span class="status-pill">' + escapeHtml(item.status || "draft") + '</span></div></div>' +
         '<div class="admin-row-actions">' +
-        '<button class="button" type="button" data-edit="' + escapeHtml(type) + '" data-id="' + escapeHtml(item.id) + '">수정</button>' +
-        '<button class="button danger" type="button" data-delete="' + escapeHtml(type) + '" data-id="' + escapeHtml(item.id) + '">삭제</button>' +
+        '<button class="button" type="button" data-edit="' + escapeHtml(type) + '" data-id="' + escapeHtml(item.id) + '">보기</button>' +
+        '<button class="button danger" type="button" disabled aria-disabled="true">삭제 비활성</button>' +
         '</div>' +
         '</article>';
     }).join("");
 
     return '<section class="admin-section">' +
-      '<div class="admin-section-header"><div><h1>' + title + '</h1><p class="admin-help">저장하면 localStorage의 researchGuideData에 반영됩니다.</p></div>' +
-      '<button class="button primary" type="button" data-new="' + type + '">' + buttonLabel + '</button></div>' +
+      '<div class="admin-section-header"><div><h1>' + title + '</h1><p class="admin-help">읽기 전용 데모입니다. 공개 사이트에서는 새 글·수정·삭제가 저장되지 않습니다.</p></div>' +
+      '<button class="button primary" type="button" disabled aria-disabled="true">' + buttonLabel + ' 비활성</button></div>' +
       '<div class="admin-list">' + (rows || '<div class="empty">등록된 항목이 없습니다.</div>') + '</div>' +
       '</section>';
   }
@@ -248,28 +249,29 @@
   function editorHtml(type, id) {
     var item = findItem(type, id) || newItem(type);
     var isNew = !findItem(type, id);
-    var title = (type === "columns" ? "칼럼" : "일반 글") + (isNew ? " 새로 만들기" : " 수정");
+    var title = (type === "columns" ? "칼럼" : "일반 글") + (isNew ? " 미리보기" : " 보기");
 
     return '<section class="admin-section">' +
       '<button class="button" type="button" data-back="' + type + '">목록으로</button>' +
       '<h1>' + title + '</h1>' +
+      '<p class="admin-notice">읽기 전용 데모라 이 화면의 값은 수정·저장되지 않습니다.</p>' +
       '<form class="form-grid" id="editor-form" data-type="' + type + '" data-id="' + escapeHtml(item.id) + '">' +
-      field("title", "제목", item.title) +
-      field("slug", "슬러그", item.slug) +
-      field("summary", "요약", item.summary) +
-      textareaField("content", "본문 HTML", item.content, 12) +
-      '<label><span>상태</span><select name="status"><option value="published"' + selected(item.status, "published") + '>published</option><option value="draft"' + selected(item.status, "draft") + '>draft</option></select></label>' +
-      '<div class="actions"><button class="button primary" type="submit">저장</button><button class="button" type="button" data-back="' + type + '">취소</button></div>' +
+      field("title", "제목", item.title, true) +
+      field("slug", "슬러그", item.slug, true) +
+      field("summary", "요약", item.summary, true) +
+      textareaField("content", "본문 HTML", item.content, 12, true) +
+      '<label><span>상태</span><select name="status" disabled><option value="published"' + selected(item.status, "published") + '>published</option><option value="draft"' + selected(item.status, "draft") + '>draft</option></select></label>' +
+      '<div class="actions"><button class="button" type="button" data-back="' + type + '">목록으로</button></div>' +
       '</form>' +
       '</section>';
   }
 
-  function field(name, label, value) {
-    return '<label><span>' + escapeHtml(label) + '</span><input class="input" name="' + name + '" value="' + escapeHtml(value || "") + '"></label>';
+  function field(name, label, value, readonly) {
+    return '<label><span>' + escapeHtml(label) + '</span><input class="input" name="' + name + '" value="' + escapeHtml(value || "") + '"' + (readonly ? ' readonly' : '') + '></label>';
   }
 
-  function textareaField(name, label, value, rows) {
-    return '<label><span>' + escapeHtml(label) + '</span><textarea name="' + name + '" rows="' + rows + '">' + escapeHtml(value || "") + '</textarea></label>';
+  function textareaField(name, label, value, rows, readonly) {
+    return '<label><span>' + escapeHtml(label) + '</span><textarea name="' + name + '" rows="' + rows + '"' + (readonly ? ' readonly' : '') + '>' + escapeHtml(value || "") + '</textarea></label>';
   }
 
   function selected(value, expected) {
@@ -281,12 +283,13 @@
     return '<section class="admin-section">' +
       '<h1>사이트 설정</h1>' +
       '<form class="form-grid" id="settings-form">' +
-      field("name", "사이트 이름", settings.name) +
-      field("tagline", "태그라인", settings.tagline) +
-      field("ownerName", "운영자 이름", settings.ownerName) +
-      textareaField("ownerBio", "운영자 소개", settings.ownerBio, 5) +
-      field("contactEmail", "문의 이메일", settings.contactEmail) +
-      '<div class="actions"><button class="button primary" type="submit">설정 저장</button></div>' +
+      '<p class="admin-notice">읽기 전용 데모라 사이트 설정은 저장되지 않습니다.</p>' +
+      field("name", "사이트 이름", settings.name, true) +
+      field("tagline", "태그라인", settings.tagline, true) +
+      field("ownerName", "운영자 이름", settings.ownerName, true) +
+      textareaField("ownerBio", "운영자 소개", settings.ownerBio, 5, true) +
+      field("contactEmail", "문의 이메일", settings.contactEmail, true) +
+      '<div class="actions"><button class="button" type="button" data-view="dashboard">대시보드로</button></div>' +
       '</form>' +
       '</section>';
   }
@@ -297,7 +300,7 @@
       '<p class="admin-notice">' + escapeHtml(notice()) + '</p>' +
       '<div class="actions">' +
       '<button class="button primary" id="export-json" type="button">JSON 내보내기</button>' +
-      '<label class="button">JSON 가져오기<input id="import-json" type="file" accept="application/json" hidden></label>' +
+      '<button class="button" type="button" disabled aria-disabled="true">JSON 가져오기 비활성</button>' +
       '</div>' +
       '<textarea id="json-preview" rows="16" readonly>' + escapeHtml(JSON.stringify(state.data, null, 2)) + '</textarea>' +
       '</section>';
@@ -418,6 +421,10 @@
 
   function saveEditor(event) {
     event.preventDefault();
+    if (readOnlyDemo) {
+      window.alert("읽기 전용 데모라 저장할 수 없습니다.");
+      return;
+    }
     var form = event.currentTarget;
     var type = form.getAttribute("data-type");
     var id = form.getAttribute("data-id");
@@ -448,6 +455,10 @@
 
   function saveSettings(event) {
     event.preventDefault();
+    if (readOnlyDemo) {
+      window.alert("읽기 전용 데모라 설정을 저장할 수 없습니다.");
+      return;
+    }
     var form = event.currentTarget;
     var settings = copy(state.data.siteSettings);
     ["name", "tagline", "ownerName", "ownerBio", "contactEmail"].forEach(function (name) {
@@ -459,6 +470,10 @@
   }
 
   function deleteItem(type, id) {
+    if (readOnlyDemo) {
+      window.alert("읽기 전용 데모라 삭제할 수 없습니다.");
+      return;
+    }
     var item = findItem(type, id);
     if (!item) return;
     if (!window.confirm("'" + (item.title || "항목") + "'을 삭제할까요?")) return;
@@ -470,7 +485,6 @@
   }
 
   function exportJson() {
-    if (!saveData()) return;
     var json = JSON.stringify(state.data, null, 2);
     var blob = new Blob([json], { type: "application/json" });
     var link = document.createElement("a");
@@ -483,6 +497,10 @@
   }
 
   function importJson(event) {
+    if (readOnlyDemo) {
+      window.alert("읽기 전용 데모라 JSON을 가져올 수 없습니다.");
+      return;
+    }
     var file = event.target.files && event.target.files[0];
     if (!file) return;
 

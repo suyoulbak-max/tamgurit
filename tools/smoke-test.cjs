@@ -151,8 +151,9 @@ function assert(condition, message) {
 
   await page.goto("http://127.0.0.1:8123/admin/", { waitUntil: "networkidle" });
   const adminLoginText = await page.locator("body").innerText();
-  assert(adminLoginText.includes("데모 로그인"), "admin missing demo login");
-  await page.getByRole("button", { name: "데모 로그인" }).click();
+  assert(adminLoginText.includes("데모 보기"), "admin missing read-only demo login");
+  assert(adminLoginText.includes("수정·삭제·가져오기는 비활성화"), "admin missing read-only warning");
+  await page.getByRole("button", { name: "데모 보기" }).click();
   await page.waitForTimeout(100);
   const adminText = await page.locator("body").innerText();
   assert(adminText.includes("대시보드"), "admin missing dashboard");
