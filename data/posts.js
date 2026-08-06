@@ -994,8 +994,8 @@ window.SiteData.posts = [
     avoidExpressions: ["이 내용만 넣으면 최상위권 합격이 보장된다", "심화 용어를 많이 쓰면 평가가 좋아진다", "모든 계열에 같은 연결 방식을 적용해도 된다", "특정 대학 면접은 항상 이런 질문이 나온다"],
     relatedPostSlugs: ["semester-record-final-check-research-report", "student-record-interview-probing-question-guide", "research-report-evaluation-rubric", "student-record-natural-connection"],
     authorName: "탐구가이드 편집팀",
-    publishedAt: "2026-07-29",
-    updatedAt: "2026-07-29",
+    publishedAt: "2026-08-06",
+    updatedAt: "2026-08-06",
     status: "published",
     featured: true
   }
