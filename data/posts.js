@@ -1049,8 +1049,8 @@ window.SiteData.posts = [
     avoidExpressions: ["이 학교 가면 무조건 1등급이다", "내신 따기 쉬운 학교가 무조건 유리하다", "자퇴하고 검정고시 정시가 무조건 답이다", "특정 대학은 항상 이렇게 평가한다"],
     relatedPostSlugs: ["student-record-course-selection-consistency-specificity", "student-record-interview-probing-question-guide", "subject-basics-to-advanced-theory-linking-guide", "semester-record-final-check-research-report"],
     authorName: "탐구가이드 편집팀",
-    publishedAt: "2026-08-13",
-    updatedAt: "2026-08-13",
+    publishedAt: "2026-08-16",
+    updatedAt: "2026-08-16",
     status: "published",
     featured: true
   },
@@ -1103,8 +1103,8 @@ window.SiteData.posts = [
     avoidExpressions: ["이 주제만 쓰면 세특이 좋아진다", "남들이 많이 하는 주제는 피해야 한다", "어려운 전공 용어가 많을수록 좋다", "학교 과목과 무관하게 주제를 정해도 된다"],
     relatedPostSlugs: ["subject-basics-to-advanced-theory-linking-guide", "semester-record-final-check-research-report", "student-record-interview-probing-question-guide", "student-record-course-selection-consistency-specificity"],
     authorName: "탐구가이드 편집팀",
-    publishedAt: "2026-08-13",
-    updatedAt: "2026-08-13",
+    publishedAt: "2026-08-16",
+    updatedAt: "2026-08-16",
     status: "published",
     featured: true
   }
