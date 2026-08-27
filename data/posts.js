@@ -1113,7 +1113,7 @@ window.SiteData.posts = [
     title: "탐구보고서 처음 쓰는 법: 4대 원칙과 5단계 실전 작성 로드맵",
     slug: "research-report-first-time-writing-guide",
     categorySlug: "student-record",
-    grade: "고1-고3",
+    grade: "고1-고2",
     subject: "전 과목",
     track: "탐구보고서",
     summary: "탐구보고서를 처음 쓸 때 갈피를 못 잡는 학생을 위해, 주제 선정부터 서론 역산 설계, 후속 탐구 예고까지 4대 원칙과 5단계 작성 로드맵을 정리했습니다.",
