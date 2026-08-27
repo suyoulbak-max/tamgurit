@@ -1157,8 +1157,8 @@ window.SiteData.posts = [
     avoidExpressions: ["이 보고서만 있으면 합격이다", "어려운 주제일수록 좋다", "실패한 실험은 숨겨야 한다", "진로와 무관한 과목은 보고서를 쓰지 않는다"],
     relatedPostSlugs: ["semester-record-final-check-research-report", "research-report-evaluation-rubric", "research-topic-50-track-matching-guide", "subject-basics-to-advanced-theory-linking-guide"],
     authorName: "탐구가이드 편집팀",
-    publishedAt: "2026-08-16",
-    updatedAt: "2026-08-16",
+    publishedAt: "2026-08-27",
+    updatedAt: "2026-08-27",
     status: "published",
     featured: true
   }
