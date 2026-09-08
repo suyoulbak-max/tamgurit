@@ -214,6 +214,8 @@
       navLink("학년별", "categories/index.html?slug=grade-guide", "categories", "grade-guide") +
       navLink("과목별", "categories/index.html?slug=subject-guide", "categories", "subject-guide") +
       navLink("진로·계열별", "categories/index.html?slug=track-guide", "categories", "track-guide") +
+      navLink("주제 예시", "categories/index.html?slug=topic-examples", "categories", "topic-examples") +
+      navLink("세특 연결", "categories/index.html?slug=student-record", "categories", "student-record") +
       navLink("면접 대비", "categories/index.html?slug=interview", "categories", "interview") +
       navLink("칼럼", "columns/index.html", "columns") +
       navLink("소개", "about/index.html", "about") +
@@ -240,6 +242,8 @@
       footerLink("학년별 탐구보고서", "categories/index.html?slug=grade-guide") +
       footerLink("과목별 탐구보고서", "categories/index.html?slug=subject-guide") +
       footerLink("진로·계열별 탐구보고서", "categories/index.html?slug=track-guide") +
+      footerLink("주제 예시", "categories/index.html?slug=topic-examples") +
+      footerLink("세특 연결", "categories/index.html?slug=student-record") +
       footerLink("면접 대비", "categories/index.html?slug=interview") +
       footerLink("칼럼", "columns/index.html") +
       footerLink("소개", "about/index.html") +
