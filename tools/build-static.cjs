@@ -202,7 +202,7 @@ function renderPage(post) {
     "</div>\n" +
     '<script src="../data/site.config.js?v=20260909-seo"></script>\n' +
     '<script src="../data/categories.js?v=20260708-4"></script>\n' +
-    '<script src="../data/posts.js?v=20260908-buildup"></script>\n' +
+    '<script src="../data/posts.js?v=20260909-diabetes-followup"></script>\n' +
     '<script src="../data/columns.js?v=20260714-ai-assessment"></script>\n' +
     '<script src="../assets/js/app.js?v=20260909-static-layout"></script>\n' +
     "</body>\n</html>\n"
