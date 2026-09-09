@@ -65,13 +65,19 @@ function assert(condition, message) {
   assert(await page.locator(".card").count() >= 6, "home should render multiple cards");
   await page.screenshot({ path: path.join(outDir, "home-desktop.png"), fullPage: true });
 
-  await page.goto("http://127.0.0.1:8123/posts/detail.html?slug=grade-1-research-report-start", { waitUntil: "networkidle" });
+  await page.goto("http://127.0.0.1:8123/posts/grade-3-interview-ready-report.html", { waitUntil: "networkidle" });
   const detailText = await page.locator("body").innerText();
   assert(detailText.includes("서류기반면접 예상 질문"), "detail missing interview questions");
   assert(detailText.includes("꼬리질문 대비"), "detail missing follow-up questions");
   assert(detailText.includes("초보자가 자주 하는 실수"), "detail missing common mistakes");
   assert(detailText.includes("체크리스트"), "detail missing checklist");
   assert(detailText.includes("자주 묻는 질문"), "detail missing faq");
+  assert(await page.locator(".article-layout").count() === 1, "detail missing article layout");
+  assert(await page.locator(".article-body").count() === 1, "detail missing article card");
+  assert(await page.locator(".aside .panel").count() >= 3, "detail missing sidebar panels");
+  assert(await page.locator(".comparison-table").count() >= 1, "detail missing comparison table");
+  assert(await page.locator(".article-top-grid .article-brief").count() === 2, "detail missing toc/summary boxes");
+  assert((await page.locator('link[rel="canonical"]').getAttribute("href") || "").endsWith("/posts/grade-3-interview-ready-report.html"), "detail canonical must stay clean");
   await page.screenshot({ path: path.join(outDir, "post-detail-desktop.png"), fullPage: true });
 
   await page.goto("http://127.0.0.1:8123/columns/", { waitUntil: "networkidle" });
@@ -165,6 +171,16 @@ function assert(condition, message) {
   const mobileHeaderBox = await page.locator(".site-header").boundingBox();
   assert(mobileHeaderBox && mobileHeaderBox.width <= 390, "mobile header width overflow");
   await page.screenshot({ path: path.join(outDir, "home-mobile.png"), fullPage: true });
+
+  await page.goto("http://127.0.0.1:8123/posts/grade-3-interview-ready-report.html", { waitUntil: "networkidle" });
+  const mobileMetrics = await page.evaluate(() => ({
+    bodyWidth: document.body.scrollWidth,
+    viewportWidth: window.innerWidth,
+    columns: getComputedStyle(document.querySelector(".article-layout")).gridTemplateColumns,
+  }));
+  assert(mobileMetrics.bodyWidth <= mobileMetrics.viewportWidth, "mobile post width overflow");
+  assert(!mobileMetrics.columns.includes(" "), "mobile post must use one-column layout");
+  await page.screenshot({ path: path.join(outDir, "post-detail-mobile.png"), fullPage: true });
 
   assert(consoleErrors.length === 0, `console errors found:\n${consoleErrors.join("\n")}`);
 

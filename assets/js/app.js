@@ -366,10 +366,13 @@
   }
 
   function renderPostDetail() {
-    var post = postBySlug(query("slug"));
+    var cleanSlug = document.body.dataset.slug;
+    var post = postBySlug(query("slug") || document.body.dataset.slug);
     if (!post) return renderNotFound();
     var related = (post.relatedPostSlugs || []).map(postBySlug).filter(Boolean);
-    var canonicalPath = "posts/detail.html?slug=" + encodeURIComponent(post.slug);
+    var canonicalPath = cleanSlug
+      ? "posts/" + encodeURIComponent(post.slug) + ".html"
+      : "posts/detail.html?slug=" + encodeURIComponent(post.slug);
     var faq = postFaq(post);
     var summaryItems = Array.isArray(post.summaryPoints) && post.summaryPoints.length ? post.summaryPoints : (post.keyPoints || []).slice(0, 3);
     var mistakes = Array.isArray(post.commonMistakes) && post.commonMistakes.length ? post.commonMistakes : post.avoidExpressions;
