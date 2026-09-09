@@ -87,6 +87,51 @@ function renderPage(post) {
     .map((s) => postBySlug.get(s))
     .filter(Boolean);
 
+  const headerHtml =
+    '<a class="skip-link" href="#main-content">본문 바로가기</a>' +
+    '<header class="site-header"><div class="container header-inner">' +
+    '<a class="brand" href="../index.html"><strong>' + esc(config.name) + "</strong></a>" +
+    '<nav class="nav" aria-label="주요 메뉴">' +
+    '<a href="../index.html">홈</a>' +
+    '<a href="../categories/index.html?slug=grade-guide">학년별</a>' +
+    '<a href="../categories/index.html?slug=subject-guide">과목별</a>' +
+    '<a href="../categories/index.html?slug=track-guide">진로·계열별</a>' +
+    '<a href="../categories/index.html?slug=topic-examples">주제 예시</a>' +
+    '<a href="../categories/index.html?slug=student-record">세특 연결</a>' +
+    '<a href="../categories/index.html?slug=interview">면접 대비</a>' +
+    '<a href="../columns/index.html">칼럼</a>' +
+    '<a href="../about/index.html">소개</a>' +
+    "</nav></div></header>";
+
+  const footerHtml =
+    '<section class="footer-cta"><div class="container footer-cta-inner">' +
+    '<div class="footer-cta-icon" aria-hidden="true">&#9993;</div>' +
+    "<h2>궁금한 점이 있으신가요?</h2>" +
+    "<p>탐구보고서, 과목 선택, 세특 연결, 서류기반면접 준비에 대한 의견이나 문의를 보내주세요.</p>" +
+    '<a class="button primary" href="../contact/index.html">문의하기 →</a>' +
+    "</div></section>" +
+    '<footer class="site-footer"><div class="container footer-grid">' +
+    '<div class="footer-brand"><strong>' + esc(config.name) + "</strong><p>" + esc(config.description || "") + "</p></div>" +
+    '<nav class="footer-column" aria-label="사이트 구조"><h2>사이트</h2>' +
+    '<a href="../index.html">홈</a>' +
+    '<a href="../categories/index.html?slug=grade-guide">학년별 탐구보고서</a>' +
+    '<a href="../categories/index.html?slug=subject-guide">과목별 탐구보고서</a>' +
+    '<a href="../categories/index.html?slug=track-guide">진로·계열별 탐구보고서</a>' +
+    '<a href="../categories/index.html?slug=topic-examples">주제 예시</a>' +
+    '<a href="../categories/index.html?slug=student-record">세특 연결</a>' +
+    '<a href="../categories/index.html?slug=interview">면접 대비</a>' +
+    '<a href="../columns/index.html">칼럼</a>' +
+    '<a href="../about/index.html">소개</a>' +
+    '<a href="../sitemap/index.html">사이트맵</a>' +
+    "</nav>" +
+    '<nav class="footer-column" aria-label="정보"><h2>정보</h2>' +
+    '<a href="../author/index.html">운영자</a>' +
+    '<a href="../contact/index.html">문의하기</a>' +
+    '<a href="../privacy/index.html">개인정보처리방침</a>' +
+    '<a href="../terms/index.html">이용약관</a>' +
+    '<a href="../disclaimer/index.html">면책고지</a>' +
+    "</nav></div></footer>";
+
   const body = [];
   body.push("<h1>" + esc(post.title) + "</h1>");
   if (subtitle) body.push('<p class="subtitle">' + esc(subtitle) + "</p>");
@@ -133,6 +178,7 @@ function renderPage(post) {
     '<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">\n' +
     '<script type="application/ld+json">' + jsonld(articleJsonLd(post, url)) + "</script>\n" +
     '<script type="application/ld+json">' + jsonld(breadcrumbJsonLd(post, url)) + "</script>\n" +
+    '<link rel="stylesheet" href="../assets/css/style.css?v=20260708-4">\n' +
     "<style>\n" +
     "body{font-family:system-ui,-apple-system,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;line-height:1.8;color:#1f2937;margin:0}\n" +
     "header.site{border-bottom:1px solid #e5e7eb;padding:14px 20px}\n" +
@@ -146,8 +192,9 @@ function renderPage(post) {
     ".tags span{display:inline-block;background:#eaf0ff;color:#1f3d7a;border-radius:999px;padding:2px 10px;margin:0 6px 6px 0;font-size:.85em}\n" +
     ".notice{background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:12px 16px;color:#4b5563;font-size:.9em;margin-top:2em}\n" +
     "</style>\n</head>\n<body>\n" +
-    '<header class="site"><a href="../index.html">' + esc(SITE_SUFFIX) + "</a></header>\n" +
-    "<main>" + body.join("\n") + "</main>\n</body>\n</html>\n"
+    headerHtml +
+    '<main id="main-content">' + body.join("\n") + "</main>\n" +
+    footerHtml + "\n</body>\n</html>\n"
   );
 }
 
