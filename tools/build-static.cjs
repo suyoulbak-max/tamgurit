@@ -132,13 +132,14 @@ function renderPage(post) {
     '<a href="../disclaimer/index.html">면책고지</a>' +
     "</nav></div></footer>";
 
+  const articleHeaderHtml =
+    '<header class="article-header"><h1>' + esc(post.title) + "</h1>" +
+    (subtitle ? '<p class="article-subtitle">' + esc(subtitle) + "</p>" : "") +
+    '<div class="meta byline"><span>' + esc(author) + "</span><span>발행 " + esc(post.publishedAt || "") + "</span>" +
+    (post.updatedAt ? "<span>수정 " + esc(post.updatedAt) + "</span>" : "") +
+    "</div></header>";
+
   const body = [];
-  body.push("<h1>" + esc(post.title) + "</h1>");
-  if (subtitle) body.push('<p class="subtitle">' + esc(subtitle) + "</p>");
-  body.push(
-    '<p class="meta">' + esc(author) + " · 발행 " + esc(post.publishedAt || "") +
-    (post.updatedAt ? " · 수정 " + esc(post.updatedAt) : "") + "</p>"
-  );
   body.push(post.content || ""); // authored HTML, trusted source
   if (Array.isArray(post.tableOfContents) && post.tableOfContents.length)
     body.push("<h2>목차</h2><ol>" + post.tableOfContents.map((i) => "<li>" + esc(i) + "</li>").join("") + "</ol>");
@@ -158,8 +159,19 @@ function renderPage(post) {
       "</ul>"
     );
   body.push(
-    '<div class="notice"><strong>운영자 안내</strong><br>이 글은 일반 교육 정보이며 특정 대학 합격·학생부 평가·면접 결과를 보장하지 않습니다. 학교와 대학의 공식 안내를 함께 확인해 주세요.</div>'
+    '<div class="notice-box"><strong>운영자 안내</strong><p>이 글은 일반 교육 정보이며 특정 대학 합격·학생부 평가·면접 결과를 보장하지 않습니다. 학교와 대학의 공식 안내를 함께 확인해 주세요.</p></div>'
   );
+
+  const asideHtml =
+    '<aside class="aside">' +
+    '<div class="panel"><h3>핵심 포인트</h3><ul class="list">' +
+    (post.keyPoints || []).map((i) => "<li>" + esc(i) + "</li>").join("") +
+    "</ul></div>" +
+    '<div class="panel"><h3>목차</h3><ol class="number-list">' +
+    (post.tableOfContents || []).map((i) => "<li>" + esc(i) + "</li>").join("") +
+    "</ol></div>" +
+    '<div class="panel"><h3>글 정보</h3><p>' + esc(author) + "</p></div>" +
+    "</aside>";
 
   return (
     '<!doctype html>\n<html lang="ko">\n<head>\n' +
@@ -179,22 +191,21 @@ function renderPage(post) {
     '<script type="application/ld+json">' + jsonld(articleJsonLd(post, url)) + "</script>\n" +
     '<script type="application/ld+json">' + jsonld(breadcrumbJsonLd(post, url)) + "</script>\n" +
     '<link rel="stylesheet" href="../assets/css/style.css?v=20260708-4">\n' +
-    "<style>\n" +
-    "body{font-family:system-ui,-apple-system,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;line-height:1.8;color:#1f2937;margin:0}\n" +
-    "header.site{border-bottom:1px solid #e5e7eb;padding:14px 20px}\n" +
-    "header.site a{text-decoration:none;font-weight:700;color:#1f3d7a;font-size:18px}\n" +
-    "main{max-width:720px;margin:0 auto;padding:24px 20px 64px}\n" +
-    "h1{font-size:1.7em;line-height:1.35;margin:0 0 8px;color:#111827}\n" +
-    ".meta{color:#6b7280;font-size:.9em;margin:0 0 8px}\n" +
-    ".subtitle{color:#374151;font-size:1.05em;margin:0 0 24px}\n" +
-    "h2{font-size:1.25em;margin-top:2em;color:#111827}\n" +
-    "ul,ol{padding-left:1.4em}li{margin:.3em 0}a{color:#1f3d7a}\n" +
-    ".tags span{display:inline-block;background:#eaf0ff;color:#1f3d7a;border-radius:999px;padding:2px 10px;margin:0 6px 6px 0;font-size:.85em}\n" +
-    ".notice{background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:12px 16px;color:#4b5563;font-size:.9em;margin-top:2em}\n" +
-    "</style>\n</head>\n<body>\n" +
+    "</head>\n" +
+    '<body data-page="post-detail" data-slug="' + esc(post.slug) + '">\n' +
+    '<div id="app">' +
     headerHtml +
-    '<main id="main-content">' + body.join("\n") + "</main>\n" +
-    footerHtml + "\n</body>\n</html>\n"
+    '<main id="main-content" tabindex="-1"><article class="article-layout"><div class="article-body">' +
+    articleHeaderHtml + body.join("\n") +
+    "</div>" + asideHtml + "</article></main>\n" +
+    footerHtml +
+    "</div>\n" +
+    '<script src="../data/site.config.js?v=20260909-seo"></script>\n' +
+    '<script src="../data/categories.js?v=20260708-4"></script>\n' +
+    '<script src="../data/posts.js?v=20260908-buildup"></script>\n' +
+    '<script src="../data/columns.js?v=20260714-ai-assessment"></script>\n' +
+    '<script src="../assets/js/app.js?v=20260909-static-layout"></script>\n' +
+    "</body>\n</html>\n"
   );
 }
 
