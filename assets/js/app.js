@@ -199,7 +199,8 @@
   }
 
   function navLink(label, path, route, slug) {
-    var current = page === route && (!slug || query("slug") === slug) ? ' aria-current="page"' : "";
+    var currentSlug = query("slug") || (document.body && document.body.dataset.slug);
+    var current = page === route && (!slug || currentSlug === slug) ? ' aria-current="page"' : "";
     return '<a href="' + url(path) + '"' + current + ">" + escapeHtml(label) + "</a>";
   }
 
@@ -211,12 +212,12 @@
       "</a>" +
       '<nav class="nav" aria-label="주요 메뉴">' +
       navLink("홈", "index.html", "home") +
-      navLink("학년별", "categories/index.html?slug=grade-guide", "categories", "grade-guide") +
-      navLink("과목별", "categories/index.html?slug=subject-guide", "categories", "subject-guide") +
-      navLink("진로·계열별", "categories/index.html?slug=track-guide", "categories", "track-guide") +
-      navLink("주제 예시", "categories/index.html?slug=topic-examples", "categories", "topic-examples") +
-      navLink("세특 연결", "categories/index.html?slug=student-record", "categories", "student-record") +
-      navLink("면접 대비", "categories/index.html?slug=interview", "categories", "interview") +
+      navLink("학년별", "categories/grade-guide.html", "categories", "grade-guide") +
+      navLink("과목별", "categories/subject-guide.html", "categories", "subject-guide") +
+      navLink("진로·계열별", "categories/track-guide.html", "categories", "track-guide") +
+      navLink("주제 예시", "categories/topic-examples.html", "categories", "topic-examples") +
+      navLink("세특 연결", "categories/student-record.html", "categories", "student-record") +
+      navLink("면접 대비", "categories/interview.html", "categories", "interview") +
       navLink("칼럼", "columns/index.html", "columns") +
       navLink("소개", "about/index.html", "about") +
       "</nav></div></header>";
@@ -239,12 +240,12 @@
       "<p>" + escapeHtml(site.config.description || "고교학점제 탐구보고서 정보 허브") + "</p></div>" +
       '<nav class="footer-column" aria-label="사이트 구조"><h2>사이트</h2>' +
       footerLink("홈", "index.html") +
-      footerLink("학년별 탐구보고서", "categories/index.html?slug=grade-guide") +
-      footerLink("과목별 탐구보고서", "categories/index.html?slug=subject-guide") +
-      footerLink("진로·계열별 탐구보고서", "categories/index.html?slug=track-guide") +
-      footerLink("주제 예시", "categories/index.html?slug=topic-examples") +
-      footerLink("세특 연결", "categories/index.html?slug=student-record") +
-      footerLink("면접 대비", "categories/index.html?slug=interview") +
+      footerLink("학년별 탐구보고서", "categories/grade-guide.html") +
+      footerLink("과목별 탐구보고서", "categories/subject-guide.html") +
+      footerLink("진로·계열별 탐구보고서", "categories/track-guide.html") +
+      footerLink("주제 예시", "categories/topic-examples.html") +
+      footerLink("세특 연결", "categories/student-record.html") +
+      footerLink("면접 대비", "categories/interview.html") +
       footerLink("칼럼", "columns/index.html") +
       footerLink("소개", "about/index.html") +
       footerLink("사이트맵", "sitemap/index.html") +
@@ -276,20 +277,20 @@
     var category = categories[0];
     return '<article class="card">' +
       metaRow(post) +
-      '<h3><a href="' + url("posts/detail.html?slug=" + encodeURIComponent(post.slug)) + '">' + escapeHtml(post.title) + "</a></h3>" +
+      '<h3><a href="' + url("posts/" + encodeURIComponent(post.slug) + ".html") + '">' + escapeHtml(post.title) + "</a></h3>" +
       "<p>" + escapeHtml(post.summary) + "</p>" +
       '<div class="card-footer"><span>' + escapeHtml(category ? category.name : "탐구 글") + "</span>" +
-      '<a class="button" href="' + url("posts/detail.html?slug=" + encodeURIComponent(post.slug)) + '">읽기</a></div>' +
+      '<a class="button" href="' + url("posts/" + encodeURIComponent(post.slug) + ".html") + '">읽기</a></div>' +
       "</article>";
   }
 
   function columnCard(column) {
     return '<article class="card">' +
       '<span class="tag accent">칼럼</span>' +
-      '<h3><a href="' + url("columns/detail.html?slug=" + encodeURIComponent(column.slug)) + '">' + escapeHtml(column.title) + "</a></h3>" +
+      '<h3><a href="' + url("columns/" + encodeURIComponent(column.slug) + ".html") + '">' + escapeHtml(column.title) + "</a></h3>" +
       "<p>" + escapeHtml(column.summary) + "</p>" +
       '<div class="card-footer"><span>' + escapeHtml(column.updatedAt || column.publishedAt || "") + "</span>" +
-      '<a class="button" href="' + url("columns/detail.html?slug=" + encodeURIComponent(column.slug)) + '">읽기</a></div>' +
+      '<a class="button" href="' + url("columns/" + encodeURIComponent(column.slug) + ".html") + '">읽기</a></div>' +
       "</article>";
   }
 
@@ -337,7 +338,7 @@
   }
 
   function renderCategories() {
-    var slug = query("slug");
+    var slug = query("slug") || document.body.dataset.slug;
     if (slug) return renderCategoryDetail(slug);
 
     setMeta("분류", "고교학점제 탐구 글을 학년, 과목, 계열, 세특, 면접 기준으로 정리했습니다.");
@@ -345,9 +346,9 @@
       site.categories.map(function (category) {
         var count = publishedPosts().filter(function (post) { return postInCategory(post, category.slug); }).length;
         return '<article class="card"><span class="tag">' + escapeHtml(category.group) + "</span><h3>" +
-          '<a href="' + url("categories/index.html?slug=" + encodeURIComponent(category.slug)) + '">' + escapeHtml(category.name) + "</a></h3>" +
+          '<a href="' + url("categories/" + encodeURIComponent(category.slug) + ".html") + '">' + escapeHtml(category.name) + "</a></h3>" +
           "<p>" + escapeHtml(category.description) + "</p>" +
-          '<div class="card-footer"><span>' + count + '개 글</span><a class="button" href="' + url("categories/index.html?slug=" + encodeURIComponent(category.slug)) + '">보기</a></div></article>';
+          '<div class="card-footer"><span>' + count + '개 글</span><a class="button" href="' + url("categories/" + encodeURIComponent(category.slug) + ".html") + '">보기</a></div></article>';
       }).join("") + "</div></div></section>");
   }
 
@@ -358,7 +359,7 @@
       return postInCategory(post, slug);
     });
 
-    setMeta(category.name, category.description);
+    setSeo(category.name, category.description, "categories/" + encodeURIComponent(category.slug) + ".html", "website");
     layout('<section class="section"><div class="container"><a class="button" href="' + url("categories/index.html") + '">분류 전체</a><h1>' +
       escapeHtml(category.name) + '</h1><p class="lead">' + escapeHtml(category.description) + '</p><div class="grid">' +
       (posts.length ? posts.map(postCard).join("") : '<div class="empty">이 분류에 표시할 글이 없습니다.</div>') +
@@ -366,13 +367,10 @@
   }
 
   function renderPostDetail() {
-    var cleanSlug = document.body.dataset.slug;
     var post = postBySlug(query("slug") || document.body.dataset.slug);
     if (!post) return renderNotFound();
     var related = (post.relatedPostSlugs || []).map(postBySlug).filter(Boolean);
-    var canonicalPath = cleanSlug
-      ? "posts/" + encodeURIComponent(post.slug) + ".html"
-      : "posts/detail.html?slug=" + encodeURIComponent(post.slug);
+    var canonicalPath = "posts/" + encodeURIComponent(post.slug) + ".html";
     var faq = postFaq(post);
     var summaryItems = Array.isArray(post.summaryPoints) && post.summaryPoints.length ? post.summaryPoints : (post.keyPoints || []).slice(0, 3);
     var mistakes = Array.isArray(post.commonMistakes) && post.commonMistakes.length ? post.commonMistakes : post.avoidExpressions;
@@ -412,7 +410,7 @@
       '<div class="panel"><h3>핵심 포인트</h3>' + list(post.keyPoints) + "</div>" +
       '<div class="panel"><h3>목차</h3>' + orderedList(post.tableOfContents) + "</div>" +
       '<div class="panel"><h3>글 정보</h3><p><a href="' + url("author/index.html") + '">' + escapeHtml(site.config.ownerName || post.authorName || "운영자") + "</a></p><p>" + escapeHtml(site.config.ownerBio || "") + "</p></div>" +
-      '<div class="panel"><h3>분류</h3><p>' + postCategories(post).map(function (category) { return '<a href="' + url("categories/index.html?slug=" + encodeURIComponent(category.slug)) + '">' + escapeHtml(category.name) + '</a>'; }).join("<br>") + "</p></div>" +
+      '<div class="panel"><h3>분류</h3><p>' + postCategories(post).map(function (category) { return '<a href="' + url("categories/" + encodeURIComponent(category.slug) + ".html") + '">' + escapeHtml(category.name) + '</a>'; }).join("<br>") + "</p></div>" +
       "</aside></article>");
   }
 
@@ -654,10 +652,10 @@
   }
 
   function renderColumnDetail() {
-    var column = columnBySlug(query("slug"));
+    var column = columnBySlug(query("slug") || document.body.dataset.slug);
     if (!column) return renderNotFound();
     var related = (column.relatedPostSlugs || []).map(postBySlug).filter(Boolean);
-    var canonicalPath = "columns/detail.html?slug=" + encodeURIComponent(column.slug);
+    var canonicalPath = "columns/" + encodeURIComponent(column.slug) + ".html";
 
     setSeo(column.title, column.summary, canonicalPath, "article");
     setJsonLd("article-jsonld", articleJsonLd(column, "column", canonicalPath));
@@ -805,10 +803,10 @@
     return [
       { label: "홈", path: "index.html", description: "사이트 첫 화면" },
       { label: "탐구 글", path: "posts/index.html", description: "전체 탐구 글 목록" },
-      { label: "학년별 탐구보고서", path: "categories/index.html?slug=grade-guide", description: "고1, 고2, 고3 단계별 작성 방향" },
-      { label: "과목별 탐구보고서", path: "categories/index.html?slug=subject-guide", description: "국어, 수학, 과학, 사회, 영어, 정보/AI 과목별 접근" },
-      { label: "진로·계열별 탐구보고서", path: "categories/index.html?slug=track-guide", description: "인문사회, 공학, 의생명/보건 등 계열별 주제 설계" },
-      { label: "면접 대비", path: "categories/index.html?slug=interview", description: "서류기반면접과 꼬리질문 대비" },
+      { label: "학년별 탐구보고서", path: "categories/grade-guide.html", description: "고1, 고2, 고3 단계별 작성 방향" },
+      { label: "과목별 탐구보고서", path: "categories/subject-guide.html", description: "국어, 수학, 과학, 사회, 영어, 정보/AI 과목별 접근" },
+      { label: "진로·계열별 탐구보고서", path: "categories/track-guide.html", description: "인문사회, 공학, 의생명/보건 등 계열별 주제 설계" },
+      { label: "면접 대비", path: "categories/interview.html", description: "서류기반면접과 꼬리질문 대비" },
       { label: "분류 전체", path: "categories/index.html", description: "모든 탐구 분류 보기" },
       { label: "칼럼", path: "columns/index.html", description: "운영 칼럼 목록" },
       { label: "소개", path: "about/index.html", description: "사이트 소개" },
@@ -842,5 +840,8 @@
     "not-found": renderNotFound
   };
 
-  (routes[page] || renderNotFound)();
+  var route = routes[page] || renderNotFound;
+  var isPrerendered = document.body && document.body.dataset.prerendered === "true";
+  var needsClientRender = !isPrerendered || page === "contact" || Boolean(query("slug"));
+  if (needsClientRender) route();
 })();
