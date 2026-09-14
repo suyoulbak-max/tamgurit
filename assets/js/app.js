@@ -429,7 +429,7 @@
   }
 
   function sanitizeNode(node) {
-    var allowedTags = ["p", "strong", "em", "b", "i", "ul", "ol", "li", "br", "a"];
+    var allowedTags = ["p", "strong", "em", "b", "i", "h2", "h3", "blockquote", "ul", "ol", "li", "br", "a"];
     var blockedContentTags = ["script", "style", "iframe", "object", "embed"];
 
     if (node.nodeType === Node.TEXT_NODE) return escapeHtml(node.textContent);

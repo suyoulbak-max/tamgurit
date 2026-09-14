@@ -80,6 +80,12 @@ function assert(condition, message) {
   assert((await page.locator('link[rel="canonical"]').getAttribute("href") || "").endsWith("/posts/grade-3-interview-ready-report.html"), "detail canonical must stay clean");
   await page.screenshot({ path: path.join(outDir, "post-detail-desktop.png"), fullPage: true });
 
+  await page.goto("http://127.0.0.1:8123/posts/diabetes-machine-learning-follow-up-four-tracks.html?slug=diabetes-machine-learning-follow-up-four-tracks", { waitUntil: "networkidle" });
+  const richDetail = page.locator(".article-body");
+  assert(await richDetail.locator("h2", { hasText: "1. 1학년 탐구의 한계 도출과 2~3학년 Bridge 연결" }).count() === 1, "forced client render must preserve rich content h2 heading");
+  assert(await richDetail.locator("h3", { hasText: "트랙 A. AI·소프트웨어·데이터사이언스 계열" }).count() === 1, "forced client render must preserve rich content h3 heading");
+  assert(await richDetail.locator("blockquote").count() >= 1, "forced client render must preserve rich content blockquote");
+
   await page.goto("http://127.0.0.1:8123/columns/", { waitUntil: "networkidle" });
   const columnsText = await page.locator("body").innerText();
   assert(columnsText.includes("윤리적 딜레마를 결론부에 담는 구체적 작성법"), "columns missing ethical dilemma column");
