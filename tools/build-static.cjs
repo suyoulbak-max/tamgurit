@@ -4,12 +4,14 @@
 const fs = require("fs");
 const vm = require("vm");
 const path = require("path");
+const crypto = require("crypto");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE_URL = "https://plus-literacy.co.kr";
 const SITE_SUFFIX = "고교학점제 탐구보고서 작성 가이드";
 const ADSENSE = "ca-pub-8108040193754389";
-const BUILD_VERSION = "20260914-adsense-quality";
+const appHash = crypto.createHash("sha256").update(fs.readFileSync(path.join(ROOT, "assets/js/app.js"))).digest("hex").slice(0, 10);
+const BUILD_VERSION = `20260914-adsense-quality-${appHash}`;
 
 const ctx = { window: { SiteData: {} } };
 vm.createContext(ctx);
