@@ -50,7 +50,9 @@ function expectPage(rel, { minChars = 300, h1 = true, canonical, ads = true } = 
 
 const home = expectPage("index.html", { minChars: 1000, canonical: `${SITE}/` });
 const appHash = crypto.createHash("sha256").update(read("assets/js/app.js")).digest("hex").slice(0, 10);
-if (!home.includes(`assets/js/app.js?v=20260914-adsense-quality-${appHash}`)) errors.push("index.html: app cache-busting version must track app.js content");
+const postsHash = crypto.createHash("sha256").update(read("data/posts.js")).digest("hex").slice(0, 10);
+if (!home.includes(`assets/js/app.js?v=20260922-adsense-content-${appHash}`)) errors.push("index.html: app cache-busting version must track app.js content");
+if (!home.includes(`data/posts.js?v=20260922-content-${postsHash}`)) errors.push("index.html: post-data cache-busting version must track posts.js content");
 if (!home.includes('name="naver-site-verification"')) errors.push("index.html: missing Naver verification meta");
 if ((home.match(/posts\/[a-z0-9-]+\.html/g) || []).length < 6) errors.push("index.html: needs at least 6 clean post links");
 
