@@ -371,14 +371,19 @@
     if (!post) return renderNotFound();
     var related = (post.relatedPostSlugs || []).map(postBySlug).filter(Boolean);
     var canonicalPath = "posts/" + encodeURIComponent(post.slug) + ".html";
-    var faq = postFaq(post);
+    var faq = post.fullArticle ? [] : postFaq(post);
     var summaryItems = Array.isArray(post.summaryPoints) && post.summaryPoints.length ? post.summaryPoints : (post.keyPoints || []).slice(0, 3);
     var mistakes = Array.isArray(post.commonMistakes) && post.commonMistakes.length ? post.commonMistakes : post.avoidExpressions;
     var checklist = Array.isArray(post.checklist) && post.checklist.length ? post.checklist : post.reportFlow;
 
     setSeo(post.title, post.summary, canonicalPath, "article");
     setJsonLd("article-jsonld", articleJsonLd(post, "post", canonicalPath));
-    setJsonLd("faq-jsonld", faqJsonLd(faq));
+    if (post.fullArticle) {
+      var staleFaq = document.getElementById("faq-jsonld");
+      if (staleFaq) staleFaq.remove();
+    } else {
+      setJsonLd("faq-jsonld", faqJsonLd(faq));
+    }
     layout('<article class="article-layout"><div class="article-body">' +
       '<header class="article-header">' +
       metaRow(post) +
@@ -391,7 +396,7 @@
       renderSummaryBox(summaryItems) +
       "</div>" +
       safeContent(post.content) +
-      renderBriefing(postBriefing(post)) +
+      (post.fullArticle ? "" : renderBriefing(postBriefing(post)) +
       renderComparison(postComparisons(post)) +
       renderBodyQuestions(postBodyQuestions(post)) +
       renderWritingSteps(postWritingSteps(post)) +
@@ -402,7 +407,7 @@
       "<h2>초보자가 자주 하는 실수</h2>" + warningList(mistakes) +
       "<h2>체크리스트</h2>" + checkList(checklist) +
       renderTags(postTags(post)) +
-      renderFaq(faq) +
+      renderFaq(faq)) +
       '<div class="notice-box"><strong>운영자 안내</strong><p>이 글은 일반 교육 정보입니다. 특정 대학 합격, 학생부 평가, 면접 결과를 보장하지 않습니다. 학교와 대학의 공식 안내를 함께 확인해 주세요.</p></div>' +
       renderAuthorBox(post.authorName) +
       (related.length ? '<h2>관련 글</h2><div class="grid two">' + related.map(postCard).join("") + "</div>" : "") +
@@ -711,29 +716,21 @@
         '<article class="panel"><h2>콘텐츠 기준</h2><p>학년별 깊이, 과목별 개념, 진로·계열 적합성, 세특 연결, 서류기반면접 질문까지 함께 고려해 글을 구성합니다.</p></article>' +
         "</div>";
     } else if (kind === "contact") {
-      extra = '<div class="contact-stack">' +
-        '<div class="contact-email-card"><div class="contact-icon" aria-hidden="true">&#9993;</div><div><strong>이메일로 직접 문의</strong><a href="mailto:' + escapeHtml(site.config.contactEmail || "tamgurit@gmail.com") + '">' + escapeHtml(site.config.contactEmail || "tamgurit@gmail.com") + "</a></div></div>" +
-        '<div class="contact-note"><span aria-hidden="true">&#9716;</span><div><strong>운영 안내</strong><p>문의는 평일 기준 1~3일 이내에 답변드립니다. 주말 및 공휴일에는 답변이 늦어질 수 있습니다.</p></div></div>' +
-        '<section class="contact-form-panel"><h2>문의 양식</h2><div class="form-alert"><span aria-hidden="true">!</span> 문의 내용을 작성하면 Gmail 작성창이 열립니다. 창이 열리지 않으면 아래에 표시되는 내용을 복사해 직접 보내 주세요.</div>' +
-        '<form class="contact-form" data-contact-form data-contact-email="' + escapeHtml(site.config.contactEmail || "tamgurit@gmail.com") + '" action="mailto:' + escapeHtml(site.config.contactEmail || "tamgurit@gmail.com") + '" method="post" enctype="text/plain">' +
-        '<div class="form-row"><label>이름<input name="name" type="text" placeholder="홍길동" required></label><label>이메일<input name="email" type="email" placeholder="example@email.com" required></label></div>' +
-        '<label>제목<input name="subject" type="text" placeholder="문의 제목을 입력해 주세요" required></label>' +
-        '<label>내용<textarea name="message" placeholder="문의 내용을 입력해 주세요" required></textarea></label>' +
-        '<button class="button primary contact-submit" type="submit">Gmail로 문의 작성하기</button>' +
-        '<div class="contact-fallback" data-contact-fallback hidden></div>' +
-        "</form></section></div>";
+      var email = escapeHtml(site.config.contactEmail || "tamgurit@gmail.com");
+      extra = '<div class="trust-content"><h2>이메일 문의</h2><p>탐구보고서 작성, 과목 선택, 세특 연결, 서류기반면접 준비와 관련한 의견 또는 사이트 오류 제보는 이메일로 보내주세요.</p>' +
+        '<div class="contact-email-card"><div><strong>이메일</strong><p><a href="mailto:' + email + '">' + email + '</a></p><p>메일 링크는 기기의 메일 앱을 엽니다. 실제 발송 여부는 메일 앱에서 확인해 주세요.</p></div></div>' +
+        '<h2>문의할 때 알려주시면 좋은 내용</h2><ul><li>오류가 발견된 글 제목과 주소</li><li>확인이 필요한 문장 또는 정보</li><li>참고한 학교·교육청·대학의 공식 안내 주소</li></ul>' +
+        '<p>개별 합격 가능성 예측, 대리 작성, 학생부 문장 작성 대행은 제공하지 않습니다. 개인 식별 정보나 민감한 학생 기록은 보내지 마세요.</p></div>';
     } else if (kind === "privacy") {
       extra = '<div class="trust-content">' +
-        '<p class="doc-updated">최종 업데이트: 2026-06-06</p>' +
-        "<h2>1. 총칙</h2><p>" + escapeHtml(site.config.name || "고교학점제 탐구가이드") + '는 고교학점제, 탐구보고서, 세특 연결, 서류기반면접 준비와 관련한 교육 정보를 제공하는 사이트입니다. 본 방침은 사이트 이용 과정에서 처리될 수 있는 개인정보의 기준과 보호 방법을 안내합니다.</p>' +
-        "<h2>2. 수집하는 정보</h2><p>사이트는 회원가입, 댓글, 결제 기능을 제공하지 않으므로 로그인 정보를 수집하지 않습니다. 다만 서비스 운영 과정에서 접속 로그, 브라우저 정보, 방문 일시가 확인될 수 있으며, 이용자가 이메일로 문의하는 경우 이름, 이메일 주소, 문의 내용이 확인될 수 있습니다.</p>" +
-        "<h2>3. 이용 목적</h2><p>수집된 정보는 문의 답변, 사이트 오류 확인, 이상 접속 감지, 콘텐츠 품질 개선, 방문 통계 분석을 위해 사용할 수 있습니다.</p>" +
-        "<h2>4. 보관 기간</h2><p>문의로 제공된 개인정보는 문의 처리 완료 후 6개월 이내에 파기하는 것을 원칙으로 합니다. 단, 관련 법령에서 별도의 보관 기간을 정한 경우 해당 기간 동안 보관할 수 있습니다.</p>" +
-        "<h2>5. 제3자 제공</h2><p>사이트는 이용자의 개인정보를 제3자에게 제공하지 않습니다. 다만 법령에 따른 요청이 있거나 이용자의 명시적 동의가 있는 경우는 예외로 합니다.</p>" +
-        "<h2>6. 쿠키 및 분석 도구</h2><p>사이트는 방문자 통계 분석을 위해 쿠키 또는 웹 분석 도구를 사용할 수 있습니다. 이때 수집되는 정보는 개인을 직접 식별하기보다 방문 흐름과 콘텐츠 이용 경향을 파악하기 위한 통계 정보로 활용됩니다.</p>" +
-        "<h2>7. 개인정보 보호 책임자</h2><p>이름: " + escapeHtml(site.config.ownerName || "탐구가이드 편집팀") + "<br>이메일: <a href=\"mailto:" + escapeHtml(site.config.contactEmail || "tamgurit@gmail.com") + "\">" + escapeHtml(site.config.contactEmail || "tamgurit@gmail.com") + "</a><br>주소: 별도 공개하지 않음</p>" +
-        "<h2>8. 이용자의 권리</h2><p>이용자는 자신의 개인정보에 대한 조회, 수정, 삭제를 요청할 수 있습니다. 요청은 위 이메일로 보내주시면 확인 가능한 범위에서 지체 없이 처리하겠습니다.</p>" +
-        "</div>";
+        '<p class="doc-updated">최종 업데이트: 2026-09-22</p>' +
+        '<h2>1. 총칙</h2><p>이 사이트는 고교학점제, 탐구보고서, 세특, 서류기반면접 관련 교육 정보를 제공합니다. 본 방침은 사이트 이용 과정에서 처리될 수 있는 개인정보의 기준과 보호 방법을 안내합니다.</p>' +
+        '<h2>2. 수집하는 정보</h2><p>회원가입, 댓글, 결제 기능을 제공하지 않으므로 로그인 정보를 수집하지 않습니다. 다만 접속 로그, 브라우저 정보, 방문 일시가 확인될 수 있고 이메일 문의 시 이름, 이메일 주소, 문의 내용이 확인될 수 있습니다.</p>' +
+        '<h2>3. 이용 목적과 보관</h2><p>정보는 문의 답변, 오류 확인, 이상 접속 감지, 콘텐츠 품질 개선 및 방문 통계 분석에 사용할 수 있습니다. 문의 정보는 처리 완료 후 6개월 이내 파기를 원칙으로 하며 법령상 의무가 있으면 해당 기간 보관할 수 있습니다.</p>' +
+        '<h2>4. Google 광고 서비스와 쿠키</h2><p>사이트의 일부 페이지에는 Google AdSense 광고 스크립트가 포함되어 있습니다. Google 광고 서비스가 로드될 때 브라우저에서 방문 페이지 주소, IP 주소 등의 정보가 Google에 전달될 수 있습니다. 광고 제공 과정에서 Google을 포함한 제3자가 브라우저의 쿠키를 저장하거나 읽고, 웹 비콘·IP 주소 등의 기술을 이용해 정보를 수집할 수 있습니다. 정보는 광고 제공·측정, 부정 이용 방지 등에 사용되며 설정과 동의 조건에 따라 광고 개인화에도 사용될 수 있습니다.</p>' +
+        '<p>Google의 처리 방식은 <a href="https://policies.google.com/technologies/partner-sites">Google 서비스를 사용하는 사이트에서의 정보 이용 안내</a>와 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>에서 확인할 수 있습니다. 브라우저의 쿠키 관리 기능으로 쿠키를 삭제하거나 제한할 수 있으며 Google 광고 설정에서도 광고 개인화 선택을 관리할 수 있습니다. 광고 개인화를 끄는 것만으로 모든 정보 처리가 중단되는 것은 아닙니다.</p>' +
+        '<h2>5. 문의와 이용자 권리</h2><p>이메일을 보내면 발신 주소와 본문·첨부 내용이 이메일 서비스에서 처리됩니다. 학생부 원문, 이름·학번, 건강 정보 등 민감한 자료를 보내지 마세요. 개인정보에 관한 조회·수정·삭제 문의는 아래 공개된 이메일로 요청할 수 있습니다. 광고 서비스에서 처리되는 정보와 선택 관리 방법은 위 Google 안내도 함께 확인해 주세요.</p>' +
+        '<h2>6. 개인정보 보호 문의</h2><p>운영자: ' + escapeHtml(site.config.ownerName || "탐구가이드 편집팀") + '<br>이메일: <a href="mailto:' + escapeHtml(site.config.contactEmail || "tamgurit@gmail.com") + '">' + escapeHtml(site.config.contactEmail || "tamgurit@gmail.com") + '</a></p></div>';
     } else if (kind === "terms") {
       extra = '<div class="trust-content">' +
         '<p class="doc-updated">최종 업데이트: 2026-06-06</p>' +
@@ -763,40 +760,6 @@
 
     setMeta(selected[0], selected[1]);
     layout('<section class="section"><div class="container"><h1>' + escapeHtml(selected[0]) + '</h1><p class="lead">' + escapeHtml(selected[1]) + "</p>" + extra + "</div></section>");
-    if (kind === "contact") initContactForm();
-  }
-
-  function initContactForm() {
-    var form = document.querySelector("[data-contact-form]");
-    if (!form) return;
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
-      var data = new FormData(form);
-      var email = form.getAttribute("data-contact-email") || site.config.contactEmail || "tamgurit@gmail.com";
-      var subject = String(data.get("subject") || "탐구가이드 문의").trim();
-      var body = [
-        "이름: " + String(data.get("name") || "").trim(),
-        "답장 이메일: " + String(data.get("email") || "").trim(),
-        "",
-        "문의 내용:",
-        String(data.get("message") || "").trim()
-      ].join("\n");
-      var mailtoUrl = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-      var gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(email) + "&su=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-      var fallback = form.querySelector("[data-contact-fallback]");
-      if (fallback) {
-        fallback.hidden = false;
-        fallback.innerHTML = '<strong>메일 작성창이 열리지 않나요?</strong>' +
-          '<p>브라우저에서 새 창이 차단되었거나 Gmail 로그인이 필요할 수 있습니다. 아래 내용을 복사해 <a href="' + mailtoUrl + '">' + escapeHtml(email) + '</a>로 보내 주세요.</p>' +
-          '<textarea readonly>' + escapeHtml(body) + '</textarea>';
-      }
-      var opened = window.open(gmailUrl, "_blank", "noopener");
-      if (!opened) window.location.href = mailtoUrl;
-    });
   }
 
   function pageLinks() {
@@ -842,6 +805,6 @@
 
   var route = routes[page] || renderNotFound;
   var isPrerendered = document.body && document.body.dataset.prerendered === "true";
-  var needsClientRender = !isPrerendered || page === "contact" || Boolean(query("slug"));
+  var needsClientRender = !isPrerendered || Boolean(query("slug"));
   if (needsClientRender) route();
 })();

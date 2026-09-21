@@ -131,11 +131,19 @@ const postSlugs = new Set((data.posts || []).map((post) => post.slug));
 
   requireArrayLength(post, "tableOfContents", 3, `post ${post.slug}`);
   requireArrayLength(post, "keyPoints", 3, `post ${post.slug}`);
-  requireArrayLength(post, "reportFlow", 4, `post ${post.slug}`);
-  requireArrayLength(post, "studentRecordPoints", 3, `post ${post.slug}`);
-  requireArrayLength(post, "interviewQuestions", 3, `post ${post.slug}`);
-  requireArrayLength(post, "followUpQuestions", 3, `post ${post.slug}`);
-  requireArrayLength(post, "avoidExpressions", 3, `post ${post.slug}`);
+  if (post.fullArticle) {
+    const content = String(post.content || "");
+    const headingCount = (content.match(/<h2\b/gi) || []).length;
+    if (content.length < 2000 || headingCount < 4) {
+      errors.push(`full article ${post.slug} needs at least 2000 characters and 4 h2 sections`);
+    }
+  } else {
+    requireArrayLength(post, "reportFlow", 4, `post ${post.slug}`);
+    requireArrayLength(post, "studentRecordPoints", 3, `post ${post.slug}`);
+    requireArrayLength(post, "interviewQuestions", 3, `post ${post.slug}`);
+    requireArrayLength(post, "followUpQuestions", 3, `post ${post.slug}`);
+    requireArrayLength(post, "avoidExpressions", 3, `post ${post.slug}`);
+  }
 
   if (post.status !== "published") {
     errors.push(`post ${post.slug} must be published`);
