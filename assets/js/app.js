@@ -275,7 +275,8 @@
   function postCard(post) {
     var categories = postCategories(post);
     var category = categories[0];
-    return '<article class="card">' +
+    var thumbnail = post.thumbnail ? '<a href="' + url("posts/" + encodeURIComponent(post.slug) + ".html") + '" tabindex="-1" aria-hidden="true"><img src="' + url(post.thumbnail) + '" alt="" width="1200" height="675" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:8px;margin-bottom:16px"></a>' : '';
+    return '<article class="card">' + thumbnail +
       metaRow(post) +
       '<h3><a href="' + url("posts/" + encodeURIComponent(post.slug) + ".html") + '">' + escapeHtml(post.title) + "</a></h3>" +
       "<p>" + escapeHtml(post.summary) + "</p>" +
