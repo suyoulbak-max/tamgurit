@@ -476,7 +476,7 @@
   function orderedList(items) {
     if (!Array.isArray(items) || !items.length) return '<p class="empty">내용이 없습니다.</p>';
     return '<ol class="number-list">' + items.map(function (item) {
-      return "<li>" + escapeHtml(item) + "</li>";
+      return "<li>" + escapeHtml(String(item).replace(/^\s*\d+[.)]\s+/, "")) + "</li>";
     }).join("") + "</ol>";
   }
 
