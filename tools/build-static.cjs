@@ -209,7 +209,7 @@ function renderPost(post) {
     [post.grade, post.subject, post.track].filter(Boolean).map((value) => '<span class="tag">' + esc(value) + '</span>').join("") +
     '</div><h1>' + esc(post.title) + '</h1><p class="article-subtitle">' + esc(post.subtitle || post.summary) + '</p>' +
     '<div class="meta byline"><span>' + esc(post.authorName || config.ownerName) + '</span><span>발행 ' + esc(post.publishedAt) + '</span><span>수정 ' + esc(cleanDate(post)) + '</span></div></header>' +
-    '<div class="article-top-grid"><section class="article-brief toc-box"><h2>목차</h2><ol class="number-list">' + (post.tableOfContents || []).map((item) => '<li>' + esc(item) + '</li>').join("") + '</ol></section>' +
+    '<div class="article-top-grid"><section class="article-brief toc-box"><h2>목차</h2><ol class="number-list">' + (post.tableOfContents || []).map((item) => '<li>' + esc(String(item).replace(/^\s*\d+[.)]\s+/, '')) + '</li>').join("") + '</ol></section>' +
     '<section class="article-brief summary-box"><h2>핵심 요약</h2><ul class="check-list">' + (post.summaryPoints || post.keyPoints || []).slice(0, 4).map((item) => '<li><span aria-hidden="true">✓</span>' + esc(item) + '</li>').join("") + '</ul></section></div>' +
     (post.content || "") + (post.fullArticle ? "" : renderPostExtras(post)) +
     (related.length ? '<h2>관련 글</h2><div class="grid two">' + related.map((item) => postCard(item, "../")).join("") + '</div>' : '') +
