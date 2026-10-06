@@ -286,7 +286,8 @@
   }
 
   function columnCard(column) {
-    return '<article class="card">' +
+    var thumbnail = column.thumbnail ? '<a href="' + url("columns/" + encodeURIComponent(column.slug) + ".html") + '" tabindex="-1" aria-hidden="true"><img src="' + url(column.thumbnail) + '" alt="" width="1200" height="675" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:8px;margin-bottom:16px"></a>' : '';
+    return '<article class="card">' + thumbnail +
       '<span class="tag accent">칼럼</span>' +
       '<h3><a href="' + url("columns/" + encodeURIComponent(column.slug) + ".html") + '">' + escapeHtml(column.title) + "</a></h3>" +
       "<p>" + escapeHtml(column.summary) + "</p>" +
