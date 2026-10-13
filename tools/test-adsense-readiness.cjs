@@ -54,12 +54,13 @@ const postsHash = crypto.createHash("sha256").update(read("data/posts.js")).dige
 if (!home.includes(`assets/js/app.js?v=20260922-adsense-content-${appHash}`)) errors.push("index.html: app cache-busting version must track app.js content");
 if (!home.includes(`data/posts.js?v=20260922-content-${postsHash}`)) errors.push("index.html: post-data cache-busting version must track posts.js content");
 if (!home.includes('name="naver-site-verification"')) errors.push("index.html: missing Naver verification meta");
+if (!home.includes('name="google-adsense-account" content="ca-pub-8108040193754389"')) errors.push("index.html: missing AdSense account verification meta");
 if ((home.match(/posts\/[a-z0-9-]+\.html/g) || []).length < 6) errors.push("index.html: needs at least 6 clean post links");
 
 const postIndex = expectPage("posts/index.html", { minChars: 1800, canonical: `${SITE}/posts/` });
 for (const post of publishedPosts) {
   if (!postIndex.includes(`${post.slug}.html`)) errors.push(`posts/index.html: missing ${post.slug}`);
-  expectPage(`posts/${post.slug}.html`, { minChars: 700, canonical: `${SITE}/posts/${post.slug}.html` });
+  expectPage(`posts/${post.slug}.html`, { minChars: 700, canonical: `${SITE}/posts/${post.slug}.html`, ads: post.ads !== false });
 }
 
 const categoryIndex = expectPage("categories/index.html", { minChars: 600, canonical: `${SITE}/categories/` });
@@ -98,7 +99,7 @@ for (const post of publishedPosts) if (!sitemap.includes(`<loc>${SITE}/posts/${p
 for (const category of categories.filter((item) => !indexableCategories.includes(item))) if (sitemap.includes(`/categories/${category.slug}.html`)) errors.push(`sitemap.xml: empty category must be excluded ${category.slug}`);
 
 const ads = read("ads.txt").trim();
-if (ads !== "google.com, pub-8108040193754389, DIRECT, f08c47fec0942fa0") errors.push("ads.txt: missing or incorrect Google publisher declaration");
+if (!ads.split(/\r?\n/).some((line) => line.trim() === "google.com, pub-8108040193754389, DIRECT, f08c47fec0942fa0")) errors.push("ads.txt: missing or incorrect Google publisher declaration");
 
 for (const rel of ["posts/detail.html", "columns/detail.html", "admin/index.html", "404.html"]) {
   const html = read(rel);

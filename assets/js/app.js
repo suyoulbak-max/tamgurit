@@ -807,6 +807,9 @@
 
   var route = routes[page] || renderNotFound;
   var isPrerendered = document.body && document.body.dataset.prerendered === "true";
-  var needsClientRender = !isPrerendered || Boolean(query("slug"));
+  // A clean static URL owns its content and advertising policy. A query must
+  // not substitute another article under a page that already loaded ads.
+  var legacyCategoryHasPosts = page === "categories" && query("slug") && !document.body.dataset.slug && publishedPosts().some(function (post) { return postInCategory(post, query("slug")); });
+  var needsClientRender = !isPrerendered || Boolean(legacyCategoryHasPosts);
   if (needsClientRender) route();
 })();

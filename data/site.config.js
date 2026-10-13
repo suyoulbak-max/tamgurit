@@ -9,5 +9,5 @@ window.SiteData.config = {
   contactEmail: "tamgurit@gmail.com",
   mainColor: "#1f3d7a",
   subColor: "#eaf0ff",
-  adminNotice: "관리자 모드는 브라우저 저장소 기반 CMS-lite입니다. 실제 보안 인증이나 서버 저장 기능은 제공하지 않습니다."
+  adminNotice: "관리자 화면은 읽기 전용 데모입니다. 콘텐츠 변경은 저장소의 원본 데이터를 수정한 뒤 정적 페이지를 생성해 반영합니다."
 };

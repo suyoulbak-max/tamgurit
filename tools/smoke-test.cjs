@@ -1,6 +1,7 @@
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
+const vm = require("vm");
 
 const { chromium } = require("playwright");
 
@@ -8,6 +9,11 @@ const root = path.resolve(__dirname, "..");
 const outDir = path.join(root, "outputs", "qa");
 fs.mkdirSync(outDir, { recursive: true });
 const chromePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+const sourceContext = { window: { SiteData: {} } };
+vm.createContext(sourceContext);
+for (const name of ["site.config", "posts"]) {
+  vm.runInContext(fs.readFileSync(path.join(root, "data", name + ".js"), "utf8"), sourceContext);
+}
 
 const mime = {
   ".html": "text/html; charset=utf-8",
@@ -52,6 +58,10 @@ function assert(condition, message) {
     : { headless: true };
   const browser = await chromium.launch(launchOptions);
   const page = await browser.newPage({ viewport: { width: 1366, height: 900 } });
+  await page.context().route("**/*", (route) => {
+    if (new URL(route.request().url()).hostname === "127.0.0.1") return route.continue();
+    return route.fulfill({ status: 200, contentType: "application/javascript", body: "" });
+  });
   const consoleErrors = [];
   page.on("console", (msg) => {
     if (["error", "warning"].includes(msg.type())) consoleErrors.push(`${msg.type()}: ${msg.text()}`);
@@ -140,26 +150,38 @@ function assert(condition, message) {
   await page.evaluate(() => window.localStorage.removeItem("researchGuideData"));
 
   await page.goto("http://127.0.0.1:8123/contact/index.html", { waitUntil: "networkidle" });
-  await page.evaluate(() => {
-    window.__contactOpenUrl = "";
-    window.open = (url) => {
-      window.__contactOpenUrl = String(url);
-      return { closed: false, focus() {} };
-    };
-  });
-  await page.fill("input[name=name]", "홍길동");
-  await page.fill("input[name=email]", "example@email.com");
-  await page.fill("input[name=subject]", "탐구보고서 작성문의");
-  await page.fill("textarea[name=message]", "탐구보고서 작성 방법을 문의합니다.");
-  await page.click(".contact-submit");
-  const contactOpenUrl = await page.evaluate(() => window.__contactOpenUrl);
-  const fallbackText = await page.locator("[data-contact-fallback]").innerText();
-  const fallbackBody = await page.locator("[data-contact-fallback] textarea").inputValue();
-  assert(contactOpenUrl.startsWith("https://mail.google.com/mail/"), "contact submit should open Gmail compose URL");
-  assert(contactOpenUrl.includes("to=tamgurit%40gmail.com"), "contact Gmail URL missing recipient");
-  assert(fallbackText.includes("tamgurit@gmail.com"), "contact fallback missing recipient");
-  assert(fallbackBody.includes("탐구보고서 작성 방법을 문의합니다."), "contact fallback missing message body");
-  await page.screenshot({ path: path.join(outDir, "contact-gmail-fallback.png"), fullPage: true });
+  const contactHref = await page.locator('.contact-email-card a').getAttribute("href");
+  assert(contactHref === "mailto:" + sourceContext.window.SiteData.config.contactEmail, "contact must expose the configured mail recipient");
+  assert(await page.locator("form").count() === 0, "static contact page must not simulate a message submission");
+  await page.screenshot({ path: path.join(outDir, "contact-email.png"), fullPage: true });
+  await page.goto("http://127.0.0.1:8123/contact/?slug=unknown", { waitUntil: "networkidle" });
+  assert(await page.locator("form").count() === 0, "a query must not restore an obsolete contact form");
+  await page.goto("http://127.0.0.1:8123/categories/?slug=unknown", { waitUntil: "networkidle" });
+  assert(await page.locator(".card").count() > 0, "an unknown category query must preserve the category index");
+
+  const rewrittenPosts = sourceContext.window.SiteData.posts.filter((post) => post.ads === false);
+  for (const post of rewrittenPosts) {
+    for (const width of [1366, 375]) {
+      await page.setViewportSize({ width, height: 900 });
+      const requests = [];
+      const onRequest = (request) => { if (/googlesyndication|doubleclick|googleadservices/.test(request.url())) requests.push(request.url()); };
+      page.on("request", onRequest);
+      const response = await page.goto(`http://127.0.0.1:8123/posts/${post.slug}.html`, { waitUntil: "networkidle" });
+      assert(response.status() === 200, `${post.slug}: direct navigation failed`);
+      assert(await page.locator("h1").innerText() === post.title, `${post.slug}: wrong article`);
+      const sourceHeadings = Array.from(post.content.matchAll(/<h2>(.*?)<\/h2>/g), (match) => match[1]);
+      const renderedHeadings = await page.locator(".article-body > h2").allTextContents();
+      assert(sourceHeadings.every((heading, index) => renderedHeadings[index] === heading), `${post.slug}: incomplete article body`);
+      assert(await page.locator('script[src*="adsbygoogle"]').count() === 0 && requests.length === 0, `${post.slug}: advertising must stay excluded`);
+      assert(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), `${post.slug}: horizontal overflow at ${width}`);
+      await page.screenshot({ path: path.join(outDir, `${post.slug}-${width}.png`), fullPage: true });
+      page.off("request", onRequest);
+    }
+  }
+  await page.goto("http://127.0.0.1:8123/posts/grade-3-interview-ready-report.html?slug=ai-ethics-research-report", { waitUntil: "networkidle" });
+  assert(await page.locator("body").getAttribute("data-slug") === "grade-3-interview-ready-report", "query must not substitute a different article on an advertising page");
+  assert(await page.locator("h1").innerText() === sourceContext.window.SiteData.posts.find((post) => post.slug === "grade-3-interview-ready-report").title, "query must preserve the canonical article body");
+  await page.setViewportSize({ width: 1366, height: 900 });
 
   await page.goto("http://127.0.0.1:8123/admin/", { waitUntil: "networkidle" });
   const adminLoginText = await page.locator("body").innerText();
