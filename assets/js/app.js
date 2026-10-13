@@ -183,7 +183,17 @@
     upsertMeta('meta[property="og:description"]', "content", description || site.config.description || "");
     upsertMeta('meta[property="og:type"]', "content", type || "website");
     upsertMeta('meta[property="og:url"]', "content", canonical);
-    upsertMeta('meta[name="twitter:card"]', "content", "summary");
+    upsertMeta('meta[name="twitter:card"]', "content", "summary_large_image");
+    if (site.config.shareImage) {
+      var shareImage = absoluteUrl(site.config.shareImage);
+      upsertMeta('meta[property="og:image"]', "content", shareImage);
+      upsertMeta('meta[property="og:image:secure_url"]', "content", shareImage);
+      upsertMeta('meta[property="og:image:width"]', "content", site.config.shareImageWidth);
+      upsertMeta('meta[property="og:image:height"]', "content", site.config.shareImageHeight);
+      upsertMeta('meta[property="og:image:alt"]', "content", site.config.shareImageAlt);
+      upsertMeta('meta[name="twitter:image"]', "content", shareImage);
+      upsertMeta('meta[name="twitter:image:alt"]', "content", site.config.shareImageAlt);
+    }
     upsertMeta('meta[name="robots"]', "content", "index, follow");
   }
 
@@ -807,6 +817,9 @@
 
   var route = routes[page] || renderNotFound;
   var isPrerendered = document.body && document.body.dataset.prerendered === "true";
-  var needsClientRender = !isPrerendered || Boolean(query("slug"));
+  // A clean static URL owns its content and advertising policy. A query must
+  // not substitute another article under a page that already loaded ads.
+  var legacyCategoryHasPosts = page === "categories" && query("slug") && !document.body.dataset.slug && publishedPosts().some(function (post) { return postInCategory(post, query("slug")); });
+  var needsClientRender = !isPrerendered || Boolean(legacyCategoryHasPosts);
   if (needsClientRender) route();
 })();
