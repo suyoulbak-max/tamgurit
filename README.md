@@ -46,7 +46,29 @@ python -m http.server 8000
 - 칼럼: `data/columns.js`
 - 관리자 안내 문구: `config`의 `adminNotice`
 
-## 관리자 모드
+## 정적 페이지 생성과 검증
+
+`data/*.js`를 수정한 뒤 아래 명령을 실행합니다. HTML 원본을 직접 고치면 다음 생성 때 덮어씁니다.
+
+```powershell
+node tools/build-static.cjs
+node tools/validate-content.cjs
+node tools/test-adsense-readiness.cjs
+node tools/test-static-post-layout.cjs
+node tools/test-toc-numbering.cjs
+node tools/test-column-thumbnail.cjs
+node tools/test-site-integrity.cjs
+```
+
+위 검사의 글 수·길이 조건은 프로젝트의 자체 검사이며 Google 승인 기준이 아닙니다. 브라우저 검사는 Playwright가 설치된 환경에서 `node tools/smoke-test.cjs`로 실행합니다. 이 검사는 외부 요청을 차단하므로 실광고를 호출하지 않습니다.
+
+`ads: false`인 글에는 광고 로더를 넣지 않습니다. 본문을 사람 검토한 뒤 광고를 적용하려면 이 설정을 별도로 검토하고 다시 생성·검증하세요. 계정 확인 메타태그는 광고 요청을 발생시키지 않습니다. `ads.txt`는 별도로 관리하며 생성기가 판매자 행을 덮어쓰지 않습니다.
+
+배포 파일은 `node tools/prepare-pages.cjs`로 `_site`에 복사하고 `node tools/test-site-integrity.cjs _site`로 확인합니다. `_site`가 이미 있으면 이전 프리뷰를 다른 위치로 옮긴 뒤 실행합니다. 공개 폴더 목록에 있는 파일만 복사하며 내부 기록, 개발 도구, 저장소 문서는 배포하지 않습니다.
+
+운영 반영은 검토 완료 후 변경 파일을 커밋하여 `main`에 push하면 기존 GitHub Pages 워크플로가 생성·검사·패키징·배포합니다. push는 운영 배포를 유발하므로 운영자의 명시적인 허용 후 수행하세요. 배포 후 `https://plus-literacy.co.kr/`와 수정한 글, `/ads.txt`, `/privacy/`, 존재하지 않는 주소의 404를 확인합니다. 로컬 작업 자체가 운영 반영을 뜻하지 않습니다.
+
+## 읽기 전용 관리자 화면
 
 관리자 모드는 `admin/index.html`에서 확인할 수 있습니다.
 

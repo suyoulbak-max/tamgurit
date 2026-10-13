@@ -28,12 +28,22 @@ jobs:
         with:
           node-version: 22
       - run: node tools/validate-content.cjs
+      - name: Build and verify static pages
+        run: |
+          node tools/build-static.cjs
+          node tools/test-adsense-readiness.cjs
+          node tools/test-static-post-layout.cjs
+          node tools/test-toc-numbering.cjs
+          node tools/test-column-thumbnail.cjs
+          node tools/test-site-integrity.cjs
+          node tools/prepare-pages.cjs
+          node tools/test-site-integrity.cjs _site
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

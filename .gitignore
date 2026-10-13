@@ -11,4 +11,5 @@ Thumbs.db
 
 node_modules/
 dist/
+_site/
 build/
