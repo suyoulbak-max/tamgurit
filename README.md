@@ -68,6 +68,10 @@ node tools/test-site-integrity.cjs
 
 운영 반영은 검토 완료 후 변경 파일을 커밋하여 `main`에 push하면 기존 GitHub Pages 워크플로가 생성·검사·패키징·배포합니다. push는 운영 배포를 유발하므로 운영자의 명시적인 허용 후 수행하세요. 배포 후 `https://plus-literacy.co.kr/`와 수정한 글, `/ads.txt`, `/privacy/`, 존재하지 않는 주소의 404를 확인합니다. 로컬 작업 자체가 운영 반영을 뜻하지 않습니다.
 
+## 공유 미리보기
+
+공유 대표 이미지는 `data/site.config.js`의 `shareImage`, `shareImageAlt`, `shareImageWidth`, `shareImageHeight`에서 관리합니다. 이미지는 `assets/images/`에 저장하고 실제 파일 크기와 설정을 맞춘 뒤 정적 페이지를 다시 생성하세요. 생성기는 카카오톡용 Open Graph와 Twitter 이미지 메타태그를 서버 HTML에 넣습니다. 기존 공유 미리보기가 남아 있으면 카카오 개발자 도구의 OG 캐시 초기화가 필요할 수 있습니다.
+
 ## 읽기 전용 관리자 화면
 
 관리자 모드는 `admin/index.html`에서 확인할 수 있습니다.
