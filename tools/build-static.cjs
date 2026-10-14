@@ -136,7 +136,7 @@ function documentHtml({ title, description, canonical, prefix = "", body, type =
     '<meta name="twitter:card" content="summary_large_image">\n' +
     '<meta name="twitter:image" content="' + SITE_URL + '/' + esc(config.shareImage) + '">\n' +
     '<meta name="twitter:image:alt" content="' + esc(config.shareImageAlt) + '">\n' +
-    '<link rel="icon" href="' + prefix + 'assets/icons/favicon.svg" type="image/svg+xml">\n' +
+    '<link rel="icon" href="' + prefix + 'assets/icons/plus-literacy.svg" type="image/svg+xml">\n' +
     schemas.map((schema) => '<script type="application/ld+json">' + jsonld(schema) + '</script>\n').join("") +
     '<link rel="stylesheet" href="' + prefix + 'assets/css/style.css?v=' + CSS_VERSION + '">\n</head>\n' +
     '<body' + (page ? ' data-page="' + esc(page) + '"' : '') + (slug ? ' data-slug="' + esc(slug) + '"' : '') + ' data-prerendered="true"><div id="app">' + header(prefix) + '<main id="main-content" tabindex="-1">' + body + '</main>' + footer(prefix) + '</div>\n' +
