@@ -66,6 +66,15 @@ async function assertHomeSpacing(page) {
 async function assertNewBadges(page) {
   const badges = await page.locator('.card h3 .new-badge').evaluateAll(nodes => nodes.map(node => ({date:node.dataset.publishedAt,visible:getComputedStyle(node).display !== 'none'})));
   assert(badges.length === await page.locator('.card h3 > a').count(), 'each content card must carry one publication badge');
+  const style = await page.locator('.new-badge').first().evaluate(node => {
+    const css = getComputedStyle(node);
+    return {color:css.color, background:css.backgroundColor, size:parseFloat(css.fontSize), repeats:css.animationIterationCount};
+  });
+  assert(style.color === 'rgb(255, 255, 255)' && style.background === 'rgb(194, 65, 12)' && style.size >= 12, 'NEW must have a readable high-contrast style');
+  assert(style.repeats === '2', 'NEW motion must stop after two pulses');
+  await page.emulateMedia({reducedMotion:'reduce'});
+  assert(await page.locator('.new-badge').first().evaluate(node => getComputedStyle(node).animationName) === 'none', 'NEW must respect reduced motion');
+  await page.emulateMedia({reducedMotion:'no-preference'});
   const now = Date.now();
   for (const badge of badges) {
     const start = Date.parse(badge.date+'T00:00:00+09:00');
