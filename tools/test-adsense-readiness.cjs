@@ -12,7 +12,7 @@ vm.createContext(ctx);
 for (const file of ["site.config.js", "categories.js", "posts.js", "columns.js"]) {
   vm.runInContext(fs.readFileSync(path.join(ROOT, "data", file), "utf8"), ctx, { filename: file });
 }
-const { categories, posts, columns } = ctx.window.SiteData;
+const { config, categories, posts, columns } = ctx.window.SiteData;
 const publishedPosts = posts.filter((item) => item.status === "published");
 const publishedColumns = columns.filter((item) => item.status === "published");
 const errors = [];
@@ -48,7 +48,7 @@ function expectPage(rel, { minChars = 300, h1 = true, canonical, ads = true } = 
   return html;
 }
 
-const home = expectPage("index.html", { minChars: 1000, canonical: `${SITE}/` });
+const home = expectPage("index.html", { minChars: 1000, canonical: `${SITE}/`, ads: config.homeAds !== false });
 const appHash = crypto.createHash("sha256").update(read("assets/js/app.js")).digest("hex").slice(0, 10);
 const postsHash = crypto.createHash("sha256").update(read("data/posts.js")).digest("hex").slice(0, 10);
 if (!home.includes(`assets/js/app.js?v=20260922-adsense-content-${appHash}`)) errors.push("index.html: app cache-busting version must track app.js content");

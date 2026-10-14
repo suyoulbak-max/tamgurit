@@ -254,6 +254,11 @@ svg {
   padding: 26px 0;
 }
 
+[data-page="columns"] #writing,
+[data-page="columns"] #issues {
+  scroll-margin-top: 128px;
+}
+
 .section-header {
   display: flex;
   align-items: end;
@@ -291,6 +296,11 @@ svg {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+[data-page="home"] .section > .container > h2 + .grid,
+[data-page="home"] .section > .container > .grid + .notice-box {
+  margin-top: 24px;
+}
+
 .card,
 .panel,
 .question-box,
@@ -320,6 +330,19 @@ svg {
   font-size: 1.11rem;
   font-weight: 900;
   line-height: 1.42;
+}
+
+.new-badge {
+  margin-inline-start: 8px;
+  padding: 3px 7px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.65rem;
+  font-weight: 800;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
 .card p {
