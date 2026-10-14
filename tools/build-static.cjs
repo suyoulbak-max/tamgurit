@@ -250,7 +250,7 @@ function renderColumn(column) {
     (related.length ? '<h2>함께 볼 글</h2><div class="grid two">' + related.map((item) => postCard(item, "../")).join("") + '</div>' : '') +
     '<p class="back-link"><a href="index.html">← 칼럼 목록으로 돌아가기</a></p></div><aside class="aside"><div class="panel"><h3>태그</h3><p>' + esc((column.tags || []).join(", ")) + '</p></div>' +
     '<div class="panel"><h3>안내</h3><p>공식 교육·입시 정보는 학교, 교육청, 대학 입학처 자료를 함께 확인하세요.</p></div></aside></article>';
-  return documentHtml({ title: column.title, description: column.summary, canonical, prefix: "../", body, type: "article", schemas: [articleSchema(column, canonical, "BlogPosting"), breadcrumbSchema([{ name: "홈", url: SITE_URL + "/" }, { name: "칼럼", url: SITE_URL + "/columns/" }, { name: column.title, url: canonical }])], page: "column-detail", slug: column.slug, scripts: true });
+  return documentHtml({ title: column.title, description: column.summary, canonical, prefix: "../", body, type: "article", schemas: [articleSchema(column, canonical, "BlogPosting"), breadcrumbSchema([{ name: "홈", url: SITE_URL + "/" }, { name: "칼럼", url: SITE_URL + "/columns/" }, { name: column.title, url: canonical }])], page: "column-detail", slug: column.slug, scripts: true, ads: column.ads !== false });
 }
 
 function renderHome() {

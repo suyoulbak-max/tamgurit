@@ -85,7 +85,7 @@ for (const category of categories.filter((item) => !indexableCategories.includes
 const columnIndex = expectPage("columns/index.html", { minChars: 600, canonical: `${SITE}/columns/` });
 for (const column of publishedColumns) {
   if (!columnIndex.includes(`${column.slug}.html`)) errors.push(`columns/index.html: missing ${column.slug}`);
-  expectPage(`columns/${column.slug}.html`, { minChars: 500, canonical: `${SITE}/columns/${column.slug}.html` });
+  expectPage(`columns/${column.slug}.html`, { minChars: 500, canonical: `${SITE}/columns/${column.slug}.html`, ads: column.ads !== false });
 }
 
 for (const rel of ["about/index.html", "author/index.html", "contact/index.html", "privacy/index.html", "terms/index.html", "disclaimer/index.html", "sitemap/index.html"]) {
