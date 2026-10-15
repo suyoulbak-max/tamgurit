@@ -3,6 +3,14 @@
 }
 
 @font-face {
+  font-family: "SUIT Variable";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/SUIT-Variable.woff2") format("woff2");
+}
+
+@font-face {
   font-family: "Paperlogy";
   font-style: normal;
   font-weight: 800;
@@ -28,8 +36,26 @@
   --shadow-soft: 0 8px 24px rgba(24, 34, 53, 0.07);
   --radius: 8px;
   --container: 1160px;
-  --font-body: "Pretendard Variable", Pretendard, "SUIT Variable", "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
-  --font-display: "Paperlogy", "Pretendard Variable", Pretendard, "SUIT Variable", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  --font-body: "SUIT Variable", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  --font-display: "Paperlogy", var(--font-body);
+  --type-small: 0.8125rem;
+  --type-label: 0.875rem;
+  --type-body: 1rem;
+  --type-reading: 1.0625rem;
+  --type-card: 1.1875rem;
+  --type-section: 1.5rem;
+  --type-title: clamp(1.75rem, 3.6vw, 2.625rem);
+  --type-hero: clamp(2rem, 4.6vw, 3.5rem);
+  --type-wordmark: 1.25rem;
+  --type-wordmark-mobile: 1.125rem;
+  --leading-body: 1.75;
+  --leading-reading: 1.9;
+  --leading-display: 1.3;
+  --tracking-heading: -0.025em;
+  --tracking-display: -0.035em;
+  --brand-size: 44px;
+  --brand-size-compact: 40px;
+  --brand-gap: 12px;
 }
 
 html {
@@ -43,8 +69,9 @@ body {
     var(--bg);
   color: var(--text);
   font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.72;
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+  letter-spacing: -0.01em;
   word-break: keep-all;
   overflow-wrap: anywhere;
   text-rendering: optimizeLegibility;
@@ -114,21 +141,39 @@ svg {
 }
 
 .brand {
-  display: grid;
-  gap: 2px;
-}
-
-.brand strong {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--brand-gap);
+  flex-shrink: 0;
+  width: fit-content;
   color: var(--primary);
-  font-size: 1.12rem;
-  font-weight: 900;
-  line-height: 1.25;
 }
 
-.brand span {
-  color: var(--muted);
-  font-size: 0.84rem;
-  font-weight: 600;
+.brand-mark {
+  display: block;
+  width: var(--brand-size);
+  height: var(--brand-size);
+  flex-shrink: 0;
+}
+
+.brand-type {
+  display: grid;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.brand .brand-name {
+  color: inherit;
+  font-family: var(--font-display);
+  font-size: var(--type-wordmark);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: var(--tracking-heading);
+}
+
+.brand--footer .brand-mark {
+  width: var(--brand-size-compact);
+  height: var(--brand-size-compact);
 }
 
 .nav {
@@ -144,8 +189,8 @@ svg {
 .nav a {
   border-radius: var(--radius);
   color: #2d374d;
-  font-size: 0.9rem;
-  font-weight: 800;
+  font-size: var(--type-label);
+  font-weight: 700;
   padding: 8px 10px;
   transition: background 0.16s ease, color 0.16s ease, transform 0.16s ease;
 }
@@ -188,16 +233,17 @@ svg {
 .section h1,
 .article-body h1 {
   margin: 12px 0;
-  line-height: 1.2;
-  letter-spacing: 0;
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+  text-wrap: balance;
 }
 
 .hero h1 {
   max-width: 720px;
   font-family: var(--font-display);
-  font-size: clamp(2.25rem, 5vw, 4rem);
+  font-size: var(--type-hero);
   font-weight: 800;
-  line-height: 1.14;
+  line-height: var(--leading-display);
 }
 
 .hero p {
@@ -268,15 +314,18 @@ svg {
 }
 
 .section h1 {
-  font-size: clamp(1.8rem, 4vw, 2.7rem);
-  font-weight: 900;
+  font-size: var(--type-title);
+  font-family: var(--font-display);
+  font-weight: 800;
 }
 
 .section h2 {
   margin: 0;
-  font-size: 1.5rem;
-  font-weight: 900;
+  font-size: var(--type-section);
+  font-weight: 800;
   line-height: 1.32;
+  letter-spacing: var(--tracking-heading);
+  text-wrap: balance;
 }
 
 .lead {
@@ -327,9 +376,11 @@ svg {
 
 .card h3 {
   margin: 10px 0 8px;
-  font-size: 1.11rem;
-  font-weight: 900;
-  line-height: 1.42;
+  font-size: var(--type-card);
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: var(--tracking-heading);
+  text-wrap: pretty;
 }
 
 .new-badge {
@@ -499,10 +550,10 @@ svg {
 }
 
 .article-body h1 {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-size: var(--type-title);
   font-family: var(--font-display);
   font-weight: 800;
-  line-height: 1.18;
+  line-height: var(--leading-display);
 }
 
 .article-header {
@@ -769,8 +820,16 @@ svg {
 
 .article-body p {
   color: #293247;
-  font-weight: 500;
-  line-height: 1.88;
+  font-size: var(--type-reading);
+  font-weight: 400;
+  line-height: var(--leading-reading);
+  text-wrap: pretty;
+}
+
+.article-body li {
+  font-size: var(--type-reading);
+  line-height: var(--leading-reading);
+  text-wrap: pretty;
 }
 
 .article-body a {
@@ -1093,6 +1152,47 @@ select:focus {
   width: 100%;
   min-height: 48px;
   font-size: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form label {
+  min-width: 0;
+}
+
+.contact-form .contact-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-weight: 500;
+}
+
+.contact-form .contact-consent input {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  margin: 4px 0 0;
+  padding: 0;
+  accent-color: var(--accent);
+}
+
+.contact-form .form-status {
+  margin: 0;
+  padding: 16px;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
+.contact-form[data-state="error"] .form-status,
+.contact-form[data-state="unavailable"] .form-status {
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+
+.contact-submit:disabled {
+  cursor: wait;
+  opacity: 0.65;
 }
 
 .contact-fallback {
@@ -1428,6 +1528,28 @@ textarea {
   color: var(--warning);
 }
 
+@media (max-width: 1100px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: start;
+    gap: 12px;
+    padding: 12px 0;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+  }
+
+  .nav a {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+}
+
 @media (max-width: 980px) {
   .hero-grid,
   .article-layout {
@@ -1455,6 +1577,14 @@ textarea {
 }
 
 @media (max-width: 720px) {
+  .brand .brand-name {
+    font-size: var(--type-wordmark-mobile);
+  }
+
+  .brand-mark {
+    width: var(--brand-size-compact);
+    height: var(--brand-size-compact);
+  }
   .container,
   .article-layout {
     width: min(100% - 24px, var(--container));
@@ -1485,7 +1615,7 @@ textarea {
   }
 
   .hero h1 {
-    font-size: clamp(2rem, 11vw, 2.8rem);
+    font-size: var(--type-hero);
   }
 
   .hero p {

@@ -288,7 +288,7 @@
       field("tagline", "태그라인", settings.tagline, true) +
       field("ownerName", "운영자 이름", settings.ownerName, true) +
       textareaField("ownerBio", "운영자 소개", settings.ownerBio, 5, true) +
-      field("contactEmail", "문의 이메일", settings.contactEmail, true) +
+      '<p>문의는 Web3Forms로 전달합니다. 수신 주소는 서비스에서 관리하며 이 화면에 표시하지 않습니다.</p>' +
       '<div class="actions"><button class="button" type="button" data-view="dashboard">대시보드로</button></div>' +
       '</form>' +
       '</section>';
@@ -461,7 +461,7 @@
     }
     var form = event.currentTarget;
     var settings = copy(state.data.siteSettings);
-    ["name", "tagline", "ownerName", "ownerBio", "contactEmail"].forEach(function (name) {
+    ["name", "tagline", "ownerName", "ownerBio"].forEach(function (name) {
       settings[name] = form.elements[name].value.trim();
     });
     state.data.siteSettings = settings;

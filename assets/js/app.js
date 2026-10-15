@@ -235,12 +235,16 @@
     return '<a href="' + url(path) + '"' + current + ">" + escapeHtml(label) + "</a>";
   }
 
+  function brand(isFooter) {
+    return '<a class="brand' + (isFooter ? ' brand--footer' : '') + '" href="' + url("index.html") + '" aria-label="' + escapeHtml(site.config.brandName || "탐구 플러스 리터러시") + ' 홈">' +
+      '<img class="brand-mark" src="' + url("assets/icons/plus-literacy.svg?v=20261016") + '" width="44" height="44" alt="">' +
+      '<span class="brand-type"><strong class="brand-name">' + escapeHtml(site.config.brandName || "탐구 플러스 리터러시") + '</strong></span></a>';
+  }
+
   function header() {
     return '<a class="skip-link" href="#main-content">본문 바로가기</a>' +
       '<header class="site-header"><div class="container header-inner">' +
-      '<a class="brand" href="' + url("index.html") + '">' +
-      "<strong>" + escapeHtml(site.config.name || "고교학점제 탐구가이드") + "</strong>" +
-      "</a>" +
+      brand(false) +
       '<nav class="nav" aria-label="주요 메뉴">' +
       navLink("홈", "index.html", "home") +
       navLink("학년별", "categories/grade-guide.html", "categories", "grade-guide") +
@@ -259,7 +263,6 @@
   }
 
   function footer() {
-    var email = site.config.contactEmail || "tamgurit@gmail.com";
     return '<section class="footer-cta"><div class="container footer-cta-inner">' +
       '<div class="footer-cta-icon" aria-hidden="true">&#9993;</div>' +
       "<h2>궁금한 점이 있으신가요?</h2>" +
@@ -267,7 +270,7 @@
       '<a class="button primary" href="' + url("contact/index.html") + '">문의하기 →</a>' +
       "</div></section>" +
       '<footer class="site-footer"><div class="container footer-grid">' +
-      '<div class="footer-brand"><strong>' + escapeHtml(site.config.name || "고교학점제 탐구가이드") + "</strong>" +
+      '<div class="footer-brand">' + brand(true) +
       "<p>" + escapeHtml(site.config.description || "고교학점제 탐구보고서 정보 허브") + "</p></div>" +
       '<nav class="footer-column" aria-label="사이트 구조"><h2>사이트</h2>' +
       footerLink("홈", "index.html") +
@@ -290,7 +293,7 @@
       footerLink("면책고지", "disclaimer/index.html") +
       "</nav></div>" +
       '<div class="container footer-bottom"><span>© 2026 ' + escapeHtml(site.config.name || "고교학점제 탐구가이드") + " · 운영자 " + escapeHtml(site.config.ownerName || "운영자") + "</span>" +
-      '<a href="mailto:' + escapeHtml(email) + '">' + escapeHtml(email) + "</a></div></footer>";
+      '<a href="' + url("contact/index.html") + '">문의 양식으로 연락하기</a></div></footer>';
   }
 
   function layout(content) {
@@ -751,21 +754,11 @@
         '<article class="panel"><h2>콘텐츠 기준</h2><p>학년별 깊이, 과목별 개념, 진로·계열 적합성, 세특 연결, 서류기반면접 질문까지 함께 고려해 글을 구성합니다.</p></article>' +
         "</div>";
     } else if (kind === "contact") {
-      var email = escapeHtml(site.config.contactEmail || "tamgurit@gmail.com");
-      extra = '<div class="trust-content"><h2>이메일 문의</h2><p>탐구보고서 작성, 과목 선택, 세특 연결, 서류기반면접 준비와 관련한 의견 또는 사이트 오류 제보는 이메일로 보내주세요.</p>' +
-        '<div class="contact-email-card"><div><strong>이메일</strong><p><a href="mailto:' + email + '">' + email + '</a></p><p>메일 링크는 기기의 메일 앱을 엽니다. 실제 발송 여부는 메일 앱에서 확인해 주세요.</p></div></div>' +
-        '<h2>문의할 때 알려주시면 좋은 내용</h2><ul><li>오류가 발견된 글 제목과 주소</li><li>확인이 필요한 문장 또는 정보</li><li>참고한 학교·교육청·대학의 공식 안내 주소</li></ul>' +
-        '<p>개별 합격 가능성 예측, 대리 작성, 학생부 문장 작성 대행은 제공하지 않습니다. 개인 식별 정보나 민감한 학생 기록은 보내지 마세요.</p></div>';
+      window.location.replace(url("contact/index.html"));
+      return;
     } else if (kind === "privacy") {
-      extra = '<div class="trust-content">' +
-        '<p class="doc-updated">최종 업데이트: 2026-09-22</p>' +
-        '<h2>1. 총칙</h2><p>이 사이트는 고교학점제, 탐구보고서, 세특, 서류기반면접 관련 교육 정보를 제공합니다. 본 방침은 사이트 이용 과정에서 처리될 수 있는 개인정보의 기준과 보호 방법을 안내합니다.</p>' +
-        '<h2>2. 수집하는 정보</h2><p>회원가입, 댓글, 결제 기능을 제공하지 않으므로 로그인 정보를 수집하지 않습니다. 다만 접속 로그, 브라우저 정보, 방문 일시가 확인될 수 있고 이메일 문의 시 이름, 이메일 주소, 문의 내용이 확인될 수 있습니다.</p>' +
-        '<h2>3. 이용 목적과 보관</h2><p>정보는 문의 답변, 오류 확인, 이상 접속 감지, 콘텐츠 품질 개선 및 방문 통계 분석에 사용할 수 있습니다. 문의 정보는 처리 완료 후 6개월 이내 파기를 원칙으로 하며 법령상 의무가 있으면 해당 기간 보관할 수 있습니다.</p>' +
-        '<h2>4. Google 광고 서비스와 쿠키</h2><p>사이트의 일부 페이지에는 Google AdSense 광고 스크립트가 포함되어 있습니다. Google 광고 서비스가 로드될 때 브라우저에서 방문 페이지 주소, IP 주소 등의 정보가 Google에 전달될 수 있습니다. 광고 제공 과정에서 Google을 포함한 제3자가 브라우저의 쿠키를 저장하거나 읽고, 웹 비콘·IP 주소 등의 기술을 이용해 정보를 수집할 수 있습니다. 정보는 광고 제공·측정, 부정 이용 방지 등에 사용되며 설정과 동의 조건에 따라 광고 개인화에도 사용될 수 있습니다.</p>' +
-        '<p>Google의 처리 방식은 <a href="https://policies.google.com/technologies/partner-sites">Google 서비스를 사용하는 사이트에서의 정보 이용 안내</a>와 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>에서 확인할 수 있습니다. 브라우저의 쿠키 관리 기능으로 쿠키를 삭제하거나 제한할 수 있으며 Google 광고 설정에서도 광고 개인화 선택을 관리할 수 있습니다. 광고 개인화를 끄는 것만으로 모든 정보 처리가 중단되는 것은 아닙니다.</p>' +
-        '<h2>5. 문의와 이용자 권리</h2><p>이메일을 보내면 발신 주소와 본문·첨부 내용이 이메일 서비스에서 처리됩니다. 학생부 원문, 이름·학번, 건강 정보 등 민감한 자료를 보내지 마세요. 개인정보에 관한 조회·수정·삭제 문의는 아래 공개된 이메일로 요청할 수 있습니다. 광고 서비스에서 처리되는 정보와 선택 관리 방법은 위 Google 안내도 함께 확인해 주세요.</p>' +
-        '<h2>6. 개인정보 보호 문의</h2><p>운영자: ' + escapeHtml(site.config.ownerName || "탐구가이드 편집팀") + '<br>이메일: <a href="mailto:' + escapeHtml(site.config.contactEmail || "tamgurit@gmail.com") + '">' + escapeHtml(site.config.contactEmail || "tamgurit@gmail.com") + '</a></p></div>';
+      window.location.replace(url("privacy/index.html"));
+      return;
     } else if (kind === "terms") {
       extra = '<div class="trust-content">' +
         '<p class="doc-updated">최종 업데이트: 2026-06-06</p>' +
@@ -776,7 +769,7 @@
         "<h2>5. 금지 행위</h2><p>사이트 운영을 방해하는 행위, 허위 정보 제공, 악성 코드 삽입, 자동화 도구를 이용한 과도한 접근, 타인의 권리를 침해하는 행위는 금지됩니다.</p>" +
         "<h2>6. 서비스 변경</h2><p>사이트 구조, 메뉴, 글 목록, 정보 페이지 내용은 더 정확한 정보 제공과 운영상 필요에 따라 사전 안내 없이 수정될 수 있습니다.</p>" +
         "<h2>7. 책임의 제한</h2><p>사이트는 일반 교육 정보를 제공하며, 개별 학생의 평가 결과, 대학 합격 여부, 면접 결과를 보장하지 않습니다.</p>" +
-        "<h2>8. 문의</h2><p>약관과 콘텐츠 이용에 관한 문의는 <a href=\"mailto:" + escapeHtml(site.config.contactEmail || "tamgurit@gmail.com") + "\">" + escapeHtml(site.config.contactEmail || "tamgurit@gmail.com") + "</a>로 보내주세요.</p>" +
+        '<h2>8. 문의</h2><p>약관과 콘텐츠 이용에 관한 문의는 <a href="' + url("contact/index.html") + '">문의 양식</a>으로 보내주세요.</p>' +
         "</div>";
     } else if (kind === "disclaimer") {
       extra = '<div class="trust-content">' +
@@ -787,7 +780,7 @@
         "<h2>4. 공식 자료 확인</h2><p>입시 제도, 대학별 전형, 고교학점제 운영 방식, 학교별 과목 개설 상황은 수시로 변동될 수 있습니다. 최종 판단 전에는 학교 공지, 교육청 자료, 대학 입학처 안내를 함께 확인해야 합니다.</p>" +
         "<h2>5. 외부 링크와 자료</h2><p>사이트가 외부 자료나 기관 안내를 언급하더라도 해당 외부 사이트의 정확성, 최신성, 운영 정책을 보장하지 않습니다.</p>" +
         "<h2>6. 이용자 판단</h2><p>사이트의 예시와 조언은 참고 자료이며, 실제 보고서 작성과 면접 준비는 학생 본인의 학습 과정과 학교 안내를 기준으로 조정해야 합니다.</p>" +
-        "<h2>7. 문의</h2><p>잘못된 정보나 수정이 필요한 내용이 있다면 <a href=\"mailto:" + escapeHtml(site.config.contactEmail || "tamgurit@gmail.com") + "\">" + escapeHtml(site.config.contactEmail || "tamgurit@gmail.com") + "</a>로 알려주세요.</p>" +
+        '<h2>7. 문의</h2><p>잘못된 정보나 수정이 필요한 내용은 <a href="' + url("contact/index.html") + '">문의 양식</a>으로 알려주세요.</p>' +
         "</div>";
     } else if (kind !== "disclaimer") {
       extra = '<div class="notice-box"><strong>공통 안내</strong><p>이 사이트의 내용은 일반 교육 정보이며, 특정 합격이나 면접 결과를 보장하지 않습니다.</p></div>';
