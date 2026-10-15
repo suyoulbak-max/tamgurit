@@ -4,7 +4,7 @@ const path = require("node:path");
 const root = path.resolve(__dirname, "..");
 const target = path.join(root, "_site");
 const entries = [
-  "index.html", "404.html", ".nojekyll", "CNAME", "ads.txt", "robots.txt", "sitemap.xml",
+  "index.html", "404.html", ".nojekyll", "CNAME", "ads.txt", "robots.txt", "sitemap.xml", "favicon.png", "favicon.ico",
   "about", "admin", "assets", "author", "categories", "columns", "contact", "data",
   "disclaimer", "posts", "privacy", "sitemap", "terms",
   ...fs.readdirSync(root).filter((name) => /^naver[a-f0-9]+\.html$/.test(name))

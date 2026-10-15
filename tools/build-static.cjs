@@ -143,7 +143,7 @@ function documentHtml({ title, description, canonical, prefix = "", body, type =
     '<meta name="twitter:card" content="summary_large_image">\n' +
     '<meta name="twitter:image" content="' + SITE_URL + '/' + esc(config.shareImage) + '">\n' +
     '<meta name="twitter:image:alt" content="' + esc(config.shareImageAlt) + '">\n' +
-    '<link rel="icon" href="' + prefix + 'assets/icons/plus-literacy.svg?v=20261016" type="image/svg+xml">\n' +
+    '<link rel="icon" href="/favicon.png" type="image/png" sizes="192x192">\n' +
     '<link rel="preload" href="' + prefix + 'assets/fonts/SUIT-Variable.woff2" as="font" type="font/woff2" crossorigin>\n' +
     schemas.map((schema) => '<script type="application/ld+json">' + jsonld(schema) + '</script>\n').join("") +
     '<link rel="stylesheet" href="' + prefix + 'assets/css/style.css?v=' + CSS_VERSION + '">\n</head>\n' +

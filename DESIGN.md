@@ -20,6 +20,7 @@
 ## Brand primitives
 - Brand: 탐구 플러스 리터러시. Korean-only wordmark; no English subtitle. The existing descriptive site title remains in metadata and content.
 - Mark: original open-book silhouette with a plus at the upper-right; navy book, green plus, paper-white page. Same mark for header, footer and favicon.
+- Search favicon: stable `/favicon.png`, square 192px PNG rasterized from the SVG mark; `/favicon.ico` provides a conventional fallback. Do not add rotating cache-busting parameters to the search favicon URL. CSS/JS content-hash versioning remains independent.
 - Lockup: 44px square mark, 12px gap, single-line Korean Paperlogy wordmark 1.25rem; no raster text or English subtitle. On phones the mark is 40px and Korean text 1.125rem.
 - Footer lockup uses a 40px mark and navy text on the existing light footer. Images are decorative inside a home link named “탐구 플러스 리터러시 홈”. Minimum clear space: 8px; do not stretch or rotate.
 - Navigation remains accessible by keyboard with the existing focus-visible ring. Brand text cannot wrap; navigation gets its own scrollable row at 1100px and below, preserving all links.
