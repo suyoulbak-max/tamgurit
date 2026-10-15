@@ -235,12 +235,16 @@
     return '<a href="' + url(path) + '"' + current + ">" + escapeHtml(label) + "</a>";
   }
 
+  function brand(isFooter) {
+    return '<a class="brand' + (isFooter ? ' brand--footer' : '') + '" href="' + url("index.html") + '" aria-label="' + escapeHtml(site.config.brandName || "플러스 리터러시") + ' 홈">' +
+      '<img class="brand-mark" src="' + url("assets/icons/plus-literacy.svg?v=20261016") + '" width="44" height="44" alt="">' +
+      '<span class="brand-type"><strong class="brand-name">' + escapeHtml(site.config.brandName || "플러스 리터러시") + '</strong><span class="brand-english" lang="en">' + escapeHtml(site.config.brandEnglish || "PLUS LITERACY") + '</span></span></a>';
+  }
+
   function header() {
     return '<a class="skip-link" href="#main-content">본문 바로가기</a>' +
       '<header class="site-header"><div class="container header-inner">' +
-      '<a class="brand" href="' + url("index.html") + '">' +
-      "<strong>" + escapeHtml(site.config.name || "고교학점제 탐구가이드") + "</strong>" +
-      "</a>" +
+      brand(false) +
       '<nav class="nav" aria-label="주요 메뉴">' +
       navLink("홈", "index.html", "home") +
       navLink("학년별", "categories/grade-guide.html", "categories", "grade-guide") +
@@ -266,7 +270,7 @@
       '<a class="button primary" href="' + url("contact/index.html") + '">문의하기 →</a>' +
       "</div></section>" +
       '<footer class="site-footer"><div class="container footer-grid">' +
-      '<div class="footer-brand"><strong>' + escapeHtml(site.config.name || "고교학점제 탐구가이드") + "</strong>" +
+      '<div class="footer-brand">' + brand(true) +
       "<p>" + escapeHtml(site.config.description || "고교학점제 탐구보고서 정보 허브") + "</p></div>" +
       '<nav class="footer-column" aria-label="사이트 구조"><h2>사이트</h2>' +
       footerLink("홈", "index.html") +

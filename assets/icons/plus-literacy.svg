@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="플러스 리터러시">
   <rect width="64" height="64" rx="14" fill="#20395f"/>
-  <path d="M10 20c8-3 15-2 22 2 7-4 14-5 22-2v29c-8-3-15-2-22 2-7-4-14-5-22-2z" fill="#fff"/>
-  <path d="M32 24v23" stroke="#20395f" stroke-width="3"/>
-  <rect x="36" y="7" width="24" height="24" rx="7" fill="#12785f" stroke="#20395f" stroke-width="2"/>
-  <path d="M48 13v12m-6-6h12" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M11 23c7-2 13-1 20 3v27c-7-4-13-5-20-3zm23 3c7-4 13-5 20-3v27c-7-2-13-1-20 3z" fill="#fbfaf7"/>
+  <path d="M16 31c4 0 7 1 10 3m-10 5c4 0 7 1 10 3m13-8 9-2m-9 10 9-2" fill="none" stroke="#20395f" stroke-width="2" stroke-linecap="round" opacity=".35"/>
+  <rect x="35" y="5" width="25" height="25" rx="8" fill="#12785f" stroke="#20395f" stroke-width="3"/>
+  <path d="M47.5 11.5v12m-6-6h12" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
 </svg>

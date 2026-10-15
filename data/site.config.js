@@ -1,6 +1,8 @@
 window.SiteData = window.SiteData || {};
 window.SiteData.config = {
   name: "고교학점제 탐구보고서 작성 가이드",
+  brandName: "플러스 리터러시",
+  brandEnglish: "PLUS LITERACY",
   tagline: "과목 선택부터 탐구보고서, 세특, 서류기반면접까지",
   description: "고교학점제 과목 선택부터 탐구보고서 작성, 세특의 학습 근거, 학생부 기반 대입 면접까지. 고등학생과 학부모를 위한 작성 예시·수정 사례·공식 전형 확인 가이드입니다.",
   homeAds: false,

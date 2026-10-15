@@ -78,11 +78,17 @@ function inCategory(post, slug) {
 
 const indexableCategories = categories.filter((category) => publishedPosts.some((post) => inCategory(post, category.slug)));
 
+function brand(prefix, footer = false) {
+  return '<a class="brand' + (footer ? ' brand--footer' : '') + '" href="' + prefix + 'index.html" aria-label="' + esc(config.brandName) + ' 홈">' +
+    '<img class="brand-mark" src="' + prefix + 'assets/icons/plus-literacy.svg?v=20261016" width="44" height="44" alt="">' +
+    '<span class="brand-type"><strong class="brand-name">' + esc(config.brandName) + '</strong><span class="brand-english" lang="en">' + esc(config.brandEnglish) + '</span></span></a>';
+}
+
 function header(prefix) {
   const p = prefix || "";
   return '<a class="skip-link" href="#main-content">본문 바로가기</a>' +
     '<header class="site-header"><div class="container header-inner">' +
-    '<a class="brand" href="' + p + 'index.html"><strong>' + esc(config.name) + '</strong></a>' +
+    brand(p) +
     '<nav class="nav" aria-label="주요 메뉴">' +
     '<a href="' + p + 'index.html">홈</a>' +
     '<a href="' + p + 'categories/grade-guide.html">학년별</a>' +
@@ -103,7 +109,7 @@ function footer(prefix) {
     '<p>탐구보고서, 과목 선택, 세특 연결, 서류기반면접 준비에 대한 의견이나 오류 제보를 보내주세요.</p>' +
     '<a class="button primary" href="' + p + 'contact/index.html">문의하기 →</a></div></section>' +
     '<footer class="site-footer"><div class="container footer-grid">' +
-    '<div class="footer-brand"><strong>' + esc(config.name) + '</strong><p>' + esc(config.description) + '</p></div>' +
+    '<div class="footer-brand">' + brand(p, true) + '<p>' + esc(config.description) + '</p></div>' +
     '<nav class="footer-column" aria-label="사이트 구조"><h2>사이트</h2>' +
     '<a href="' + p + 'index.html">홈</a><a href="' + p + 'posts/index.html">전체 탐구 글</a>' +
     '<a href="' + p + 'categories/index.html">분류별 탐구 가이드</a><a href="' + p + 'columns/index.html">칼럼·이슈</a><a href="' + p + 'columns/index.html#issues">입시·교육 이슈</a>' +
@@ -137,7 +143,8 @@ function documentHtml({ title, description, canonical, prefix = "", body, type =
     '<meta name="twitter:card" content="summary_large_image">\n' +
     '<meta name="twitter:image" content="' + SITE_URL + '/' + esc(config.shareImage) + '">\n' +
     '<meta name="twitter:image:alt" content="' + esc(config.shareImageAlt) + '">\n' +
-    '<link rel="icon" href="' + prefix + 'assets/icons/plus-literacy.svg" type="image/svg+xml">\n' +
+    '<link rel="icon" href="' + prefix + 'assets/icons/plus-literacy.svg?v=20261016" type="image/svg+xml">\n' +
+    '<link rel="preload" href="' + prefix + 'assets/fonts/SUIT-Variable.woff2" as="font" type="font/woff2" crossorigin>\n' +
     schemas.map((schema) => '<script type="application/ld+json">' + jsonld(schema) + '</script>\n').join("") +
     '<link rel="stylesheet" href="' + prefix + 'assets/css/style.css?v=' + CSS_VERSION + '">\n</head>\n' +
     '<body' + (page ? ' data-page="' + esc(page) + '"' : '') + (slug ? ' data-slug="' + esc(slug) + '"' : '') + ' data-prerendered="true"><div id="app">' + header(prefix) + '<main id="main-content" tabindex="-1">' + body + '</main>' + footer(prefix) + '</div>\n' +
