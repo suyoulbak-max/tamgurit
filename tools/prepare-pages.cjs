@@ -14,5 +14,9 @@ for (const entry of entries) {
   if (!fs.existsSync(path.join(root, entry))) throw new Error(`Missing public entry: ${entry}`);
 }
 fs.mkdirSync(target);
-for (const entry of entries) fs.cpSync(path.join(root, entry), path.join(target, entry), { recursive: true });
+const sourceTemplates = new Set(["data/contact.html", "data/privacy.html"]);
+for (const entry of entries) fs.cpSync(path.join(root, entry), path.join(target, entry), {
+  recursive: true,
+  filter: (source) => !sourceTemplates.has(path.relative(root, source).split(path.sep).join("/"))
+});
 console.log(`Public package: _site (${entries.length} entries); internal notes and tools excluded.`);

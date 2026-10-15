@@ -48,7 +48,7 @@ const configFields = [
   "url",
   "ownerName",
   "ownerBio",
-  "contactEmail",
+  "web3formsAccessKey",
   "mainColor",
   "subColor",
   "adminNotice"

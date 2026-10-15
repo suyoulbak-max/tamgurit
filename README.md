@@ -39,7 +39,7 @@ python -m http.server 8000
 
 ## 수정 위치
 
-- 사이트 이름, 이메일, 운영자 정보: `data/site.config.js`
+- 사이트 이름, Web3Forms Access Key, 운영자 정보: `data/site.config.js`
 - 색상: `assets/css/style.css`
 - 카테고리: `data/categories.js`
 - 게시글: `data/posts.js`
@@ -68,7 +68,13 @@ node tools/test-site-integrity.cjs
 
 운영 반영은 검토 완료 후 변경 파일을 커밋하여 `main`에 push하면 기존 GitHub Pages 워크플로가 생성·검사·패키징·배포합니다. push는 운영 배포를 유발하므로 운영자의 명시적인 허용 후 수행하세요. 배포 후 `https://plus-literacy.co.kr/`와 수정한 글, `/ads.txt`, `/privacy/`, 존재하지 않는 주소의 404를 확인합니다. 로컬 작업 자체가 운영 반영을 뜻하지 않습니다.
 
-## 공유 미리보기
+## 문의 양식
+
+문의 폼은 `data/contact.html`, 처리 안내는 `data/privacy.html`, 전송 동작은 `assets/js/contact.js`에서 관리합니다. 수신 이메일은 Web3Forms 계정의 폼에서 설정하고 사이트 파일에는 저장하지 않습니다. `data/site.config.js`에는 공개용 식별자인 `web3formsAccessKey`만 넣습니다. 수신 주소를 변경할 때는 해당 주소로 발급·인증된 키를 사용한 뒤 다시 생성·검증하세요.
+
+폼은 필수 입력과 동의를 검사하고, API의 HTTP 성공 및 `success: true`를 확인한 뒤에만 접수 완료를 표시합니다. 실패 시 입력 내용을 보존하며, 응답을 확인할 수 없는 경우 재접수될 수 있으므로 즉시 반복 전송하지 않습니다. 폼과 개인정보 본문의 원본 템플릿은 공개 패키지에서 제외합니다.
+
+## 공유 대표 이미지
 
 공유 대표 이미지는 `data/site.config.js`의 `shareImage`, `shareImageAlt`, `shareImageWidth`, `shareImageHeight`에서 관리합니다. 이미지는 `assets/images/`에 저장하고 실제 파일 크기와 설정을 맞춘 뒤 정적 페이지를 다시 생성하세요. 생성기는 카카오톡용 Open Graph와 Twitter 이미지 메타태그를 서버 HTML에 넣습니다. 기존 공유 미리보기가 남아 있으면 카카오 개발자 도구의 OG 캐시 초기화가 필요할 수 있습니다.
 

@@ -1057,6 +1057,47 @@ select:focus {
   font-size: 1rem;
 }
 
+.contact-form input,
+.contact-form textarea,
+.contact-form label {
+  min-width: 0;
+}
+
+.contact-form .contact-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-weight: 500;
+}
+
+.contact-form .contact-consent input {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  margin: 4px 0 0;
+  padding: 0;
+  accent-color: var(--accent);
+}
+
+.contact-form .form-status {
+  margin: 0;
+  padding: 16px;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
+.contact-form[data-state="error"] .form-status,
+.contact-form[data-state="unavailable"] .form-status {
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+
+.contact-submit:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
 .contact-fallback {
   border: 1px solid var(--line);
   border-radius: var(--radius);
