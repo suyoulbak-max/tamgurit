@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="플러스 리터러시">
+  <rect width="64" height="64" rx="14" fill="#20395f"/>
+  <path d="M10 20c8-3 15-2 22 2 7-4 14-5 22-2v29c-8-3-15-2-22 2-7-4-14-5-22-2z" fill="#fff"/>
+  <path d="M32 24v23" stroke="#20395f" stroke-width="3"/>
+  <rect x="36" y="7" width="24" height="24" rx="7" fill="#12785f" stroke="#20395f" stroke-width="2"/>
+  <path d="M48 13v12m-6-6h12" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+</svg>

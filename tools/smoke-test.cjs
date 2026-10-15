@@ -11,7 +11,7 @@ fs.mkdirSync(outDir, { recursive: true });
 const chromePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
 const sourceContext = { window: { SiteData: {} } };
 vm.createContext(sourceContext);
-for (const name of ["site.config", "posts"]) {
+for (const name of ["site.config", "posts", "columns"]) {
   vm.runInContext(fs.readFileSync(path.join(root, "data", name + ".js"), "utf8"), sourceContext);
 }
 
@@ -51,6 +51,37 @@ function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
+async function assertHomeSpacing(page) {
+  const gaps = await page.evaluate(() => {
+    const grid = document.querySelector('[data-page="home"] .section > .container > h2 + .grid');
+    const notice = document.querySelector('[data-page="home"] .section > .container > .grid + .notice-box');
+    return {
+      heading: grid.getBoundingClientRect().top - grid.previousElementSibling.getBoundingClientRect().bottom,
+      notice: notice.getBoundingClientRect().top - notice.previousElementSibling.getBoundingClientRect().bottom,
+    };
+  });
+  assert(gaps.heading >= 24 && gaps.notice >= 24, `home boxes need breathing room: ${JSON.stringify(gaps)}`);
+}
+
+async function assertNewBadges(page) {
+  const badges = await page.locator('.card h3 .new-badge').evaluateAll(nodes => nodes.map(node => ({date:node.dataset.publishedAt,visible:getComputedStyle(node).display !== 'none'})));
+  assert(badges.length === await page.locator('.card h3 > a').count(), 'each content card must carry one publication badge');
+  const style = await page.locator('.new-badge').first().evaluate(node => {
+    const css = getComputedStyle(node);
+    return {color:css.color, background:css.backgroundColor, size:parseFloat(css.fontSize), repeats:css.animationIterationCount};
+  });
+  assert(style.color === 'rgb(255, 255, 255)' && style.background === 'rgb(194, 65, 12)' && style.size >= 12, 'NEW must have a readable high-contrast style');
+  assert(style.repeats === '2', 'NEW motion must stop after two pulses');
+  await page.emulateMedia({reducedMotion:'reduce'});
+  assert(await page.locator('.new-badge').first().evaluate(node => getComputedStyle(node).animationName) === 'none', 'NEW must respect reduced motion');
+  await page.emulateMedia({reducedMotion:'no-preference'});
+  const now = Date.now();
+  for (const badge of badges) {
+    const start = Date.parse(badge.date+'T00:00:00+09:00');
+    assert(badge.visible === (start <= now && now < start + 7*86400000), `wrong NEW visibility for ${badge.date}`);
+  }
+}
+
 (async () => {
   await new Promise((resolve) => server.listen(8123, "127.0.0.1", resolve));
   const launchOptions = fs.existsSync(chromePath)
@@ -73,19 +104,30 @@ function assert(condition, message) {
   assert(homeText.includes("탐구보고서에서"), "home missing hero text");
   assert(homeText.includes("탐구보고서 작성 칼럼"), "home missing columns section");
   assert(await page.locator(".card").count() >= 6, "home should render multiple cards");
+  await assertHomeSpacing(page);
+  assert(await page.getByRole('navigation', {name:'주요 메뉴'}).getByRole('link', {name:'칼럼·이슈',exact:true}).count() === 1, 'header must expose columns and issues');
+  assert(await page.getByRole('link', {name:'입시·교육 이슈 보기',exact:true}).count() === 1, 'home must link to the issue section');
+  await assertNewBadges(page);
   await page.screenshot({ path: path.join(outDir, "home-desktop.png"), fullPage: true });
 
   await page.goto("http://127.0.0.1:8123/posts/grade-3-interview-ready-report.html", { waitUntil: "networkidle" });
   const detailText = await page.locator("body").innerText();
+  const detailSource = sourceContext.window.SiteData.posts.find(post => post.slug === "grade-3-interview-ready-report");
+  if (!detailSource.fullArticle) {
   assert(detailText.includes("서류기반면접 예상 질문"), "detail missing interview questions");
   assert(detailText.includes("꼬리질문 대비"), "detail missing follow-up questions");
   assert(detailText.includes("초보자가 자주 하는 실수"), "detail missing common mistakes");
   assert(detailText.includes("체크리스트"), "detail missing checklist");
   assert(detailText.includes("자주 묻는 질문"), "detail missing faq");
+  } else {
+    const headings = Array.from(detailSource.content.matchAll(/<h2>(.*?)<\/h2>/g), match => match[1]);
+    const actual = await page.locator('.article-body > h2').allTextContents();
+    assert(headings.every((heading,index)=>actual[index]===heading), 'complete detail must preserve authored sections');
+  }
   assert(await page.locator(".article-layout").count() === 1, "detail missing article layout");
   assert(await page.locator(".article-body").count() === 1, "detail missing article card");
   assert(await page.locator(".aside .panel").count() >= 3, "detail missing sidebar panels");
-  assert(await page.locator(".comparison-table").count() >= 1, "detail missing comparison table");
+  if (!detailSource.fullArticle) assert(await page.locator(".comparison-table").count() >= 1, "detail missing comparison table");
   assert(await page.locator(".article-top-grid .article-brief").count() === 2, "detail missing toc/summary boxes");
   assert((await page.locator('link[rel="canonical"]').getAttribute("href") || "").endsWith("/posts/grade-3-interview-ready-report.html"), "detail canonical must stay clean");
   await page.screenshot({ path: path.join(outDir, "post-detail-desktop.png"), fullPage: true });
@@ -100,6 +142,13 @@ function assert(condition, message) {
   const columnsText = await page.locator("body").innerText();
   assert(columnsText.includes("윤리적 딜레마를 결론부에 담는 구체적 작성법"), "columns missing ethical dilemma column");
   assert(columnsText.includes("인문사회 계열 보고서에서 정책의 양면성을 비판하는 법"), "columns missing policy two-sidedness column");
+  const publicColumns = sourceContext.window.SiteData.columns.filter(item => item.status === 'published');
+  await assertNewBadges(page);
+  assert(await page.locator('#writing .card').count() === publicColumns.filter(item => item.kind !== 'issue').length, 'writing columns must stay in their own section');
+  assert(await page.locator('#issues .card').count() === publicColumns.filter(item => item.kind === 'issue').length, 'issue cards must match published content only');
+  await page.getByRole('navigation', {name:'칼럼·이슈 바로가기'}).getByRole('link', {name:'입시·교육 이슈',exact:true}).click();
+  assert(new URL(page.url()).hash === '#issues', 'issue navigation must reach its real anchor');
+  await page.screenshot({path:path.join(outDir,'columns-issues-desktop.png'),fullPage:true});
   await page.screenshot({ path: path.join(outDir, "columns-desktop.png"), fullPage: true });
 
   await page.goto("http://127.0.0.1:8123/columns/detail.html?slug=how-to-write-ethical-dilemma-conclusion", { waitUntil: "networkidle" });
@@ -124,6 +173,7 @@ function assert(condition, message) {
   });
   await page.goto("http://127.0.0.1:8123/categories/index.html?slug=track-guide", { waitUntil: "networkidle" });
   const trackText = await page.locator("body").innerText();
+  await assertNewBadges(page);
   assert(trackText.includes("고2·고3 전공계열별 탐구보고서 평가 루브릭"), "stored data should merge new track rubric post");
   assert(trackText.includes("전공별 오차 분석과 비판적 사고 작성 전략"), "stored data should merge error-analysis post");
   assert(trackText.includes("계열별 탐구보고서 평가 사례와 면접 검증 포인트"), "stored data should merge evaluation-cases post");
@@ -244,6 +294,13 @@ function assert(condition, message) {
   await page.setViewportSize({ width: 375, height: 812 });
   await page.goto("http://127.0.0.1:8123/", { waitUntil: "networkidle" });
   const mobileHeaderBox = await page.locator(".site-header").boundingBox();
+  await assertHomeSpacing(page);
+  await assertNewBadges(page);
+  await page.getByRole('link', {name:'입시·교육 이슈 보기',exact:true}).click();
+  assert(new URL(page.url()).hash === '#issues', 'mobile home must link directly to issues');
+  assert(await page.evaluate(()=>document.documentElement.scrollWidth <= window.innerWidth), 'mobile issue page must not overflow');
+  await page.screenshot({path:path.join(outDir,'columns-issues-mobile.png'),fullPage:true});
+  await page.goto("http://127.0.0.1:8123/", { waitUntil: "networkidle" });
   assert(mobileHeaderBox && mobileHeaderBox.width <= 390, "mobile header width overflow");
   await page.screenshot({ path: path.join(outDir, "home-mobile.png"), fullPage: true });
 

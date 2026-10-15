@@ -9,6 +9,27 @@
 
   if (!root) return;
 
+  var newBadgeTimer;
+  function newBadge(item) {
+    return '<span class="new-badge" data-published-at="' + escapeHtml(item.publishedAt || "") + '" hidden aria-label="새 글" title="최초 발행일부터 7일간 표시">NEW</span>';
+  }
+
+  function refreshNewBadges() {
+    clearTimeout(newBadgeTimer);
+    // ponytail: browser clock; use server time only if strict timing becomes necessary.
+    var now = Date.now();
+    var nextExpiry = Infinity;
+    document.querySelectorAll('.new-badge[data-published-at]').forEach(function (badge) {
+      var date = badge.dataset.publishedAt;
+      var start = Date.parse(date + 'T00:00:00+09:00');
+      var valid = /^\d{4}-\d{2}-\d{2}$/.test(date) && isFinite(start) && new Date(start + 9 * 60 * 60 * 1000).toISOString().slice(0, 10) === date;
+      var end = start + 7 * 24 * 60 * 60 * 1000;
+      badge.hidden = !(valid && start <= now && now < end);
+      if (!badge.hidden) nextExpiry = Math.min(nextExpiry, end);
+    });
+    if (isFinite(nextExpiry)) newBadgeTimer = setTimeout(refreshNewBadges, nextExpiry - now);
+  }
+
   function escapeHtml(value) {
     return String(value == null ? "" : value).replace(/[&<>"']/g, function (char) {
       return {
@@ -228,7 +249,7 @@
       navLink("주제 예시", "categories/topic-examples.html", "categories", "topic-examples") +
       navLink("세특 연결", "categories/student-record.html", "categories", "student-record") +
       navLink("면접 대비", "categories/interview.html", "categories", "interview") +
-      navLink("칼럼", "columns/index.html", "columns") +
+      navLink("칼럼·이슈", "columns/index.html", "columns") +
       navLink("소개", "about/index.html", "about") +
       "</nav></div></header>";
   }
@@ -255,7 +276,8 @@
       footerLink("주제 예시", "categories/topic-examples.html") +
       footerLink("세특 연결", "categories/student-record.html") +
       footerLink("면접 대비", "categories/interview.html") +
-      footerLink("칼럼", "columns/index.html") +
+      footerLink("칼럼·이슈", "columns/index.html") +
+      footerLink("입시·교육 이슈", "columns/index.html#issues") +
       footerLink("소개", "about/index.html") +
       footerLink("사이트맵", "sitemap/index.html") +
       "</nav>" +
@@ -272,6 +294,7 @@
 
   function layout(content) {
     root.innerHTML = header() + '<main id="main-content" tabindex="-1">' + content + "</main>" + footer();
+    refreshNewBadges();
   }
 
   function metaRow(post) {
@@ -287,7 +310,7 @@
     var thumbnail = post.thumbnail ? '<a href="' + url("posts/" + encodeURIComponent(post.slug) + ".html") + '" tabindex="-1" aria-hidden="true"><img src="' + url(post.thumbnail) + '" alt="" width="1200" height="675" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:8px;margin-bottom:16px"></a>' : '';
     return '<article class="card">' + thumbnail +
       metaRow(post) +
-      '<h3><a href="' + url("posts/" + encodeURIComponent(post.slug) + ".html") + '">' + escapeHtml(post.title) + "</a></h3>" +
+      '<h3><a href="' + url("posts/" + encodeURIComponent(post.slug) + ".html") + '">' + escapeHtml(post.title) + "</a>" + newBadge(post) + "</h3>" +
       "<p>" + escapeHtml(post.summary) + "</p>" +
       '<div class="card-footer"><span>' + escapeHtml(category ? category.name : "탐구 글") + "</span>" +
       '<a class="button" href="' + url("posts/" + encodeURIComponent(post.slug) + ".html") + '">읽기</a></div>' +
@@ -298,7 +321,7 @@
     var thumbnail = column.thumbnail ? '<a href="' + url("columns/" + encodeURIComponent(column.slug) + ".html") + '" tabindex="-1" aria-hidden="true"><img src="' + url(column.thumbnail) + '" alt="" width="1200" height="675" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:8px;margin-bottom:16px"></a>' : '';
     return '<article class="card">' + thumbnail +
       '<span class="tag accent">칼럼</span>' +
-      '<h3><a href="' + url("columns/" + encodeURIComponent(column.slug) + ".html") + '">' + escapeHtml(column.title) + "</a></h3>" +
+      '<h3><a href="' + url("columns/" + encodeURIComponent(column.slug) + ".html") + '">' + escapeHtml(column.title) + "</a>" + newBadge(column) + "</h3>" +
       "<p>" + escapeHtml(column.summary) + "</p>" +
       '<div class="card-footer"><span>' + escapeHtml(column.updatedAt || column.publishedAt || "") + "</span>" +
       '<a class="button" href="' + url("columns/" + encodeURIComponent(column.slug) + ".html") + '">읽기</a></div>' +
@@ -772,7 +795,7 @@
       { label: "진로·계열별 탐구보고서", path: "categories/track-guide.html", description: "인문사회, 공학, 의생명/보건 등 계열별 주제 설계" },
       { label: "면접 대비", path: "categories/interview.html", description: "서류기반면접과 꼬리질문 대비" },
       { label: "분류 전체", path: "categories/index.html", description: "모든 탐구 분류 보기" },
-      { label: "칼럼", path: "columns/index.html", description: "운영 칼럼 목록" },
+      { label: "칼럼·이슈", path: "columns/index.html", description: "작성 칼럼과 입시·교육 이슈 해설" },
       { label: "소개", path: "about/index.html", description: "사이트 소개" },
       { label: "운영자", path: "author/index.html", description: "운영자와 콘텐츠 기준" },
       { label: "문의하기", path: "contact/index.html", description: "문의 안내" },
@@ -811,4 +834,6 @@
   var legacyCategoryHasPosts = page === "categories" && query("slug") && !document.body.dataset.slug && publishedPosts().some(function (post) { return postInCategory(post, query("slug")); });
   var needsClientRender = !isPrerendered || Boolean(legacyCategoryHasPosts);
   if (needsClientRender) route();
+  refreshNewBadges();
+  document.addEventListener("visibilitychange", refreshNewBadges);
 })();
