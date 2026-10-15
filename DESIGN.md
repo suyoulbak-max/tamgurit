@@ -18,10 +18,10 @@
 - Fonts use `font-display: swap`, local assets only; the SUIT variable font is preloaded on generated public pages. Original OFL licence travels with the font.
 
 ## Brand primitives
-- Brand: 플러스 리터러시 / PLUS LITERACY. The existing descriptive site title remains in metadata and content.
+- Brand: 탐구 플러스 리터러시. Korean-only wordmark; no English subtitle. The existing descriptive site title remains in metadata and content.
 - Mark: original open-book silhouette with a plus at the upper-right; navy book, green plus, paper-white page. Same mark for header, footer and favicon.
-- Lockup: 44px square mark, 12px gap, Korean Paperlogy wordmark 1.25rem, English SUIT label 0.625rem with 0.18em tracking; no raster text. On phones the mark is 40px and Korean text 1.125rem.
-- Footer lockup uses a 40px mark and navy text on the existing light footer. Images are decorative inside a home link named “플러스 리터러시 홈”. Minimum clear space: 8px; do not stretch or rotate.
+- Lockup: 44px square mark, 12px gap, single-line Korean Paperlogy wordmark 1.25rem; no raster text or English subtitle. On phones the mark is 40px and Korean text 1.125rem.
+- Footer lockup uses a 40px mark and navy text on the existing light footer. Images are decorative inside a home link named “탐구 플러스 리터러시 홈”. Minimum clear space: 8px; do not stretch or rotate.
 - Navigation remains accessible by keyboard with the existing focus-visible ring. Brand text cannot wrap; navigation gets its own scrollable row at 1100px and below, preserving all links.
 - Accessibility: body starts at 16px, article copy 17px. Avoid light-weight body text, text clipping, letter-by-letter Korean wrapping and horizontal page overflow. No new motion.
 - Accepted scope: no font artwork is invented; typography means font selection, scale, weight, tracking and rhythm. The logo is original SVG; font licences are preserved. No dark theme is introduced.

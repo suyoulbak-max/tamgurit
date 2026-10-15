@@ -81,7 +81,7 @@ const indexableCategories = categories.filter((category) => publishedPosts.some(
 function brand(prefix, footer = false) {
   return '<a class="brand' + (footer ? ' brand--footer' : '') + '" href="' + prefix + 'index.html" aria-label="' + esc(config.brandName) + ' 홈">' +
     '<img class="brand-mark" src="' + prefix + 'assets/icons/plus-literacy.svg?v=20261016" width="44" height="44" alt="">' +
-    '<span class="brand-type"><strong class="brand-name">' + esc(config.brandName) + '</strong><span class="brand-english" lang="en">' + esc(config.brandEnglish) + '</span></span></a>';
+    '<span class="brand-type"><strong class="brand-name">' + esc(config.brandName) + '</strong></span></a>';
 }
 
 function header(prefix) {

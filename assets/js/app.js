@@ -236,9 +236,9 @@
   }
 
   function brand(isFooter) {
-    return '<a class="brand' + (isFooter ? ' brand--footer' : '') + '" href="' + url("index.html") + '" aria-label="' + escapeHtml(site.config.brandName || "플러스 리터러시") + ' 홈">' +
+    return '<a class="brand' + (isFooter ? ' brand--footer' : '') + '" href="' + url("index.html") + '" aria-label="' + escapeHtml(site.config.brandName || "탐구 플러스 리터러시") + ' 홈">' +
       '<img class="brand-mark" src="' + url("assets/icons/plus-literacy.svg?v=20261016") + '" width="44" height="44" alt="">' +
-      '<span class="brand-type"><strong class="brand-name">' + escapeHtml(site.config.brandName || "플러스 리터러시") + '</strong><span class="brand-english" lang="en">' + escapeHtml(site.config.brandEnglish || "PLUS LITERACY") + '</span></span></a>';
+      '<span class="brand-type"><strong class="brand-name">' + escapeHtml(site.config.brandName || "탐구 플러스 리터러시") + '</strong></span></a>';
   }
 
   function header() {

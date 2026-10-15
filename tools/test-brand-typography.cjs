@@ -60,7 +60,7 @@ const records = [];
         assert(metrics.readingSize === null || metrics.readingSize >= 17, `${file}: undersized reading copy`);
         assert.equal(metrics.homeLinks.length, 2, `${file}: header/footer branding missing`);
         for (const link of metrics.homeLinks) {
-          assert.equal(link.name, "플러스 리터러시 홈");
+          assert.equal(link.name, "탐구 플러스 리터러시 홈");
           assert.equal(new URL(link.href, base + file).href, base + "index.html");
         }
         const stem = file.replaceAll("/", "-").replace(".html", "") + "-" + width;
@@ -80,7 +80,7 @@ const records = [];
     await page.keyboard.press("Tab");
     assert.equal(await page.locator(":focus").textContent(), "본문 바로가기");
     await page.keyboard.press("Tab");
-    assert.equal(await page.locator(":focus").getAttribute("aria-label"), "플러스 리터러시 홈");
+    assert.equal(await page.locator(":focus").getAttribute("aria-label"), "탐구 플러스 리터러시 홈");
     assert.notEqual(await page.locator(":focus").evaluate(el => getComputedStyle(el).outlineStyle), "none");
     await Promise.all([page.waitForURL(base + "index.html"), page.keyboard.press("Enter")]);
     assert.equal(page.url(), base + "index.html");

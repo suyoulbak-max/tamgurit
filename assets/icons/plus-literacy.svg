@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="플러스 리터러시">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="탐구 플러스 리터러시">
   <rect width="64" height="64" rx="14" fill="#20395f"/>
   <path d="M11 23c7-2 13-1 20 3v27c-7-4-13-5-20-3zm23 3c7-4 13-5 20-3v27c-7-2-13-1-20 3z" fill="#fbfaf7"/>
   <path d="M16 31c4 0 7 1 10 3m-10 5c4 0 7 1 10 3m13-8 9-2m-9 10 9-2" fill="none" stroke="#20395f" stroke-width="2" stroke-linecap="round" opacity=".35"/>
