@@ -26,7 +26,7 @@ const records = [];
 (async () => {
   await new Promise(resolve => server.listen(0, "127.0.0.1", resolve));
   const base = `http://127.0.0.1:${server.address().port}/`;
-  const browser = await chromium.launch({ headless: true, channel: "chrome" });
+  const browser = await chromium.launch({ headless: true });
   try {
     const context = await browser.newContext();
     await context.route("**/*", route => new URL(route.request().url()).hostname === "127.0.0.1" ? route.continue() : route.abort());
