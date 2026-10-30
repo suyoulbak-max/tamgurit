@@ -472,7 +472,7 @@
   }
 
   function sanitizeNode(node) {
-    var allowedTags = ["p", "strong", "em", "b", "i", "h2", "h3", "blockquote", "ul", "ol", "li", "br", "a"];
+    var allowedTags = ["p", "strong", "em", "b", "i", "h2", "h3", "blockquote", "ul", "ol", "li", "br", "a", "figure", "figcaption", "img", "code"];
     var blockedContentTags = ["script", "style", "iframe", "object", "embed"];
 
     if (node.nodeType === Node.TEXT_NODE) return escapeHtml(node.textContent);
@@ -482,6 +482,17 @@
     if (blockedContentTags.indexOf(tag) >= 0) return "";
     if (allowedTags.indexOf(tag) < 0) return sanitizeChildren(node);
     if (tag === "br") return "<br>";
+    if (tag === "img") {
+      var src;
+      try { src = new URL(node.getAttribute("src") || "", window.location.href); } catch (error) { return ""; }
+      if (src.origin !== window.location.origin || !/^\/assets\/images\/.+\.(?:webp|png|jpe?g|gif)$/i.test(src.pathname)) return "";
+      var dimensions = "";
+      ["width", "height"].forEach(function (name) {
+        var value = node.getAttribute(name) || "";
+        if (/^[1-9]\d{0,4}$/.test(value)) dimensions += ' ' + name + '="' + value + '"';
+      });
+      return '<img src="' + escapeHtml(src.href) + '" alt="' + escapeHtml(node.getAttribute("alt") || "") + '"' + dimensions + ' decoding="async" style="display:block;width:100%;height:auto;border-radius:16px">';
+    }
 
     var attrs = "";
     if (tag === "a") {
