@@ -275,6 +275,7 @@
       "<p>" + escapeHtml(site.config.description || "고교학점제 탐구보고서 정보 허브") + "</p></div>" +
       '<nav class="footer-column" aria-label="사이트 구조"><h2>사이트</h2>' +
       footerLink("홈", "index.html") +
+      footerLink("고교학점제·과목 선택", "categories/credit-system.html") +
       footerLink("학년별 탐구보고서", "categories/grade-guide.html") +
       footerLink("과목별 탐구보고서", "categories/subject-guide.html") +
       footerLink("진로·계열별 탐구보고서", "categories/track-guide.html") +

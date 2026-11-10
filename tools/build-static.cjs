@@ -111,7 +111,7 @@ function footer(prefix) {
     '<div class="footer-brand">' + brand(p, true) + '<p>' + esc(config.description) + '</p></div>' +
     '<nav class="footer-column" aria-label="사이트 구조"><h2>사이트</h2>' +
     '<a href="' + p + 'index.html">홈</a><a href="' + p + 'posts/index.html">전체 탐구 글</a>' +
-    '<a href="' + p + 'categories/index.html">분류별 탐구 가이드</a><a href="' + p + 'columns/index.html">칼럼·이슈</a><a href="' + p + 'columns/index.html#issues">입시·교육 이슈</a>' +
+    '<a href="' + p + 'categories/index.html">분류별 탐구 가이드</a><a href="' + p + 'categories/credit-system.html">고교학점제·과목 선택</a><a href="' + p + 'columns/index.html">칼럼·이슈</a><a href="' + p + 'columns/index.html#issues">입시·교육 이슈</a>' +
     '<a href="' + p + 'about/index.html">소개</a><a href="' + p + 'sitemap/index.html">사이트맵</a></nav>' +
     '<nav class="footer-column" aria-label="정보"><h2>정보</h2>' +
     '<a href="' + p + 'author/index.html">운영자</a><a href="' + p + 'contact/index.html">문의하기</a>' +
