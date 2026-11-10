@@ -1576,7 +1576,14 @@ window.SiteData.posts = [
       { title: "면접 질문으로 검증", description: "과목 선택 이유, 활동 방법, 한계, 다음 질문을 소리 내어 설명하며 빈칸을 찾습니다." }
     ],
     avoidExpressions: ["이 과목을 고르면 합격", "대학이 무조건 좋아하는 학생부", "세특 문장만 잘 쓰면 된다", "하나의 진로만 유지해야 한다"],
-    relatedPostSlugs: ["student-record-natural-connection", "research-report-evaluation-rubric", "document-based-interview-questions", "grade-2-3-track-evaluation-rubric"],
+    relatedPostSlugs: [
+  "student-record-natural-connection",
+  "research-report-evaluation-rubric",
+  "document-based-interview-questions",
+  "grade-2-3-track-evaluation-rubric",
+  "high-school-credit-system-elective-subject-guide",
+  "career-elective-subject-types-assessment-guide"
+],
     authorName: "탐구가이드 편집팀",
     publishedAt: "2026-07-20",
     updatedAt: "2026-07-20",
@@ -1792,7 +1799,14 @@ window.SiteData.posts = [
       { title: "최종 결정", description: "내신·수능·이수 이력을 함께 관리할 수 있는 학교를 최종 선택합니다." }
     ],
     avoidExpressions: ["이 학교 가면 무조건 1등급이다", "내신 따기 쉬운 학교가 무조건 유리하다", "자퇴하고 검정고시 정시가 무조건 답이다", "특정 대학은 항상 이렇게 평가한다"],
-    relatedPostSlugs: ["student-record-course-selection-consistency-specificity", "student-record-interview-probing-question-guide", "subject-basics-to-advanced-theory-linking-guide", "semester-record-final-check-research-report"],
+    relatedPostSlugs: [
+  "student-record-course-selection-consistency-specificity",
+  "student-record-interview-probing-question-guide",
+  "subject-basics-to-advanced-theory-linking-guide",
+  "semester-record-final-check-research-report",
+  "2028-admission-changes-csat-school-record-guide",
+  "high-school-credit-system-elective-subject-guide"
+],
     authorName: "탐구가이드 편집팀",
     publishedAt: "2026-08-13",
     updatedAt: "2026-08-16",
@@ -3653,5 +3667,233 @@ window.SiteData.posts = [
   "publishedAt": "2026-11-10",
   "updatedAt": "2026-11-10",
   "content": "<figure><img src=\"../assets/images/fashion-reading-evidence-pattern-design.webp\" alt=\"펼친 독서 노트에서 원단 배치와 의상 실루엣으로 이어지는 패션디자인 탐구 작업대\" width=\"1200\" height=\"675\" decoding=\"async\" style=\"display:block;width:100%;height:auto;border-radius:16px\"><figcaption>책 한 권에서 질문 하나를 골라, 읽은 근거와 나의 디자인 판단을 연결해 보세요.</figcaption></figure>\n<p>“패션디자이너가 되고 싶은 고1인데, 동아리 독서 보고서에는 어떤 책이 좋을까요?” 처음부터 어려운 소재공학이나 거대한 패션산업 전체를 다룰 필요는 없습니다. <strong>내가 궁금한 옷의 문제를 설명하는 책 한 권</strong>을 고르고, 읽은 대목 하나를 비교표·스케치·짧은 비평으로 발전시키면 됩니다.</p>\n<p>이 글은 환경·인문학·디지털 의상의 세 독서 경로를 제안합니다. 세 권을 모두 읽거나 프로그램을 유료로 구입하라는 뜻은 아닙니다. 감상문을 요구하는 과제라면 구체적인 대목과 자신의 생각 변화를 쓰는 것도 적절합니다. 독후감은 무의미하다거나 특정 책이 높은 평가를 보장한다고 보지 않습니다. 먼저 담당교사가 안내한 독서 범위·분량·인용 방식·AI 활용 기준을 확인하세요.</p>\n<h2>1. 책을 고르기 전에 ‘무엇을 남길지’부터 정하세요</h2>\n<ul><li><strong>환경과 소비가 궁금하다면:</strong> 《내 몸과 지구를 살리는 옷 사용 설명서》에서 출발해, 옷의 생산·세탁·사용·폐기를 질문으로 좁힙니다.</li><li><strong>옷과 사람의 관계가 궁금하다면:</strong> 《옷장 속 인문학》을 읽고 주머니, 몸의 표현, 취향처럼 눈으로 비교할 수 있는 대상을 택합니다.</li><li><strong>가상 의상에 관심이 있다면:</strong> 《디지털 클로딩 개론》을 선택적으로 읽되, 처음부터 소프트웨어 실습 전체를 완수하려 하지 않습니다. 기술서 읽기가 부담스러우면 앞의 두 경로를 먼저 택해도 됩니다.</li></ul>\n<p>학교·공공도서관에서 정확한 제목과 저자를 검색하고 목차·미리보기로 난이도를 확인하세요. 학교가 완독을 요구하는지, 일부 장을 읽고 탐구해도 되는지에 따라 선택이 달라집니다. 아래 추천은 <strong>확인한 서지·출판사 소개·공개 목차에 근거한 읽기 후보</strong>입니다. 편집팀이 세 권 전체를 정독·서평했다는 뜻이 아니며, 제시한 활동은 책 속 실습을 그대로 옮긴 것이 아니라 별도의 교육용 제안입니다.</p>\n<h2>2. 환경 경로: 《내 몸과 지구를 살리는 옷 사용 설명서》</h2>\n<p><strong>배온·배성호 지음, 철수와영희, 2026년 9월 1일 발행. ISBN 9791171530526.</strong> 공개 목차는 옷의 재료와 생산, 패스트패션, 세탁, 미래의 옷과 헌 옷의 행방 등을 다룹니다.<a href=\"https://kobic.net/book/bookInfo/view.do?isbn=9791171530526\">[1]</a> 일상에서 입는 옷으로 시작하고 싶은 학생에게 첫 후보로 권합니다.</p>\n<p><strong>고1용 질문:</strong> “자투리를 줄이는 배치와 오래 입기 쉬운 디자인은 어떤 점에서 다른가?” 우선 책에서 자원 사용이나 옷의 수명과 관련한 대목을 찾고 쪽수와 자신의 요약을 적습니다. 이후 종이 패턴 배치, 수선하기 쉬운 여밈, 세탁·관리 방법 중 하나만 비교하세요. 책이 아래의 패턴 계산을 제시했다고 쓰지 않습니다.</p>\n<p>보충 자료인 UNEP의 2020년 보고서는 섬유 가치사슬의 단계별 환경·사회 영향을 함께 검토합니다.<a href=\"https://circulareconomy.europa.eu/platform/sites/default/files/2025-09/Sustainability-and-Circularity-in-the-Textile-Value-Chain.pdf\">[4]</a> 따라서 원단을 덜 남기는 것과 옷 한 벌의 전체 환경부하를 줄이는 것은 같은 판단이 아닙니다. 소재·염색·사용 수명·세탁·운송·폐기 조건을 확인하지 않고 “천연섬유는 항상 친환경”, “재활용 섬유면 탄소가 반드시 적다”라고 결론 내리지 마세요. 생분해 조건이나 실제 재활용 경로를 조사하지 않았다면 추정으로 표시합니다.</p>\n<h3>작게 해 볼 활동: 같은 종이 조각, 두 가지 배치</h3>\n<p>아래 수치는 <strong>교육용 가상 설계·계산 예시</strong>이며 실제 의류 재단 실험이 아닙니다. 가로 20cm의 종이 띠에 10×10cm 조각 두 개, 10×8cm 한 개, 10×2cm 한 개를 겹치지 않게 놓는다고 합시다. 네 조각의 총면적은 300cm²로 같습니다.</p>\n<ul><li><strong>배치 A:</strong> 10×10cm 두 장을 첫 줄에 나란히 놓고, 그 아래 왼쪽에 10×8cm, 오른쪽 맨 아래에 10×2cm를 놓아 전체 길이를 20cm로 잡습니다. 사용 직사각형은 20×20=400cm², 남는 면적은 100cm²입니다.</li><li><strong>배치 B:</strong> 같은 조각을 재배치해 왼쪽 열에 10×10cm와 10×8cm, 오른쪽 열에 10×10cm와 10×2cm를 위에서부터 이어 놓습니다. 전체 길이는 18cm, 사용 면적은 360cm², 남는 면적은 60cm²입니다.</li><li><strong>남는 면적 비율:</strong> (사용 직사각형 면적−조각 총면적)÷사용 직사각형 면적×100. A는 25%, B는 약 16.7%입니다. 비율 차이는 약 8.3%포인트입니다. 분모도 달라졌다는 점을 함께 적으세요.</li></ul>\n<p>직접 종이로 비교한다면 배치도와 눈금 사진을 남기고 실제 치수로 다시 계산합니다. <strong>이 예시는 자투리를 줄이는 배치이지 제로웨이스트 달성이 아닙니다.</strong> 실제 옷에는 원단 폭, 결 방향, 시접, 무늬 맞춤, 착용감, 내구성 같은 조건이 더 있습니다. 종이 면적 감소율을 탄소배출 감소율로 바꾸지 말고, 전 과정 탄소 자료가 없으면 탄소발자국을 정량 분석했다고 쓰지 않습니다.</p>\n<blockquote><p><strong>수정 전</strong><br>제로웨이스트 패턴으로 환경오염을 해결하고 탄소배출을 40% 줄였다.</p><p><strong>수정 후 · 위 가상 예시를 설명하는 문장</strong><br>동일한 종이 조각의 두 배치를 비교했을 때 남는 면적은 100cm²에서 60cm²로 줄었다. 다만 이는 종이 배치 모델의 결과이며 의류의 탄소배출 감소를 측정한 것은 아니다. 실제 의상에는 시접과 원단 결 방향을 반영해 다시 검토해야 한다.</p></blockquote>\n<p>원서 읽기가 가능하다면 Dana Thomas의 <em>Fashionopolis</em>도 확장 후보입니다. 원서 출판사는 의류산업의 문제와 이를 바꾸려는 기술·실천을 다룬 책으로 소개합니다.<a href=\"https://www.penguinrandomhouse.com/books/554229/fashionopolis-by-dana-thomas\">[6]</a> 여기서는 영문 원서 제목과 저자를 확인했으며, 임의의 한국어 제목을 번역본의 정식 서지처럼 쓰지 않습니다.</p>\n<h2>3. 인문학 경로: 《옷장 속 인문학》</h2>\n<p><strong>김홍기 지음, 중앙북스, 2016년 9월 7일 발행. ISBN 9788927807926.</strong> 공개 목차에는 몸과 자기표현, 취향, 티셔츠·스니커즈·주머니 등 옷과 삶을 연결하는 항목이 있습니다.<a href=\"https://m.yes24.com/goods/detail/30746201\">[2]</a> 모든 시대의 복식사를 한 권으로 입증하려 하기보다, 직접 읽은 항목 한 가지를 중심으로 비교하는 편이 좋습니다.</p>\n<p><strong>고1용 질문:</strong> “주머니의 위치와 크기는 옷의 사용성과 외형에 어떤 차이를 만들까?” 책에서 주머니 관련 대목을 읽은 뒤, 자신의 옷 두 벌에서 입구 폭·깊이·위치·여밈을 관찰합니다. 개인 옷에 실제로 물건을 넣어 볼 때는 같은 작은 물건을 사용하고, 착용자 사진 대신 옷을 평평하게 둔 사진이나 도식을 써도 됩니다. 측정하지 않았다면 ‘넣기 편해 보인다’는 시각적 판단과 실제 사용 결과를 구분하세요.</p>\n<p><strong>산출물:</strong> ‘책에서 읽은 해석 / 내 옷에서 관찰한 형태 / 가능한 설명 / 다른 설명’ 네 칸과 주머니를 수정한 스케치 한 장. 주머니가 작다는 관찰만으로 제작자의 성차별 의도나 모든 시대의 권력 구조를 증명할 수는 없습니다. 실루엣, 원가, 사용 목적 등 대안 설명도 적어 보세요. 관찰한 두 벌을 모든 남성복·여성복의 대표 표본으로 삼지 않습니다.</p>\n<p>복식사로 확장하고 싶다면 V&A의 빅토리아 시대 속옷 해설에서 코르셋·크리놀린·버슬의 구조와 활동성 차이를 살펴보세요. 자료는 같은 종류 안의 다양한 구조와 조정 장치도 설명합니다.<a href=\"https://www.vam.ac.uk/articles/corsets-crinolines-and-bustles-fashionable-victorian-underwear\">[5]</a> “코르셋의 소멸=곧바로 여성 해방 완성”처럼 형태 변화와 사회 변화 사이의 인과를 단순화하지 않습니다. 비교할 유물의 연대·지역·재료·소장처를 적고, 특정 시대의 유물을 현대 젠더리스 디자인과 동일한 의도로 만들어졌다고 단정하지 마세요.</p>\n<blockquote><p><strong>학생용 결론 틀</strong><br>책의 [쪽·대목]을 읽고 옷의 [형태 요소]를 단순한 장식이 아니라 [사용·표현의 관점]에서 보게 되었다. 내가 비교한 [대상]에서는 [실제 관찰]이 달랐다. 이를 바탕으로 [디자인 변경]을 제안했지만, [확인하지 않은 사용 조건·사람들의 반응]까지 설명하지는 못한다. 다음에는 [추가로 확인할 자료]로 이 해석을 점검하고 싶다.</p></blockquote>\n<h2>4. 기술 경로: 《디지털 클로딩 개론》</h2>\n<p><strong>고형석 지음, 교문사, 2015년 8월 20일 발행. ISBN 9788936315153.</strong> 공개 목차에는 디지털 클로딩의 작업 흐름, 바디 생성·측정, 패널 구성, 의복 시뮬레이션 등이 있으며 실습은 DC Suite 사용을 전제합니다.<a href=\"https://www.kobic.net/book/bookInfo/view.do?isbn=9788936315153\">[7]</a> 한국의류학회 신간 소개에서도 이 책의 3D 의상 구현 범위를 확인할 수 있습니다.<a href=\"https://www.ksct.or.kr/publ/pdf/18.pdf\">[3]</a></p>\n<p><strong>난이도 주의:</strong> 고1 모두에게 가벼운 첫 독서로 권하는 책은 아닙니다. 2015년 기술서를 현재 CLO 사용 설명서로 소개하거나, AI·웨어러블 헬스케어 전체를 다룬다고 확장하지 않습니다. 책을 구할 수 있고 기술에 관심이 있다면 작업 흐름을 설명하는 부분부터 읽되, 과제가 완독을 요구하면 분량과 난이도를 보고 다른 후보를 고르세요. 일부만 읽었다면 그 범위를 그대로 기록합니다.</p>\n<p><strong>고1용 질문:</strong> “가상 의상 화면으로 확인할 수 있는 것과 실물에서 확인해야 할 것은 무엇일까?” ‘스케치 → 패턴 → 가상 검토 → 실물 확인’의 흐름을 직접 읽은 내용에 맞춰 그려 보세요. 같은 치마나 상의를 가정하고, 화면에서 볼 형태·색 배치와 실제로 확인할 촉감·압박감·봉제 상태를 구분한 체크리스트를 작성할 수 있습니다. 이것은 활동 제안이지 책의 실습을 수행했다는 결과가 아닙니다.</p>\n<p>허용된 도구가 없다면 종이 스케치와 문헌 비교로 끝내도 됩니다. 프로그램을 쓰려면 학교 이용 권한과 장비를 먼저 확인하고, 책 속 도구와 실제 이용 도구가 다르면 구분해서 적습니다. 자신의 체형·신체 사진이나 친구의 건강정보를 업로드하는 활동은 이 과제에 필요하지 않습니다.</p>\n<p><strong>핵심 한계:</strong> 화면에서 그럴듯한 옷이 곧바로 실제 맞음새·내구성·건강 측정 기능을 검증한 옷은 아닙니다. 소재·인체·동작 조건을 입력하고 실물과 대조하지 않았다면 ‘설계 검토 가능성을 정리했다’고 씁니다. 실물 샘플 몇 벌을 대체했는지 조사하지 않고 “폐기물이 몇 % 감소했다”고 만들지 않습니다. 센서가 들어간 스마트 의류와 가상 의상 시뮬레이션도 서로 다른 탐구 대상입니다.</p>\n<h2>5. 네 단계로 쓰기: 읽은 근거에서 디자인 판단까지</h2>\n<ol><li><strong>질문:</strong> 원래의 관심과 읽은 대목을 연결합니다. “패션이 좋아서 읽었다”에 그치지 말고, “주머니가 얕은 이유가 궁금해 해당 항목을 읽었다”처럼 출발점을 좁힙니다. 실제로 배우지 않은 교과 단원을 동기처럼 꾸미지 않습니다.</li><li><strong>읽기와 탐구:</strong> 저자·판본·쪽수, 짧은 인용, 자기 말로 쓴 요약, 나의 질문을 나눠 기록합니다. 필요한 줄거리·주장 요약을 먼저 제시하고 비교표·스케치·자료 분석으로 이어 갑니다. 책의 주장과 자신의 관찰이 어느 문장인지 드러내세요.</li><li><strong>한계와 수정:</strong> 단순히 “비싸다”를 붙이기보다 무엇을 확인하지 못했는지 씁니다. 실제 가격·내구성을 조사하지 않았다면 바이오 소재가 모두 비싸고 약하다고 단정하지 않습니다. 종이와 원단의 차이, 유물의 대표성, 가상 화면과 실물 차이 중 자신의 방법에 해당하는 한계를 고릅니다.</li><li><strong>결론과 다음 질문:</strong> 질문에 대한 제한된 답과 생각의 변화를 먼저 쓰고, 후속 활동은 마지막에 분리합니다. 다음 학년 과목이나 거창한 프로토타입을 필수로 약속할 필요는 없습니다. 학교에서 실제로 할 수 있는 다음 확인 한 가지만 남깁니다.</li></ol>\n<p>처음에는 임시 서론을 써도 됩니다. 본론·결론이 정리된 뒤 목적·방법·범위가 맞도록 서론을 고치는 것은 유용한 순서이지, 모든 보고서가 반드시 따라야 하는 법칙은 아닙니다. 학교가 감상 중심 글을 요구하면 관찰 실험을 덧붙이기보다 구체적인 대목과 자신의 경험·생각 변화를 충분히 설명하세요.</p>\n<h2>6. 짧은 일정과 실제 활동 기록</h2>\n<p><strong>일주일을 잡을 수 있을 때의 제안:</strong> 1일차에는 과제와 도서 접근성을 확인하고, 2~3일차에는 책을 읽으며 쪽수와 질문을 적습니다. 4일차에는 비교 대상·자료를 정리하고, 5일차에는 표나 스케치를 만듭니다. 6일차에는 결론·감상과 초안을 쓰고, 7일차에는 인용·수치·과장 표현을 고칩니다. 완독 속도나 책 분량에 따라 더 시간이 필요할 수 있습니다.</p>\n<p>학교생활기록부 문장을 학생이 교사 대신 완성하는 것이 목적은 아닙니다. 특히 동아리 활동 기록과 교과 세특을 같은 항목으로 단정하지 마세요. 교사가 확인할 수 있도록 <strong>읽은 범위·본인의 행동·산출물·수정 과정</strong>을 사실대로 정리하면 됩니다.</p>\n<blockquote><p><strong>학생의 활동 사실 정리용 틀</strong><br>[저자]의 《[정확한 제목]》 중 [실제 읽은 장·쪽]을 읽고 [질문]을 정했다. [대상·자료]를 [실제로 한 방법]으로 비교해 [표·스케치·비평]를 작성했다. 초안의 [원래 표현]을 [수정 표현]으로 고쳤으며, 그 이유는 [읽거나 관찰한 근거]이다. [측정·조사하지 않은 사항]은 확인하지 못했고, [다음 활동]은 아직 계획 단계다.</p></blockquote>\n<p>발표나 소프트웨어 실습을 하지 않았다면 완료형으로 적지 않습니다. 친구와 함께했다면 내 역할과 공동 작업을 나누세요. “융합 역량을 입증함” 대신 실제 만든 표·고친 스케치·바꾼 판단을 보여주는 편이 읽는 사람에게 명확합니다.</p>\n<p>보고서 전체 구성이 막힌다면 <a href=\"./research-report-first-time-writing-guide.html\">탐구보고서 대표 작성 가이드</a>, 감상문을 쓰려면 <a href=\"./researcher-career-reading-three-books-reflection.html\">구체적인 대목에서 생각 변화를 쓰는 독서 가이드</a>를 참고하세요. 활동을 정리할 때는 <a href=\"./student-record-natural-connection.html\">교사가 확인할 수 있는 활동 사실 정리법</a>과 함께 점검할 수 있습니다.</p>\n<h2>7. 확인한 자료와 이 글의 범위</h2>\n<p>확인일: 2026년 11월 10일. 도서 정보와 공개 소개·목차, 보충 자료의 해당 내용을 확인했습니다. 책 전체 정독이나 실제 학생 실험을 수행한 기록은 아닙니다. 질문·종이 배치 모델·일정·문장 틀은 편집팀의 교육용 제안입니다. 학교 과제의 기준을 대신하거나 수행평가·입시 결과를 보장하지 않습니다. 도서의 대출·판매 가능 여부와 도구 이용 조건은 이용 시점에 별도로 확인하세요.</p>\n<ul><li>[1] <a href=\"https://kobic.net/book/bookInfo/view.do?isbn=9791171530526\" target=\"_blank\" rel=\"noopener noreferrer\">KOBIC — 내 몸과 지구를 살리는 옷 사용 설명서</a></li><li>[2] <a href=\"https://m.yes24.com/goods/detail/30746201\" target=\"_blank\" rel=\"noopener noreferrer\">중앙북스 제공 도서 소개·목차(예스24) — 옷장 속 인문학</a></li><li>[3] <a href=\"https://www.ksct.or.kr/publ/pdf/18.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">한국의류학회 2016년 제1호 뉴스레터 — 디지털 클로딩 개론 신간 소개</a></li><li>[4] <a href=\"https://circulareconomy.europa.eu/platform/sites/default/files/2025-09/Sustainability-and-Circularity-in-the-Textile-Value-Chain.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">UNEP — Sustainability and Circularity in the Textile Value Chain: Global Stocktaking (2020, EU 공개 사본)</a></li><li>[5] <a href=\"https://www.vam.ac.uk/articles/corsets-crinolines-and-bustles-fashionable-victorian-underwear\" target=\"_blank\" rel=\"noopener noreferrer\">V&amp;A — Corsets, crinolines and bustles: fashionable Victorian underwear</a></li><li>[6] <a href=\"https://www.penguinrandomhouse.com/books/554229/fashionopolis-by-dana-thomas\" target=\"_blank\" rel=\"noopener noreferrer\">Penguin Random House — Fashionopolis by Dana Thomas</a></li><li>[7] <a href=\"https://www.kobic.net/book/bookInfo/view.do?isbn=9788936315153\" target=\"_blank\" rel=\"noopener noreferrer\">KOBIC — 디지털 클로딩 개론 서지·출판사 소개·목차</a></li></ul>\n"
+},
+{
+  "id": 53,
+  "title": "2028 대입 변경사항 총정리: 내신·수능·대학별 전형 확인법",
+  "slug": "2028-admission-changes-csat-school-record-guide",
+  "categorySlug": "credit-system",
+  "categorySlugs": [
+    "credit-system"
+  ],
+  "grade": "2028학년도 대입 준비생",
+  "subject": "전 과목·대입 제도",
+  "track": "전 계열",
+  "summary": "통합형 수능·내신 5등급과 대학별 전형을 나눠 확인하는 2028 대입 출발 가이드. 적용 학년도, 성취도·석차등급 차이, 공식 문서 확인 순서와 학생용 확인표를 안내합니다.",
+  "subtitle": "2026년 고1의 지원 학년도부터 확인하고, 공통 제도와 대학별 조건을 구분하세요",
+  "thumbnail": "assets/images/2028-admission-common-and-university-rules.webp",
+  "fullArticle": true,
+  "ads": false,
+  "tableOfContents": [
+    "지원 학년도와 현재 학년 맞추기",
+    "통합형 수능의 변화와 예외",
+    "내신 성취도와 석차등급",
+    "국가 제도와 대학별 전형",
+    "학생용 확인표",
+    "자주 묻는 질문",
+    "공식 근거와 확인 범위"
+  ],
+  "keyPoints": [
+    "2028학년도와 2027년 수능 시행연도를 구분",
+    "내신 5등급과 수능 성적 체계를 혼동하지 않기",
+    "대학·모집단위·전형별 최신 문서로 실제 조건 확인"
+  ],
+  "reportFlow": [
+    "지원 학년도 확인",
+    "공통 제도 분리",
+    "학교 편성·학습 조건 확인",
+    "대학별 반영 문서 대조",
+    "미확인 항목을 상담 질문으로 정리"
+  ],
+  "studentRecordPoints": [
+    "보고서 제출과 교사 관찰·기재를 구분",
+    "실제 수업의 질문·자료·수정 과정 기록",
+    "입시 성과나 자동 기재를 보장하지 않기"
+  ],
+  "interviewQuestions": [
+    "자신의 지원 학년도를 어떻게 확인했나요?",
+    "과목 선택의 근거는 무엇인가요?",
+    "국가 제도와 대학 기준은 어떻게 다른가요?"
+  ],
+  "followUpQuestions": [
+    "원문 수정 공지를 확인했나요?",
+    "반영·권장·필수의 표현이 구분돼 있나요?",
+    "학교에서 가능한 과목인지 확인했나요?"
+  ],
+  "avoidExpressions": [
+    "모든 대학의 세특 반영비율을 동일하게 단정",
+    "내신과 수능을 모두 5등급으로 설명",
+    "미확인 모집정원을 최신 확정값으로 소개"
+  ],
+  "tags": [
+    "2028 대입",
+    "내신 5등급",
+    "통합형 수능",
+    "대학별 전형",
+    "공식 자료 확인"
+  ],
+  "relatedPostSlugs": [
+    "high-school-credit-system-elective-subject-guide",
+    "career-elective-subject-types-assessment-guide",
+    "student-record-natural-connection"
+  ],
+  "authorName": "탐구가이드 편집팀",
+  "status": "published",
+  "featured": true,
+  "publishedAt": "2026-11-10",
+  "updatedAt": "2026-11-10",
+  "content": "<figure><img src=\"../assets/images/2028-admission-common-and-university-rules.webp\" alt=\"2028학년도 달력 옆에서 국가 공통 제도와 대학별 전형 문서를 따로 확인하는 그림\" width=\"1200\" height=\"675\" decoding=\"async\" style=\"display:block;width:100%;height:auto;border-radius:16px\"><figcaption>국가 공통 제도가 같아도 대학·전형별 반영 방법까지 같아지는 것은 아닙니다.</figcaption></figure>\n<p><strong>2028 대입의 핵심 변화는 선택과목 없는 통합형 수능과 고교 내신 5등급 체제입니다.</strong> 다만 내신의 성취도·석차등급, 수능 성적, 대학별 전형 기준은 서로 다른 정보입니다. 같은 ‘5등급’이라는 말로 모두 설명하거나, 특정 과목을 고르면 입시에 유리하다고 단정하면 안 됩니다.<a href=\"https://www.moe.go.kr/boardCnts/fileDown.do?m=0204&amp;s=moe&amp;fileSeq=c6771be19593d96923d194f9281f7c47\">[1]</a><a href=\"https://moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=a5a452cb76fa90642abfd9feb7f2a798\">[2]</a></p>\n<p>이 글은 2028학년도 대입을 준비하는 학생·학부모가 공통 제도와 대학별 확인사항을 나누는 출발점입니다. <strong>확인 기준일은 2026년 11월 10일</strong>이며, 최초 개편 확정 발표일인 2023년 12월 27일과 다릅니다.<a href=\"https://www.moe.go.kr/boardCnts/fileDown.do?m=0204&amp;s=moe&amp;fileSeq=c6771be19593d96923d194f9281f7c47\">[1]</a> 대학별 모집단위·전형을 모두 비교한 자료나 개인별 합격 예측이 아닙니다.</p>\n<h2>1. 먼저 ‘2028학년도’와 현재 학년을 맞춰 보세요</h2>\n<p>2028학년도는 대학 입학 학년도입니다. 2028학년도 수능은 <strong>2027년 11월 18일</strong>에 시행되고 성적은 <strong>2027년 12월 10일</strong>에 통지될 예정입니다.<a href=\"https://moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=a5a452cb76fa90642abfd9feb7f2a798\">[2]</a> 시험을 보는 해와 대학에 입학하는 해를 구분해야 합니다.</p>\n<p>일반적인 3년제 고교 진급을 기준으로 2025년 고1 입학생은 2026년 고2, 2027년 고3을 거쳐 2028학년도 대입을 준비합니다. 반면 <strong>2026년 현재 고1의 일반적인 현역 대입 대상은 2029학년도</strong>입니다. 교육부의 2026년 8월 18일 발표도 당시 고1이 응시할 시험을 2029학년도 수능으로 안내합니다.<a href=\"https://www.moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=7ae7af8fd5e2a843e078b5e5171d1f81\">[5]</a> 조기졸업·학적 변동·재수 등은 따로 확인하세요.</p>\n<p>그렇다고 현재 고1에게 2028 개편이 무관한 것은 아닙니다. 교육부는 2029학년도에도 2028학년도부터 바뀐 수능 체제를 동일하게 적용한다고 설명합니다.<a href=\"https://www.moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=7ae7af8fd5e2a843e078b5e5171d1f81\">[5]</a> 다만 지원 대학의 전형은 자신의 지원 학년도로 다시 찾아야 합니다. 오래된 자료의 ‘현재 고1’을 오늘의 고1로 바꿔 읽지 마세요.</p>\n<h2>2. 수능은 무엇이 달라지고 무엇은 남을까요?</h2>\n<ul><li><strong>국어:</strong> 화법과 언어·독서와 작문·문학을 바탕으로 공통 출제합니다.<a href=\"https://www.moe.go.kr/boardCnts/fileDown.do?m=0204&amp;s=moe&amp;fileSeq=c6771be19593d96923d194f9281f7c47\">[1]</a><a href=\"https://moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=a5a452cb76fa90642abfd9feb7f2a798\">[2]</a></li><li><strong>수학:</strong> 대수·미적분Ⅰ·확률과 통계가 공통 출제과목입니다. 미적분Ⅱ·기하가 수능 출제에 포함되지 않는다는 뜻이지, 고교 과목이 없어지거나 대학별 이수 판단에서도 의미가 없어진다는 뜻은 아닙니다.<a href=\"https://www.moe.go.kr/boardCnts/fileDown.do?m=0204&amp;s=moe&amp;fileSeq=c6771be19593d96923d194f9281f7c47\">[1]</a><a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\">[6]</a></li><li><strong>사회·과학탐구:</strong> 통합사회·통합과학 체제로 바뀝니다. 사회·과학탐구 영역을 선택한 수험생은 두 영역에 모두 응시해야 합니다.<a href=\"https://moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=a5a452cb76fa90642abfd9feb7f2a798\">[2]</a></li><li><strong>응시 영역의 예외:</strong> 한국사는 필수이며, 한국사 외 영역은 일부 또는 전부를 선택해 응시하는 구조입니다. 제2외국어/한문은 9개 과목 중 하나를 고르는 선택이 남습니다. ‘선택과목 폐지’를 모든 영역 의무응시나 모든 선택의 폐지로 확대하지 마세요.<a href=\"https://moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=a5a452cb76fa90642abfd9feb7f2a798\">[2]</a></li></ul>\n<p><strong>수능도 5등급으로 바뀌는 것은 아닙니다.</strong> 내신 5등급 전환과 수능 성적 체계는 별개입니다. 수능의 영어·한국사·제2외국어/한문은 절대평가 등급을, 이외 영역·과목은 상대평가 성적을 제공하는 구조를 구분해 확인하세요.<a href=\"https://moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=a5a452cb76fa90642abfd9feb7f2a798\">[2]</a> 학교 과목 선택은 수능 출제범위 하나만이 아니라 학습 준비와 해당 대학 기준을 함께 보고 결정합니다.</p>\n<h2>3. 내신에서는 성취도와 석차등급을 나눠 읽으세요</h2>\n<p>2025년 고교 입학생부터 적용되는 체제에서는 원칙적으로 성취도 A~E와 석차등급 1~5를 함께 기재합니다.<a href=\"https://www.moe.go.kr/boardCnts/fileDown.do?m=0204&amp;s=moe&amp;fileSeq=c6771be19593d96923d194f9281f7c47\">[1]</a><a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a> <strong>A는 성취수준에 관한 정보이고, 1등급은 집단 내 상대적 위치에 관한 정보</strong>입니다. A를 받았으니 자동으로 1등급이라고 바꿔 읽을 수 없습니다.</p>\n<p>5등급의 구간 비율은 순서대로 10%·24%·32%·24%·10%이며, 누적 비율은 10%·34%·66%·90%·100%입니다.<a href=\"https://www.moe.go.kr/boardCnts/fileDown.do?m=0204&amp;s=moe&amp;fileSeq=c6771be19593d96923d194f9281f7c47\">[1]</a> 이는 성취도 A~E의 분포나 대학 합격확률이 아닙니다. 실제 석차 산출은 동점자와 수강 인원 등 관련 지침을 함께 적용하므로 ‘우리 반 인원×10%’만으로 특정 학생의 등급을 확정하지 않습니다.</p>\n<p>모든 과목의 표기가 같지는 않습니다. 사회·과학의 정해진 융합선택 9과목은 석차등급을 산출하지 않으며, 과학탐구실험·체육·예술·교양 등에도 별도 표기 방식이 있습니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a> 과목 유형별 설명은 <a href=\"./career-elective-subject-types-assessment-guide.html\">진로선택과목과 평가 정보 안내</a>에서 확인하세요. 석차가 없다는 이유로 평가나 대학 반영 자체가 없다고 생각하면 안 됩니다.</p>\n<h2>4. 국가 공통 제도와 대학별 전형을 분리하세요</h2>\n<p>대교협은 2026년 4월 30일, 194개 회원대학이 제출한 2028학년도 대학입학전형시행계획을 취합해 공표했습니다.<a href=\"https://kcue.or.kr/_upload/news/2026/04/30/application_3eb96f4ffbc6cf20a16a3396bd07fe8b.pdf\">[3]</a> 이 발표가 모든 대학·학과의 평가 방식이 같다는 뜻은 아닙니다. 발표 당시의 모집 통계도 이후 수정 가능성을 확인하지 않고 ‘현재 최종 정원’이라고 재사용하지 않습니다.</p>\n<p>대학입학전형 <strong>기본사항</strong>은 공통 운영 원칙, 대학별 <strong>시행계획</strong>은 해당 대학의 선발 계획입니다. 실제 지원 단계에는 모집요강과 변경 공지도 함께 봅니다. 이번에 확인한 2028 기본사항 첨부에는 2026년 7월 31일 개정 표시가 있습니다. 시행계획은 원칙적으로 공표 후 변경이 제한되지만 정해진 사유와 절차에 따른 수정이 가능하므로 최초 발표본만 저장하고 끝내지 마세요.<a href=\"https://www.kcue.or.kr/_upload/news/2026/10/20/application_ab1942705812e69b5fd5bd8277987ab3.pdf\">[4]</a></p>\n<ol><li><strong>지원 학년도:</strong> 2028학년도 문서인지 먼저 확인합니다.</li><li><strong>대학·캠퍼스·모집단위·전형:</strong> 같은 대학 안에서도 조건이 다를 수 있으므로 문서의 정확한 표를 찾습니다.</li><li><strong>학생부:</strong> 반영 교과·과목, 성취도·석차등급 환산, 서류평가 유무와 방법을 확인합니다.</li><li><strong>수능·면접:</strong> 반영 영역·비율·최저학력기준·가감산점·면접 방식 중 자신의 전형에 해당하는 항목을 기록합니다.</li><li><strong>문서 버전:</strong> 공지일·수정일·파일명·해당 쪽수와 확인일을 함께 남깁니다.</li></ol>\n<p>위 목록은 공식 기본사항의 확인 항목을 참고해 편집팀이 만든 점검 순서입니다.<a href=\"https://www.kcue.or.kr/_upload/news/2026/10/20/application_ab1942705812e69b5fd5bd8277987ab3.pdf\">[4]</a> 특정 대학이 세특을 일률적으로 몇 % 반영한다거나 모든 전형에서 특정 과목을 필수로 요구한다는 뜻은 아닙니다. 권장·필수·가산점·평가 참고는 같은 표현이 아니므로 해당 대학의 문구를 그대로 구분해 기록하세요.</p>\n<h2>5. 학생이 지금 만들 수 있는 확인표</h2>\n<p>정보를 더 많이 모으기 전에 ‘공통 제도 / 우리 학교 운영 / 지원 대학 기준’ 세 칸을 만들어 보세요. 아래는 실제 대학의 전형표가 아닌 <strong>교육용 확인표 예시</strong>입니다.</p>\n<ul><li><strong>질문:</strong> 미적분Ⅱ를 선택할까? → 공통 제도 칸에는 ‘2028 수능 출제에 미포함’, 학교 칸에는 ‘개설 학기·선수 학습·시간표 확인 필요’, 대학 칸에는 ‘지원 학과의 이수·권장·반영 기준 미확인’이라고 나눠 적습니다.</li><li><strong>질문:</strong> 탐구보고서를 제출하면 학생부에 들어갈까? → 제출 사실과 교사가 수업·평가에서 관찰한 학습 과정은 다릅니다. 학생부 기재요령과 학교 안내에 맞춰 확인하고, 자동 반영이라고 쓰지 않습니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a></li><li><strong>확인이 끝나지 않은 칸:</strong> 추측으로 채우지 말고 ‘미확인’으로 남긴 뒤 담당교사 상담이나 공식 문서 확인 과제로 바꿉니다.</li></ul>\n<p>과목을 고르는 실제 순서는 <a href=\"./high-school-credit-system-elective-subject-guide.html\">고교학점제 선택과목 가이드</a>, 수업 탐구를 시작할 때는 <a href=\"./research-report-first-time-writing-guide.html\">탐구보고서 대표 작성 가이드</a>를 함께 읽으세요. 수업 과정의 사실을 정리하는 방법은 <a href=\"./student-record-natural-connection.html\">교사가 확인할 수 있는 활동 사실 정리법</a>으로 이어집니다.</p>\n<h2>6. 자주 묻는 질문</h2>\n<h3>2026년 고1도 2028학년도 모집요강으로 준비하면 되나요?</h3><p>일반적인 진급 기준으로는 2029학년도 지원 대상입니다. 공통 개편 방향은 참고하되 대학별 기준은 본인의 지원 학년도로 확인해야 합니다.<a href=\"https://www.moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=7ae7af8fd5e2a843e078b5e5171d1f81\">[5]</a></p>\n<h3>수능에 안 나오면 기하·미적분Ⅱ를 안 들어도 되나요?</h3><p>수능 출제범위와 학교 교육과정·대학별 반영 기준은 다릅니다. 해당 과목의 학습 필요, 수강 가능성, 지원 대학의 실제 안내를 함께 확인한 뒤 결정하세요.<a href=\"https://www.moe.go.kr/boardCnts/fileDown.do?m=0204&amp;s=moe&amp;fileSeq=c6771be19593d96923d194f9281f7c47\">[1]</a><a href=\"https://www.kcue.or.kr/_upload/news/2026/10/20/application_ab1942705812e69b5fd5bd8277987ab3.pdf\">[4]</a><a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\">[6]</a></p>\n<h3>내신 5등급이면 1등급 학생의 대학 평가도 같나요?</h3><p>같은 등급이라는 정보만으로 대학별 환산이나 서류평가 결과까지 같다고 판단할 수 없습니다. 해당 대학·전형의 학생부 반영방법을 확인해야 합니다.<a href=\"https://www.kcue.or.kr/_upload/news/2026/10/20/application_ab1942705812e69b5fd5bd8277987ab3.pdf\">[4]</a></p>\n<h2>7. 공식 근거와 확인 범위</h2>\n<p>확인일: 2026년 11월 10일. 국가 공통 개편 자료·수능 안내·대교협 공통 자료·교육과정·학생부 기재요령의 해당 부분을 확인했습니다. 대학별 수정계획·최종 모집요강을 전수 검증한 것은 아닙니다. 발표일과 적용 학년도를 구분했고, 정책 제안·입법예고를 확정된 전국 공통 규칙으로 추가하지 않았습니다. 확인표와 상담 순서는 편집팀의 학습용 제안이며, 성적·합격·검색 순위를 보장하지 않습니다.</p>\n<ul><li>[1] <a href=\"https://www.moe.go.kr/boardCnts/fileDown.do?m=0204&amp;s=moe&amp;fileSeq=c6771be19593d96923d194f9281f7c47\" target=\"_blank\" rel=\"noopener noreferrer\">교육부 — 2028 대학입시제도 개편 확정안 (2023-12-27, 별첨 HWP)</a></li><li>[2] <a href=\"https://moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=a5a452cb76fa90642abfd9feb7f2a798\" target=\"_blank\" rel=\"noopener noreferrer\">교육부 — 2028학년도 수능 시행일·시험영역 안내 (2025-06-01, HWPX)</a></li><li>[3] <a href=\"https://kcue.or.kr/_upload/news/2026/04/30/application_3eb96f4ffbc6cf20a16a3396bd07fe8b.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">대교협 — 2028학년도 대학입학전형시행계획 공표 (2026-04-30, PDF)</a></li><li>[4] <a href=\"https://www.kcue.or.kr/_upload/news/2026/10/20/application_ab1942705812e69b5fd5bd8277987ab3.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">대교협 — 2028학년도 대학입학전형기본사항 (개정 2026-07-31, PDF)</a></li><li>[5] <a href=\"https://www.moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=7ae7af8fd5e2a843e078b5e5171d1f81\" target=\"_blank\" rel=\"noopener noreferrer\">교육부 — 2029학년도 수능 시행일 안내 (2026-08-18, HWPX)</a></li><li>[6] <a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\" target=\"_blank\" rel=\"noopener noreferrer\">국가교육위원회 고시 제2026-1호 일부개정 포함 초·중등학교 교육과정 총론</a></li><li>[7] <a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\" target=\"_blank\" rel=\"noopener noreferrer\">2026학년도 학교생활기록부 기재요령 고등학교</a></li></ul>\n"
+},
+{
+  "id": 54,
+  "title": "고교학점제 선택과목 가이드: 일반·진로·융합선택과 학교 편성표 읽기",
+  "slug": "high-school-credit-system-elective-subject-guide",
+  "categorySlug": "credit-system",
+  "categorySlugs": [
+    "credit-system"
+  ],
+  "grade": "중3·고1·고2",
+  "subject": "전 과목·2022 개정 교육과정",
+  "track": "전 계열",
+  "summary": "일반·진로·융합선택의 목적과 실제 과목명을 구분하고, 학교 교육과정표의 대상·시기·선택 묶음·학점·평가를 읽는 법. 진로 미정 학생도 활용할 상담 질문과 수정 사례를 제공합니다.",
+  "subtitle": "전공에 좋아 보이는 이름보다 개설 조건과 학습 준비를 먼저 확인하세요",
+  "thumbnail": "assets/images/elective-subject-school-plan-choices.webp",
+  "fullArticle": true,
+  "ads": false,
+  "tableOfContents": [
+    "세 가지 선택유형의 목적",
+    "2022 개정의 정확한 과목명",
+    "학교 교육과정표의 다섯 칸",
+    "다음에 배울 내용으로 후보 좁히기",
+    "이수 조건과 평가 구별",
+    "자주 묻는 질문",
+    "공식 근거와 확인 범위"
+  ],
+  "keyPoints": [
+    "교과별 일반·진로·융합선택을 실제 과목표로 구분",
+    "학교 편성표와 국가 과목표를 구분",
+    "준비도·수강 조건·대학 문서를 함께 확인"
+  ],
+  "reportFlow": [
+    "대상 입학연도 확인",
+    "개설 학년·학기 확인",
+    "선택 묶음·학점·위계 확인",
+    "평가·대안 확인",
+    "배울 내용과 미확인 항목 기록"
+  ],
+  "studentRecordPoints": [
+    "과목 선택의 이유를 실제 학습 관심과 연결",
+    "수강 사실과 수업의 학습 과정을 구분",
+    "학생부 기록을 대신 만들어 내지 않기"
+  ],
+  "interviewQuestions": [
+    "이 과목에서 배우려는 내용은 무엇인가요?",
+    "학교의 개설 조건을 어떻게 확인했나요?",
+    "다른 후보와 어떤 기준으로 비교했나요?"
+  ],
+  "followUpQuestions": [
+    "폐강되면 어떤 대안이 있나요?",
+    "대학 안내가 권장인지 필수인지 확인했나요?",
+    "학교 변경 기한을 확인했나요?"
+  ],
+  "avoidExpressions": [
+    "국가 과목표의 모든 과목이 학교에서 개설된다고 단정",
+    "특정 전공이면 과목을 전부 골라야 한다는 표현",
+    "융합선택은 모두 무석차라고 설명"
+  ],
+  "tags": [
+    "고교학점제 선택과목",
+    "일반선택",
+    "진로선택",
+    "융합선택",
+    "학교 교육과정표"
+  ],
+  "relatedPostSlugs": [
+    "career-elective-subject-types-assessment-guide",
+    "2028-admission-changes-csat-school-record-guide",
+    "student-record-course-selection-consistency-specificity"
+  ],
+  "authorName": "탐구가이드 편집팀",
+  "status": "published",
+  "featured": true,
+  "publishedAt": "2026-11-10",
+  "updatedAt": "2026-11-10",
+  "content": "<figure><img src=\"../assets/images/elective-subject-school-plan-choices.webp\" alt=\"우리 학교 교육과정표에서 일반·진로·융합선택과 개설 여부·학습 준비를 함께 확인하는 그림\" width=\"1200\" height=\"675\" decoding=\"async\" style=\"display:block;width:100%;height:auto;border-radius:16px\"><figcaption>과목 이름을 모으기 전에 우리 학교의 실제 개설 학년·학기와 선택 조건부터 확인하세요.</figcaption></figure>\n<p><strong>고교학점제 선택과목은 2022 개정 교육과정에서 일반선택·진로선택·융합선택으로 나뉩니다.</strong><a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\">[6]</a> 과목 선택은 ‘전공에 좋아 보이는 이름’을 고르는 일이 아니라, 학습 목적·학교의 실제 개설·자신의 준비·지원 대학 기준을 함께 맞추는 과정입니다. 국가 과목표에 있는 과목을 모든 학교에서 수강할 수 있다는 뜻은 아닙니다.</p>\n<p>이 글은 2022 개정 교육과정의 <strong>일반고 보통교과 중심 안내</strong>입니다. 2026년 11월 10일 기준 고1·고2에 적용되는 교육과정과 현행 일부개정 고시를 확인했습니다.<a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\">[6]</a> 특성화고 전문교과, 특수교육, 학교별 별도 편성은 해당 학교 안내를 따로 봐야 합니다. 2028학년도 지원 여부는 현재 학년과 구분해 <a href=\"./2028-admission-changes-csat-school-record-guide.html\">2028 대입 변경사항 가이드</a>에서 확인하세요.</p>\n<h2>1. 일반·진로·융합선택은 무엇이 다른가요?</h2>\n<ul><li><strong>일반선택:</strong> 교과의 주요 학습 내용을 이해하고 탐구하는 데 초점을 둡니다.</li><li><strong>진로선택:</strong> 교과 심화학습과 진로 관련 학습을 지원합니다.</li><li><strong>융합선택:</strong> 교과 내·교과 간 주제를 연결하거나 실생활 체험·응용으로 확장합니다. 반드시 서로 다른 두 교과를 붙여야만 융합이 되는 것은 아닙니다.<a href=\"https://www.moe.go.kr/boardCnts/fileDown.do?m=0204&amp;s=moe&amp;fileSeq=add6e23eb7da4c5b3100c4dcfdb3762c\">[9]</a></li></ul>\n<p>유형 이름만으로 난이도나 성적 산출을 확정하지 마세요. 진로선택을 많이 들으면 무조건 유리하거나, 융합선택이면 모두 석차등급이 없다는 식의 설명은 정확하지 않습니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a> 과목별 학습 내용, 평가계획, 실제 학교 편성을 함께 읽어야 합니다.</p>\n<h2>2. 과목명은 2022 개정 표로 확인하세요</h2>\n<p>아래는 현행 교육과정 총론의 보통교과 과목표에서 확인한 일부 예시입니다.<a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\">[6]</a> 계열별 필수 조합이나 추천 순위가 아니며, 과목명에 ‘과학’이나 ‘탐구’가 들어간다는 이유만으로 교과·유형을 추측하지 않습니다.</p>\n<ul><li><strong>수학:</strong> 일반선택은 대수·미적분Ⅰ·확률과 통계, 진로선택에는 기하·미적분Ⅱ·경제 수학·인공지능 수학, 융합선택에는 수학과 문화·실용 통계·수학과제 탐구가 있습니다.</li><li><strong>사회:</strong> 사회와 문화·세계사 등은 일반선택, 정치·법과 사회·경제 등은 진로선택, 사회문제 탐구·금융과 경제생활 등은 융합선택입니다.</li><li><strong>과학:</strong> 물리학·화학·생명과학·지구과학은 일반선택, 역학과 에너지·물질과 에너지·세포와 물질대사·생물의 유전 등은 진로선택, 과학의 역사와 문화·기후변화와 환경생태·융합과학 탐구는 융합선택입니다.</li><li><strong>정보:</strong> 정보는 일반선택, 인공지능 기초·데이터 과학은 진로선택, 소프트웨어와 생활은 융합선택입니다.<a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\">[6]</a></li></ul>\n<p>예를 들어 ‘인공지능 수학’과 ‘인공지능 기초’는 다른 과목이고, ‘데이터 과학’은 정보 관련 진로선택입니다. ‘수학과제 탐구’를 예전 교육과정의 설명만 보고 현재의 진로선택으로 옮겨 적지 마세요.<a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\">[6]</a> 예전 자료의 과목명과 새 과목명을 짐작으로 일대일 치환하지 말고 적용 교육과정부터 확인합니다.</p>\n<h2>3. 학교 교육과정표는 다섯 칸으로 읽으세요</h2>\n<p>교육부 고시 과목표와 <a href=\"https://hscredit.kr/curriculum/subjects\">고교학점제 공식 과목선택 안내</a>는 전체 구조를 이해하는 출발점입니다.<a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\">[6]</a><a href=\"https://hscredit.kr/curriculum/subjects\">[10]</a> 실제 선택은 우리 학교가 해당 입학연도 학생에게 배포한 편성표·수강신청 안내·과목 소개서를 함께 보며 확인하세요. 아래는 편집팀이 만든 상담용 확인 순서입니다.</p>\n<ol><li><strong>대상:</strong> 내 입학연도에 적용되는 자료인지 봅니다. 학교가 여러 학년용 편성표를 함께 올렸다면 파일 제목만 보지 말고 대상부터 찾습니다.</li><li><strong>시기:</strong> 개설 학년과 학기, 선택·변경 신청 기한을 적습니다. 계획표의 과목이 실제 개설 확정인지도 확인합니다.</li><li><strong>선택 묶음:</strong> 같은 시간대에 놓인 과목이나 선택 개수 제한이 있는지 봅니다. 목록에 모두 있다고 전부 들을 수 있는 것은 아닙니다.</li><li><strong>학점·학습 순서:</strong> 편성 학점, 선수 학습, 과목 간 위계와 학교의 권장 이수 순서를 확인합니다. 유형 세 개를 단순한 학년 순서로 읽지 않습니다.</li><li><strong>평가·대안:</strong> 평가계획과 성적 산출 방식, 폐강·시간표 충돌 때의 대안을 교사에게 묻습니다. 공동교육과정·온라인학교의 신청 자격과 운영 조건도 개별 확인합니다.</li></ol>\n<p>일반고 등의 현행 편성 기준표는 교과 174학점과 창의적 체험활동 18학점, 총 192학점을 제시합니다.<a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\">[6]</a> 이 숫자만 채우면 모든 졸업 조건을 충족한다는 뜻은 아니며, 교과별 이수 조건과 과목 이수 여부를 함께 확인해야 합니다. 이 편성 구성과 이수판정을 모든 학교종·특수교육에 그대로 적용하지 않습니다.</p>\n<h2>4. 희망학과보다 먼저 ‘다음에 배울 내용’을 적어 보세요</h2>\n<p>아래는 실제 학생의 성과나 대학 권장 조합이 아닌 <strong>교육용 상담 사례</strong>입니다.</p>\n<ul><li><strong>AI에 관심 있는 학생:</strong> ‘AI라는 이름의 과목을 모두 선택’ 대신, 다루고 싶은 문제가 데이터 정리인지 알고리즘인지 수학적 원리인지 적습니다. 정보·인공지능 기초·데이터 과학·인공지능 수학의 학습 내용과 자신의 준비도를 비교한 뒤 수강 가능한 후보를 좁힙니다.</li><li><strong>보건·생명 분야에 관심 있는 학생:</strong> ‘의약학이면 과학 심화는 전부 필수’라고 시작하지 않습니다. 생명과학의 어떤 개념이 궁금한지, 세포와 물질대사·생물의 유전 등의 내용과 어떻게 이어지는지 확인하고 학교 개설·평가 부담을 검토합니다.</li><li><strong>진로가 미정인 학생:</strong> 지금 흥미를 느끼는 질문과 기본 학습을 기준으로 후보를 만듭니다. 하나의 직업명에 맞추느라 다른 교과 학습을 불필요하게 배제하지 않습니다.</li></ul>\n<p>후보마다 ‘배우려는 내용 / 준비된 개념 / 수강 조건 / 확인 안 된 점’을 한 줄씩 적어 보세요. 지원 대학의 필수·권장·반영 과목을 확인할 때는 학년도·모집단위·전형·출처 쪽수도 함께 기록합니다. 특정 조합이 합격을 보장한다거나 전국 대학에 동일한 조건이 적용된다고 해석하지 않습니다.</p>\n<blockquote><p><strong>상담 질문 바꾸기</strong><br>수정 전: 컴퓨터공학과에 유리한 과목을 전부 알려 주세요.<br>수정 후: 데이터 분석에 관심이 있습니다. 우리 학교의 정보 관련 후보 중 제가 현재 배운 내용으로 준비할 수 있는 과목과 개설 학기, 선택 묶음을 확인하고 싶습니다. 지원 대학의 반영 기준은 어느 문서에서 찾아야 할까요?</p></blockquote>\n<h2>5. 이수 기준 완화와 성적 평가를 혼동하지 마세요</h2>\n<p>2026년 1월 28일 교육부는 선택과목의 학점 이수 기준에서 학업성취율을 제외하고 출석률만 적용하는 지원 대책을 발표했습니다. 공통과목은 출석률과 학업성취율 기준을 유지하며, 적용 대상은 2026학년도 고1·고2부터입니다.<a href=\"https://moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=55e06de53281c675adda4aa299002beb\">[8]</a> 학점 취득 조건의 변화이지 선택과목 시험·성취도·석차 산출 자체가 없어진다는 뜻은 아닙니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a></p>\n<p>같은 진로선택이라도 적용 교육과정과 개설 방식에 따라 성적 표기를 확인해야 합니다. 자세한 비교와 예외는 <a href=\"./career-elective-subject-types-assessment-guide.html\">진로선택과목의 성취도·석차등급·이수 안내</a>에서 다룹니다. 신청 전에 성적 산출을 상담하는 것과 쉬운 평가만을 기준으로 과목을 고르는 것은 다른 일입니다.</p>\n<p>선택한 수업에서 질문이 생겼다면 <a href=\"./research-report-first-time-writing-guide.html\">탐구보고서 대표 작성 가이드</a>로 이어가 보세요. 과목 선택의 이유와 학습 과정 기록은 <a href=\"./student-record-course-selection-consistency-specificity.html\">과목 선택·학습 흐름 점검법</a>과 연결되지만, 수강 사실이나 보고서 제출이 학생부 기록·입시 결과를 자동으로 보장하지는 않습니다.</p>\n<h2>6. 자주 묻는 질문</h2>\n<h3>국가 과목표에 있으면 우리 학교에서도 들을 수 있나요?</h3><p>국가 과목표와 학교의 실제 개설·시간표는 다릅니다. 해당 입학연도 편성표와 수강신청 안내, 개설 확정 여부를 확인해야 합니다.<a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\">[6]</a></p>\n<h3>융합선택이면 모두 석차등급이 없나요?</h3><p>아닙니다. 사회·과학의 명시된 9과목 등 정해진 예외가 있습니다. 수학·정보 등의 융합선택까지 같은 규칙으로 묶을 수 없습니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a></p>\n<h3>희망 과목이 폐강되거나 진로가 바뀌면 어떻게 하나요?</h3><p>변경 가능 기간과 시간표·학점 영향을 학교에 확인하고, 남은 과목이나 공동교육과정 등의 대안을 상담하세요. 이 글은 개별 학교의 변경 승인이나 외부 수강 가능 여부를 확정하지 않습니다.</p>\n<h2>7. 공식 근거와 확인 범위</h2>\n<p>확인일: 2026년 11월 10일. 2022 개정 교육과정의 2026년 일부개정 포함 총론, 교육부 질의응답, 2026 학생부 기재요령 및 1월 28일 지원 대책의 해당 부분을 확인했습니다. 학교별 편성·개설·평가계획과 대학별 권장 조합은 전수 검증하지 않았습니다. 사례와 상담 순서는 편집팀의 교육용 제안이며, 과목 선택의 정답이나 입시 성과를 보장하지 않습니다.</p>\n<ul><li>[6] <a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\" target=\"_blank\" rel=\"noopener noreferrer\">국가교육위원회 고시 제2026-1호 일부개정 포함 초·중등학교 교육과정 총론</a></li><li>[7] <a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\" target=\"_blank\" rel=\"noopener noreferrer\">2026학년도 학교생활기록부 기재요령 고등학교</a></li><li>[8] <a href=\"https://moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=55e06de53281c675adda4aa299002beb\" target=\"_blank\" rel=\"noopener noreferrer\">교육부 — 고교학점제 안착 지원 대책 발표 (2026-01-28, 보도자료 HWPX)</a></li><li>[9] <a href=\"https://www.moe.go.kr/boardCnts/fileDown.do?m=0204&amp;s=moe&amp;fileSeq=add6e23eb7da4c5b3100c4dcfdb3762c\" target=\"_blank\" rel=\"noopener noreferrer\">2022 개정 교육과정 질의 응답 자료(교육부 2022-12-22 별첨1)</a></li><li>[10] <a href=\"https://hscredit.kr/curriculum/subjects\" target=\"_blank\" rel=\"noopener noreferrer\">고교학점제 공식 홈페이지 과목선택(접속 유효)</a></li></ul>\n"
+},
+{
+  "id": 55,
+  "title": "진로선택과목이란? 2015·2022 개정의 성취도·석차등급·이수 기준",
+  "slug": "career-elective-subject-types-assessment-guide",
+  "categorySlug": "credit-system",
+  "categorySlugs": [
+    "credit-system"
+  ],
+  "grade": "고1·고2·고3·학부모",
+  "subject": "진로선택·평가·학점 이수",
+  "track": "전 계열",
+  "summary": "진로선택과목의 실제 예시, 2015·2022 개정 교육과정의 A~C·A~E와 석차등급 차이, 융합선택 예외 및 2026 이수 기준 완화를 구분합니다. 학교·대학 확인 체크리스트를 제공합니다.",
+  "subtitle": "과목 유형·성적 표기·학점 이수·대학 반영은 서로 다른 판단입니다",
+  "thumbnail": "assets/images/career-elective-assessment-check-card.webp",
+  "fullArticle": true,
+  "ads": false,
+  "tableOfContents": [
+    "진로선택의 실제 과목과 유형",
+    "2015·2022 개정 평가 구분",
+    "융합선택과 개설 방식의 예외",
+    "2026 학점 이수 기준 완화",
+    "선택 전 네 가지 확인",
+    "자주 묻는 질문과 수업 연결",
+    "공식 근거와 적용 범위"
+  ],
+  "keyPoints": [
+    "2026 고3과 고1·고2의 적용 교육과정을 구분",
+    "성취도와 석차등급 및 예외를 따로 확인",
+    "학점 이수 완화와 성적 평가 폐지를 혼동하지 않기"
+  ],
+  "reportFlow": [
+    "적용 교육과정 확인",
+    "정확한 과목 유형 확인",
+    "성취도·석차와 개설 방식 확인",
+    "이수 조건 확인",
+    "학교와 대학의 별도 기준 대조"
+  ],
+  "studentRecordPoints": [
+    "과목명보다 실제로 배운 내용과 과정 정리",
+    "교사 관찰·평가와 학생의 과정 메모 구분",
+    "미수행 활동을 완료형으로 적지 않기"
+  ],
+  "interviewQuestions": [
+    "성취도와 석차등급은 어떻게 다른가요?",
+    "이 과목의 학습 목표는 무엇인가요?",
+    "학교 미개설 상황을 어떻게 확인했나요?"
+  ],
+  "followUpQuestions": [
+    "예전 교육과정의 설명을 그대로 읽고 있지 않나요?",
+    "원하는 과목의 평가계획을 확인했나요?",
+    "미확인 대학 기준을 단정하지 않았나요?"
+  ],
+  "avoidExpressions": [
+    "진로선택은 모두 A/B/C만 기록한다고 단정",
+    "학점 이수 기준 완화를 평가 폐지로 설명",
+    "미개설이면 반드시 불이익 또는 무조건 불이익 없다고 약속"
+  ],
+  "tags": [
+    "진로선택과목",
+    "성취도",
+    "석차등급",
+    "2022 개정 교육과정",
+    "2026 학점 이수"
+  ],
+  "relatedPostSlugs": [
+    "high-school-credit-system-elective-subject-guide",
+    "2028-admission-changes-csat-school-record-guide",
+    "student-record-natural-connection"
+  ],
+  "authorName": "탐구가이드 편집팀",
+  "status": "published",
+  "featured": true,
+  "publishedAt": "2026-11-10",
+  "updatedAt": "2026-11-10",
+  "content": "<figure><img src=\"../assets/images/career-elective-assessment-check-card.webp\" alt=\"진로선택 과목 카드의 유형·평가 정보·학교 이수 조건을 돋보기로 점검하는 그림\" width=\"1200\" height=\"675\" decoding=\"async\" style=\"display:block;width:100%;height:auto;border-radius:16px\"><figcaption>‘진로선택’이라는 이름만으로 등급 표기나 대학의 필수과목 여부를 결정할 수 없습니다.</figcaption></figure>\n<p><strong>진로선택과목은 교과 심화학습과 진로 관련 학습을 위한 선택과목 유형입니다.</strong><a href=\"https://www.moe.go.kr/boardCnts/fileDown.do?m=0204&amp;s=moe&amp;fileSeq=add6e23eb7da4c5b3100c4dcfdb3762c\">[9]</a> 특정 직업을 확정한 학생만 듣는 과목이나 대학 지원의 전국 공통 필수 목록을 뜻하지는 않습니다. 일반·융합선택과의 전체 구조는 <a href=\"./high-school-credit-system-elective-subject-guide.html\">고교학점제 선택과목 가이드</a>에서, 이 글에서는 진로선택의 실제 과목과 평가·이수 판단을 다룹니다.</p>\n<p><strong>‘진로선택은 A·B·C만 기록한다’는 설명은 적용 교육과정부터 확인해야 합니다.</strong> 2026학년도 고3의 2015 개정 교육과정과 고1·고2의 2022 개정 교육과정을 섞으면 잘못된 과목 상담이 됩니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a> 확인 기준일은 2026년 11월 10일이며, 아래는 일반고 보통교과 중심 안내입니다.</p>\n<h2>1. 이름보다 공식 과목 유형을 확인하세요</h2>\n<p>2022 개정 교육과정의 과목표에서 확인한 진로선택 예시는 다음과 같습니다.<a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\">[6]</a> 전공별 권장 조합이나 개인별 추천 순위를 만든 목록은 아닙니다.</p>\n<ul><li><strong>수학:</strong> 기하, 미적분Ⅱ, 경제 수학, 인공지능 수학, 직무 수학.</li><li><strong>사회:</strong> 한국지리 탐구, 정치, 법과 사회, 경제, 윤리와 사상 등.</li><li><strong>과학:</strong> 역학과 에너지, 전자기와 양자, 물질과 에너지, 화학 반응의 세계, 세포와 물질대사, 생물의 유전, 지구시스템과학, 행성우주과학.</li><li><strong>정보:</strong> 인공지능 기초, 데이터 과학.<a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\">[6]</a></li></ul>\n<p>반대로 사회문제 탐구·금융과 경제생활·융합과학 탐구는 융합선택입니다. 수학과제 탐구도 2022 개정에서는 융합선택으로 분류됩니다.<a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\">[6]</a> ‘진로에 도움이 되는 과목’이라는 일상 표현과 공식 유형 ‘진로선택’을 구분하세요. 경제가 진로선택이라고 모든 경제 관련 과목이 같은 유형인 것도 아닙니다.</p>\n<h2>2. 2015와 2022 개정의 평가를 먼저 나누세요</h2>\n<ul><li><strong>2026학년도 고3 · 2015 개정:</strong> 보통교과 진로선택은 원칙적으로 성취도 A~C를 산출하고 석차등급은 산출하지 않습니다. 그렇다고 원점수·과목평균·수강자수·성취도별 분포비율 같은 다른 정보도 모두 사라지는 것은 아닙니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a></li><li><strong>2026학년도 고1·고2 · 2022 개정:</strong> 일반적인 보통교과 선택과목은 성취도 A~E와 석차등급 1~5를 함께 산출하는 것이 원칙입니다. 진로선택도 원칙에 포함되며, 개설 유형 등에 따른 예외는 따로 확인합니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a></li></ul>\n<p>성취도 A~E와 석차등급 1~5는 모두 다섯 구간처럼 보여도 같은 척도가 아닙니다. 성취도와 상대적 석차를 혼동해 ‘A=1등급’이라고 환산하거나, 옛 진로선택 설명을 새 교육과정의 모든 과목에 적용하지 마세요.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a> 이전 졸업생이라면 인터넷 글의 작성연도만이 아니라 본인이 적용받은 교육과정을 먼저 확인해야 합니다.</p>\n<blockquote><p><strong>표현 고치기</strong><br>수정 전: 진로선택은 전부 절대평가라서 등급 부담이 없다.<br>수정 후: 2022 개정 적용 학생의 진로선택은 일반적으로 A~E와 석차 1~5등급을 함께 산출한다. 내가 신청할 과목의 실제 편성과 개설 방식에 따른 예외는 학교 평가계획으로 확인해야 한다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a></p></blockquote>\n<h2>3. 융합선택과 개설 방식의 예외를 구별하세요</h2>\n<p>2026 학생부 기재요령은 사회·과학 교과의 다음 <strong>융합선택 9과목</strong>에 대해 성취도 A~E를 산출하되 석차등급을 산출하지 않도록 안내합니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a></p>\n<ul><li><strong>사회 6과목:</strong> 여행지리, 역사로 탐구하는 현대 세계, 사회문제 탐구, 금융과 경제생활, 윤리문제 탐구, 기후변화와 지속가능한 세계.</li><li><strong>과학 3과목:</strong> 과학의 역사와 문화, 기후변화와 환경생태, 융합과학 탐구.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a></li></ul>\n<p>이 목록을 모든 융합선택의 규칙으로 넓히지 않습니다. 예를 들어 수학의 실용 통계와 정보의 소프트웨어와 생활은 같은 ‘융합선택’이어도 위 9과목에 속하지 않습니다.<a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\">[6]</a><a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a> 석차등급이 없더라도 다른 성적 정보는 남으며, 대학에서의 반영은 해당 전형 기준으로 따로 확인합니다.</p>\n<p>과목 유형 외의 예외도 있습니다. 아래는 대표적인 확인 지점이지 모든 사례를 판정하는 목록은 아닙니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a></p>\n<ul><li><strong>과학탐구실험·체육·예술:</strong> 보통교과의 해당 과목은 성취도 A~C, 석차 미산출 방식이 적용됩니다. 다만 특수목적고의 체육·예술 선택과목까지 이 예외에 일괄 포함하지 않습니다.</li><li><strong>교양:</strong> 성취등급 대신 이수여부 P로 처리합니다.</li><li><strong>공동교육과정·온라인학교:</strong> 해당 유형의 성적을 산출하되 석차등급란에 ‘·’를 입력합니다. 학교 밖 교육과는 기록 방식이 같지 않습니다.</li><li><strong>소인수·특수교육 등:</strong> 수강자수 5명 이하 과목의 석차 표기 선택, 특수교육 전문교과 등의 별도 기준이 있습니다. ‘인원이 적으면 자동으로 무석차’라고 단정하지 말고 학교의 적용 방식을 확인합니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a></li></ul>\n<h2>4. 선택과목 40% 기준 완화는 평가 폐지가 아닙니다</h2>\n<p>국가교육위원회의 교육과정 일부개정 고시일은 <strong>2026년 1월 21일</strong>, 교육부의 후속 지원 대책 발표일은 <strong>2026년 1월 28일</strong>입니다.<a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\">[6]</a><a href=\"https://moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=55e06de53281c675adda4aa299002beb\">[8]</a> 개정일·발표일·학교 적용 시점을 같은 날짜로 쓰지 않습니다.</p>\n<ul><li><strong>공통과목:</strong> 과목 출석률 2/3 이상과 학업성취율 40% 이상이라는 기존 기준을 유지합니다.</li><li><strong>선택과목:</strong> 학점 이수 조건에서 학업성취율을 제외하고 과목 출석률 2/3 이상을 적용합니다.</li><li><strong>적용 학년:</strong> 2026학년도 고1·고2, 2027학년도부터 고1~고3으로 안내됐습니다.<a href=\"https://moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=55e06de53281c675adda4aa299002beb\">[8]</a></li></ul>\n<p><strong>학점을 얻는 조건과 성적을 산출하는 방식은 다릅니다.</strong> 선택과목에서도 시험·수행평가와 성취도·석차 산출은 해당 기준에 따라 이루어집니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a> 이수 기준이 완화됐으니 공부하지 않아도 되거나 성적과 무관하게 자동 졸업한다는 해석은 틀립니다. 출석 미달·미이수·보충·재이수와 특수교육대상학생 등의 적용은 학교가 안내하는 절차와 개별 조건을 확인하세요.</p>\n<h2>5. 진로선택을 고를 때 적을 네 가지</h2>\n<p>아래는 대학의 공식 평가표가 아니라 <strong>편집팀의 상담용 체크리스트</strong>입니다.</p>\n<ol><li><strong>배울 내용:</strong> ‘전공에 좋아 보임’ 대신 어떤 개념을 배우고 싶은지 적습니다. 과목 소개서에서 실제 학습 범위를 확인하세요.</li><li><strong>준비와 부담:</strong> 필요한 기초 개념과 학교의 이수 순서, 다른 과목의 학습량·평가 일정을 함께 점검합니다. 모든 진로선택이 같은 난이도라는 가정은 하지 않습니다.</li><li><strong>수강 조건:</strong> 개설 학년·학기·선택 묶음·정원·변경 기한과 성적 표기를 학교에 확인합니다.</li><li><strong>대학 문서:</strong> 자신의 지원 학년도·전형·모집단위에서 필수·권장·반영·가산점 중 어떤 표현을 썼는지 원문과 쪽수로 구분해 기록합니다.</li></ol>\n<p><strong>교육용 예시:</strong> 데이터 과학을 희망한다면 ‘컴퓨터공학과 필수이므로 선택’이라고 단정하지 않습니다. ‘표 데이터를 정리하고 해석하는 내용을 배우고 싶다 → 학교에서 해당 학기에 개설하는지와 학습 준비를 확인 → 대학의 실제 기준은 별도 확인’으로 적어 보세요. 이 사례는 특정 대학의 이수요건을 검증한 결과가 아닙니다.</p>\n<p>해당 과목이 학교에 없으면 담당교사와 대안을 상담하고, 대학의 기준이 그 상황을 어떻게 다루는지도 해당 학년도 자료로 확인합니다. 미개설이라는 한 가지 사실만으로 자동 불이익 또는 무조건 불이익 없음이라고 약속할 수 없습니다.</p>\n<h2>6. 자주 묻는 질문과 수업 연결</h2>\n<h3>진로선택을 몇 개 들으면 좋나요?</h3><p>전국 공통 정답 개수를 제시할 수 없습니다. 학교 편성·자신의 준비·지원 대학의 실제 기준을 맞춰야 하며, 숫자를 채우려고 무리한 조합을 만들지 않습니다.</p>\n<h3>석차가 없는 과목이면 대학이 보지 않나요?</h3><p>석차등급 미산출과 대학의 평가·반영 여부는 별개입니다. 성취도 등 어떤 정보가 제공되는지와 해당 대학의 반영방법을 각각 확인해야 합니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a></p>\n<h3>선택과목은 성취율 40% 미만이어도 학점을 얻나요?</h3><p>2026학년도 적용 대상의 선택과목 이수 조건에서는 학업성취율 기준이 제외됐습니다. 그러나 과목 출석률 등 해당 이수 조건과 성적 산출은 여전히 확인해야 합니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a><a href=\"https://moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=55e06de53281c675adda4aa299002beb\">[8]</a> 공통과목까지 같은 규칙으로 묶지 마세요.</p>\n<p>수업에서 생긴 질문을 보고서로 발전시키려면 <a href=\"./research-report-first-time-writing-guide.html\">탐구보고서 대표 작성 가이드</a>, 실제 학습 과정을 남기려면 <a href=\"./student-record-natural-connection.html\">교사가 확인할 수 있는 활동 사실 정리법</a>을 참고하세요. 학생이 교사의 기록 문장을 대신 작성하거나, 보고서 제출만으로 기록을 보장받는 것이 목적은 아닙니다. 대입 제도의 큰 틀은 <a href=\"./2028-admission-changes-csat-school-record-guide.html\">2028 대입 변경사항 가이드</a>에서 지원 학년도와 함께 확인할 수 있습니다.</p>\n<h2>7. 공식 근거와 적용 범위</h2>\n<p>확인일: 2026년 11월 10일. 과목 유형은 2026 일부개정 포함 총론의 과목표, 평가는 2026 학생부 기재요령의 고1·고2 부분과 고3 부분, 이수는 2026년 1월 28일 발표의 공통·선택 구분을 대조했습니다. 학교별 실제 편성·평가·변경 승인과 대학별 과목 요건은 별도 확인 대상입니다. 특수교육·특성화고 등에 일반고의 편성·이수 조건을 그대로 확대하지 않습니다.</p>\n<ul><li>[6] <a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\" target=\"_blank\" rel=\"noopener noreferrer\">국가교육위원회 고시 제2026-1호 일부개정 포함 초·중등학교 교육과정 총론</a></li><li>[7] <a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\" target=\"_blank\" rel=\"noopener noreferrer\">2026학년도 학교생활기록부 기재요령 고등학교</a></li><li>[8] <a href=\"https://moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=55e06de53281c675adda4aa299002beb\" target=\"_blank\" rel=\"noopener noreferrer\">교육부 — 고교학점제 안착 지원 대책 발표 (2026-01-28, 보도자료 HWPX)</a></li><li>[9] <a href=\"https://www.moe.go.kr/boardCnts/fileDown.do?m=0204&amp;s=moe&amp;fileSeq=add6e23eb7da4c5b3100c4dcfdb3762c\" target=\"_blank\" rel=\"noopener noreferrer\">2022 개정 교육과정 질의 응답 자료(교육부 2022-12-22 별첨1)</a></li></ul>\n"
 }
 ];
