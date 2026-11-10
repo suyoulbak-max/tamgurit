@@ -3484,5 +3484,90 @@ window.SiteData.posts = [
   ],
   "publishedAt": "2026-11-03",
   "updatedAt": "2026-11-03"
+},
+{
+  "id": 51,
+  "title": "고1 의약학·생명과학 동아리 탐구: DNA 추출에서 이어가는 심화 주제 3선",
+  "slug": "grade-1-club-dna-catalase-bioethics-two-week-inquiry",
+  "categorySlug": "track-guide",
+  "categorySlugs": [
+    "track-guide",
+    "subject-guide",
+    "grade-guide"
+  ],
+  "grade": "고1",
+  "subject": "과학·생명과학·화학·동아리",
+  "track": "의약학·생명과학",
+  "summary": "DNA 추출·코끼리 치약·생명윤리 발표에서 질문 하나를 골라 2주 안에 보고서로 정리하는 법. 순도 지표의 한계, 거품과 반응속도의 구분, CRISPR 안전성과 동의, 실제 활동만 남기는 기록 예시를 안내합니다.",
+  "subtitle": "새 장기 실험보다 원래 활동의 관찰·측정·한계를 문헌과 대조하세요",
+  "thumbnail": "assets/images/club-dna-purity-catalyst-ethics.webp",
+  "ads": false,
+  "fullArticle": true,
+  "tableOfContents": [
+    "실제 활동과 미확인 항목 나누기",
+    "DNA 침전과 순도 질문",
+    "코끼리 치약의 촉매와 관찰 지표",
+    "CRISPR와 생명윤리 기준",
+    "2주 일정과 보고서 작성",
+    "동아리 활동 사실 기록",
+    "확인한 원문과 적용 범위"
+  ],
+  "keyPoints": [
+    "세 활동 중 기록이 남은 한 가지 질문 선택",
+    "관찰·문헌 설명·미수행 측정을 분리",
+    "순도·반응속도·윤리 판단을 과장하지 않기"
+  ],
+  "summaryPoints": [
+    "DNA 침전 관찰만으로 순도나 PCR 적합성 확정 금지",
+    "거품 높이와 반응속도 상수는 다른 지표",
+    "체세포·유전 가능한 편집의 안전·동의·접근성 비교"
+  ],
+  "reportFlow": [
+    "활동지·시약·사진 확인",
+    "답할 수 있는 질문 하나 선택",
+    "원문 조건과 실제 조건 대조",
+    "기작 도식 또는 비교표 작성",
+    "관찰·해석·한계를 나눠 결론 작성",
+    "실제 수행과 후속 계획 구분"
+  ],
+  "studentRecordPoints": [
+    "교사가 확인할 수 있는 개인 기여와 산출물 기록",
+    "발표·측정·주도 사실을 꾸미지 않기",
+    "교과 세특과 동아리활동 특기사항을 구분"
+  ],
+  "interviewQuestions": [
+    "흰 침전만 보고 어디까지 말할 수 있나요?",
+    "거품 높이가 산소 발생속도와 같지 않은 이유는 무엇인가요?",
+    "체세포와 유전 가능한 편집의 동의 문제는 어떻게 다른가요?"
+  ],
+  "followUpQuestions": [
+    "원문 속 시료·장비 조건과 내 활동은 어떻게 다른가요?",
+    "장비가 없다면 질문 범위를 어떻게 줄일 수 있나요?",
+    "추가 자료가 생기면 어느 결론을 바꾸겠나요?"
+  ],
+  "avoidExpressions": [
+    "순도·진단 정확도를 측정 없이 검증했다고 주장",
+    "거품 관찰로 항암 효과를 입증했다고 주장",
+    "미수행 발표와 주도 역할을 완료형으로 기록"
+  ],
+  "tags": [
+    "고1 동아리",
+    "DNA 추출 심화",
+    "의약학 탐구",
+    "카탈레이스",
+    "생명윤리",
+    "2주 보고서"
+  ],
+  "relatedPostSlugs": [
+    "grade-2-biology-biohealth-research-report",
+    "research-report-first-time-writing-guide",
+    "student-record-natural-connection"
+  ],
+  "authorName": "탐구가이드 편집팀",
+  "status": "published",
+  "featured": true,
+  "content": "<figure><img src=\"../assets/images/club-dna-purity-catalyst-ethics.webp\" alt=\"DNA 추출 시험관을 확대해 순도를 묻고, 촉매 거품과 유전자 편집 윤리 노트를 나란히 비교하는 실험대\" width=\"1200\" height=\"675\" decoding=\"async\" style=\"display:block;width:100%;height:auto;border-radius:16px\"><figcaption>새 실험을 늘리기보다, 이미 관찰한 현상에서 아직 확인하지 못한 질문 하나를 고르세요.</figcaption></figure>\n<p>고1 동아리에서 DNA 추출 실험을 마쳤는데 보고서가 ‘하얀 실타래를 관찰했다’로 끝난다면, 다음에는 무엇을 쓰면 좋을까요? 의약학·생명과학에 관심이 있고 제출까지 2주라면, 어려운 치료 기술을 잔뜩 붙이기보다 <strong>내가 관찰한 것과 확인하지 못한 것을 구분하는 작은 질문</strong>부터 고르는 편이 현실적입니다.</p>\n<p>DNA 추출, 코끼리 치약, 생명윤리 발표는 서로 다른 출발점입니다. 세 활동을 한 보고서에 모두 연결할 필요는 없습니다. 이 글은 각 활동에서 한 가지 심화 질문을 고르고 문헌 비교 중심으로 완성하는 안내입니다. 흔한 실험이라는 이유만으로 활동의 가치나 입시 평가가 정해지는 것은 아니며, 특정 주제·전문 용어가 평가나 합격을 보장하지도 않습니다. 과제의 실험 필수 여부, 분량, AI 활용 범위는 담당교사 안내를 먼저 확인하세요.</p>\n<h2>1. 먼저 활동 기록에서 ‘한 일’과 ‘모르는 일’을 나누세요</h2>\n<p>원래 실험의 재료, 사용한 세제·소금·알코올, 처리 순서, 사진과 날짜를 다시 확인하세요. ‘DNA 검출’이라고 불렀더라도 실제로 한 일이 간이 추출과 침전 관찰인지, DNA에 특이적인 검사까지 했는지 구분해야 합니다. 사용하지 않은 장비나 기록하지 않은 측정값을 새 보고서에 보태지 않습니다.</p>\n<ul><li><strong>남은 것이 사진·활동지뿐이라면:</strong> 절차와 관찰의 의미를 문헌과 대조합니다. 회수율·순도·반응속도를 직접 측정했다고 쓰지 않습니다.</li><li><strong>조건과 측정값이 남아 있다면:</strong> 단위, 측정 시점, 독립 시료 수, 빠진 기록부터 확인합니다. 보기 좋지 않은 값도 원기록에서 지우지 않습니다.</li><li><strong>안전한 추가 측정이 가능하다면:</strong> 담당교사가 승인한 학교 실험에서 변인 하나만 다룹니다. 2주 일정에는 준비·정리·재확인 시간도 포함합니다.</li></ul>\n<p>다음 셋 중 하나만 택해도 됩니다. DNA 추출 기록이 가장 충실하면 ①, 코끼리 치약의 촉매와 조건을 알고 있으면 ②, 발표에서 찬반 논거를 비교했던 자료가 남아 있으면 ③이 출발점입니다. 기록이나 실험 승인이 부족할 때도 문헌 기반 보고서를 선택할 수 있습니다.</p>\n<h2>2. DNA 추출 심화: 하얀 침전만으로 순수한 DNA라고 할 수 있을까?</h2>\n<p><strong>권하는 제목:</strong> ‘간이 DNA 추출물의 순도는 무엇으로 판단할까? 추출·정제·확인의 차이’. 질문은 ‘더 많은 DNA 얻기’보다 ‘보이는 침전과 분석에 쓸 수 있는 DNA는 어떻게 다른가’로 좁힙니다.</p>\n<p>유타대학교의 간이 추출 안내는 세제가 막의 지질·단백질과 상호작용해 내용물을 꺼내는 과정을 설명합니다. 소금은 핵산 분자들이 모이는 데 도움을 주며, 알코올 층에서 핵산이 침전합니다. 이 안내의 질문·답변은 흰 물질이 DNA와 RNA의 혼합물일 수 있다는 점도 짚습니다.<a href=\"https://learn.genetics.utah.edu/content/labs/extraction/howto\">[1]</a> 따라서 본인의 침전에 단백질이 얼마나 섞였는지 분석하지 않았다면 ‘불순물을 확인했다’보다 ‘불순물 가능성을 배제하지 못했다’고 씁니다.</p>\n<p><strong>심화 개념:</strong> 음전하를 띠는 DNA 인산 골격 주변에 양이온이 작용해 전하 사이 반발이 줄고, 물과 다른 용매 조건에서 핵산이 덜 녹아 침전하는 방향으로 이해해 보세요. 이것을 DNA가 소금과 새로운 공유결합을 만드는 반응으로 그리지 않습니다. 간이 추출을 하나의 화학 반응식으로 모두 설명하려 하기보다 ‘막 파괴 → 단백질 처리 → 핵산 침전’ 단계마다 목적을 적는 편이 정확합니다.</p>\n<p>비교 대상은 제조사 QIAGEN의 실리카 막 기반 정제법입니다. 안내에서 proteinase K 처리, 특정 염 조건에서 DNA가 실리카 막에 흡착하는 단계, 세척, 용출을 찾아 정리하세요.<a href=\"https://www.qiagen.com/nf/products/discovery-and-translational-research/dna-rna-purification/dna-purification/genomic-dna/dneasy-blood-and-tissue-kit\">[2]</a> 단백질 분해효소가 DNA를 증폭하는 효소는 아니며, 단백질 처리만으로 모든 종류의 오염이 없어졌다고 결론 내리지 않습니다. 이 제품 자료는 정제 원리 비교용입니다. 해당 연구용 제품이 환자 진단용으로 승인됐다는 뜻으로 소개하지 않습니다.</p>\n<ul><li><strong>산출물 A:</strong> 간이 추출과 실리카 정제의 ‘단계 / 목적 / 제거하려는 성분 / 남을 수 있는 한계’ 비교표.</li><li><strong>산출물 B:</strong> ‘눈으로 관찰’, ‘흡광도 측정’, ‘PCR로 특정 표적 증폭’, ‘전기영동으로 분리’가 각각 무엇을 알려 주는지 구분한 도식.</li><li><strong>자료 읽기:</strong> 유타 안내의 “mix of DNA and RNA” 문답과 QIAGEN의 “Principle”, “Procedure” 부분부터 읽습니다. 실제 사용한 시약·시료와 자료 속 조건이 다르면 별도 칸에 표시합니다.</li></ul>\n<p>PCR은 DNA 중합효소를 이용하는 증폭 과정이고, 전기영동은 전기장 속에서 분자를 분리하는 과정입니다. <strong>‘전기영동의 중합효소가 저해된다’고 쓰면 두 방법을 혼동한 문장</strong>입니다. 정제 과정은 후속 분석을 고려해야 하지만, 어떤 잔류 성분이 실제로 내 시료의 PCR을 방해했는지는 직접 검사하지 않았다면 확인된 결과로 쓸 수 없습니다.</p>\n<h3>A260/A280 ≈ 1.8은 합격 도장이 아닙니다</h3>\n<p>Thermo Scientific의 NanoDrop 안내는 DNA의 A260/A280 값 약 1.8을 흔히 쓰는 참고 지표로 제시하면서, pH·이온 세기 등 측정 조건의 영향을 설명합니다. 또한 후속 분석에서의 기능이 중요한 품질 판단이라고 구분합니다.<a href=\"https://documents.thermofisher.com/TFS-Assets/CAD/Warranties/Thermo-Scientific-NanoDrop-Products-Nucleic-Acid-Technical-Guide-EN.pdf\">[3]</a> A260/A280만으로 DNA만 존재한다거나 오염 종류·양이 확정됐다고 판단하지 않습니다. 순도 비율은 DNA 양이나 손상 정도와도 같은 지표가 아닙니다.</p>\n<p>분광광도계가 없다면 측정 원리를 조사하고 ‘직접 측정하지 못했다’고 쓰면 됩니다. <strong>교육용 가상 계산</strong>으로, 같은 광경로 기준으로 보정하고 blank를 뺀 A260=0.18, A280=0.10이라면 비율은 1.8입니다. 이것은 계산 예시이지 학생 시료의 측정값이나 순도 검증 결과가 아닙니다.</p>\n<blockquote><p><strong>수정 전</strong><br>추출한 DNA의 불순물을 확인하고 제거하여 PCR 진단 정확도를 높였다.</p><p><strong>수정 후 · 사진과 문헌만 있는 경우의 교육용 예시</strong><br>간이 추출에서 흰 침전을 관찰했지만 DNA 특이 검사나 흡광도 측정은 하지 않았다. 문헌에서 이 추출물이 DNA 외의 핵산을 포함할 수 있음을 확인하고, 간이 침전법과 실리카 막 정제법의 단계별 목적을 비교했다. 내 시료의 순도나 PCR 적합성은 이번 활동으로 검증하지 못했다.</p></blockquote>\n<h2>3. 코끼리 치약 심화: 거품 높이를 반응속도로 읽어도 될까?</h2>\n<p><strong>권하는 제목:</strong> ‘코끼리 치약의 거품 높이는 무엇을 나타낼까? 과산화수소 분해와 촉매 비교’. 먼저 동아리가 아이오딘화물 촉매를 썼는지, 효모 등 효소를 포함한 재료를 썼는지 활동지로 확인하세요. 시약이 다르면 같은 세부 반응 경로로 설명할 수 없습니다.</p>\n<p>아이오딘화 이온을 쓰는 대학 시연 자료는 과산화수소 분해의 전체 반응을 <strong>2H₂O₂ → 2H₂O + O₂</strong>로 나타내며 발열을 설명합니다.<a href=\"https://sites.tntech.edu/dcashman/2021/06/29/catalytic-decomposition-of-hydrogen-peroxide-elephants-toothpaste\">[7]</a> 효모를 이용한 교육 연구에서는 효모의 카탈레이스와 과산화수소 반응에서 생기는 산소를 관찰 지표로 다룹니다.<a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC5134961\">[8]</a> 공통 생성물이 있다고 해서 무기 촉매와 효소의 작용 조건·중간 과정을 동일시하지 않습니다.</p>\n<p><strong>2주 기본 경로는 문헌 비교입니다.</strong> 자료별 촉매, 과산화수소 조건, 온도, 관찰 지표를 한 표에 적고 어떤 비교가 가능한지 검토합니다. 활성화 에너지 그림은 촉매에 따른 경로 차이를 설명하는 개념도라고 표시하세요. 실험 데이터를 얻지 않았는데 수치가 있는 에너지 그래프나 반응속도 상수를 만들지 않습니다.</p>\n<p>거품은 발생 기체가 세제 막에 붙잡힌 모습이어서 용기 모양, 세제의 양, 거품의 붕괴도 높이에 영향을 줄 수 있습니다. 따라서 ‘거품이 두 배 높으니 산소 발생속도도 정확히 두 배’라고 결론 내리지 마세요. 이미 측정한 자료가 있다면 무엇을 재었는지부터 정의합니다. 거품 높이/시간은 해당 조건의 관찰 지표이지 바로 반응속도 상수 k가 아닙니다.</p>\n<p>추가 실험을 허용받았다면 농도·효소 재료량·온도를 한꺼번에 바꾸지 말고 변인 하나와 같은 용기·관찰 시간을 정하세요. 실제 기체량을 측정하는 방법도 학교 장비와 안전 절차에 맞춰 교사와 설계해야 합니다. 측정 없이 문헌 비교로 마쳐도 됩니다. 인체의 효소 작용을 이해하는 출발점으로 삼되, 교실의 거품만으로 항산화 효과나 암 치료 효능을 입증했다고 쓰지 않습니다. 활성산소 표적 치료는 별도 선행연구를 읽는 후속 질문으로 남기세요.</p>\n<p><strong>안전 경계:</strong> 인용한 대학 시연의 고농도 과산화수소·용량·점화 확인법을 학생 재현 처방으로 옮기지 않습니다. 고농도 시약 구매·가열·불꽃 사용·발생 기체의 밀폐는 권하지 않습니다. 추가 실험은 교사가 승인한 학교 시약과 소규모 절차, 보안경 등 보호구·폐기 지침을 따르며, 반응액이나 거품을 만지거나 먹지 않습니다. 일정이 촉박하면 실험을 늘리지 않는 것이 기본 선택입니다.</p>\n<h2>4. 생명윤리 심화: 체세포 치료와 유전 가능한 편집에 같은 기준을 적용할까?</h2>\n<p><strong>권하는 제목:</strong> ‘CRISPR-Cas9의 의도하지 않은 편집과 생명윤리: 안전성·동의·접근성을 기준으로’. 기존 발표의 찬반 결론을 먼저 가져오기보다, 어떤 세포를 어떤 목적으로 바꾸는지부터 나눕니다.</p>\n<p>Addgene 안내에서 기본 Cas9의 가이드 RNA와 표적 인식, DNA 이중가닥 절단, 세포의 복구를 구분해 읽으세요. 비상동 말단 연결(NHEJ)은 절단된 끝을 연결하는 과정이며 작은 삽입·결실이 생길 수 있습니다. 상동성 유도 복구(HDR)는 주형을 이용하는 경로입니다. NHEJ와 HDR을 Cas9이 직접 수행하는 작용으로 적지 않습니다. 비슷한 다른 위치가 영향을 받는 오프타깃도 별도 확인 항목입니다.<a href=\"https://www.addgene.org/guides/crispr\">[4]</a> 이 글의 설명은 대표적인 절단형 Cas9 모형이며 모든 유전체 편집 기술이 같은 방식으로 작동한다는 뜻은 아닙니다.</p>\n<p>NHGRI 안내는 비생식 세포를 대상으로 하는 체세포 치료와 다음 세대로 전달될 수 있는 생식세포 계열의 변화를 구분합니다.<a href=\"https://www.genome.gov/about-genomics/policy-issues/what-is-Genome-Editing\">[5]</a> 윤리 안내에서는 의도하지 않은 편집과 모자이크 현상, 동의, 접근성·형평성을 검토합니다.<a href=\"https://www.genome.gov/about-genomics/policy-issues/Genome-Editing/ethical-concerns\">[6]</a> 체세포 치료라서 자동으로 안전하거나 윤리적인 것은 아니고, 배아 관련 논의가 모두 외모·능력 향상을 뜻하는 것도 아닙니다. 목적·위험·대안·영향받는 사람을 함께 따져야 합니다.</p>\n<p><strong>산출물:</strong> 가상의 ‘체세포 질환 치료’와 ‘후손에게 전달될 수 있는 편집’ 두 상황을 놓고 아래 질문으로 기준표를 작성하세요. 실제 환자 사례를 새로 모집하거나 친구의 유전정보를 조사하지 않습니다.</p>\n<ul><li>예상 이익과 위험을 확인한 근거는 무엇이며, 모르는 위험은 무엇인가?</li><li>누가 동의할 수 있고, 직접 동의할 수 없는 사람이나 다음 세대에는 무엇이 남는가?</li><li>다른 방법이 있는가? 비용과 접근성이 불평등할 때 어떤 문제가 생기는가?</li><li>어떤 정보가 추가되면 내 판단을 바꿀 것인가?</li></ul>\n<p>문헌·상황 비교가 기본이며 CRISPR 습식 실험은 권하지 않습니다. NHGRI 원문은 개념과 쟁점을 읽는 자료이지 대한민국의 현재 법적 허용 범위를 확정하는 자료가 아닙니다. 국내 법을 논하려면 국가법령정보센터의 현행 조문·시행일과 학교 안내를 별도로 확인해야 합니다. 오래된 국제 현황을 현재 모든 나라의 공통 규칙으로 옮기지 마세요.</p>\n<h2>5. 2주 계획: 세 주제를 모두 하지 말고 하나를 완성하세요</h2>\n<p>아래는 편집팀의 일정 제안이며 실제 실험을 수행했다는 기록이 아닙니다. 장비·자료 접근과 학교 일정에 따라 줄일 수 있습니다.</p>\n<ol><li><strong>1~2일:</strong> 활동지와 사진에서 재료·관찰·내 역할을 확인하고 질문 하나를 정합니다. 실제 측정이 없는 부분을 표시합니다.</li><li><strong>3~5일:</strong> 아래 원문 중 선택 주제에 맞는 자료 2~3개부터 읽습니다. ‘원문 내용 / 내 요약 / 내 실험과 다른 조건’을 세 칸으로 나누고 쪽·절·접근일을 적습니다. 초록만 읽었다면 전문을 읽었다고 쓰지 않습니다.</li><li><strong>6~8일:</strong> 비교표나 기작 도식 하나를 만듭니다. 승인된 추가 실험이 없다면 문헌만으로 답할 수 있는 질문을 유지합니다. 자료가 부족하면 표적 치료 전체 대신 순도 지표 하나처럼 범위를 줄입니다.</li><li><strong>9~11일:</strong> 본론·결론 초안을 쓰고 ‘문헌에서 아는 것 / 이번 활동에서 관찰한 것 / 아직 확인하지 못한 것’을 분리합니다.</li><li><strong>12~13일:</strong> 실제 본론에 맞게 서론을 다듬고, 단위·인용·도식 출처·반응식을 대조합니다. 수치를 얻지 못한 경우 표를 상상해서 채우지 않습니다.</li><li><strong>14일:</strong> 과제 형식과 안전·개인정보 문제를 확인하고 제출합니다. 실험 결과가 예상과 달랐거나 자료를 못 구한 부분도 정직하게 남깁니다.</li></ol>\n<p>처음에는 잠정 질문과 개요를 적어도 됩니다. 서론의 최종 목적·방법·범위는 실제로 마친 본론과 맞추세요. ‘서론은 절대로 먼저 쓰면 안 된다’는 규칙이나 모든 보고서의 고정 구성 비율은 없습니다.</p>\n<h2>6. 보고서 문장과 동아리 활동 기록을 다르게 쓰세요</h2>\n<p>학교생활기록부의 동아리활동 특기사항을 학생이 완성된 교사 문체로 대신 작성하는 것이 목표는 아닙니다. 교사가 확인할 수 있게 <strong>내가 실제로 한 행동·산출물·수정 내용</strong>을 정리하세요. 교과 세특과 동아리 활동 기록을 같은 항목으로 단정하지 말고 학교의 제출·기록 안내를 따릅니다.</p>\n<blockquote><p><strong>활동 사실 정리용 빈칸 틀</strong><br>동아리에서 [실제 재료·방법]으로 [실제 관찰]을 기록했다. 이후 [내가 고른 질문]을 정해 [직접 읽은 자료의 절·쪽]을 비교하고 [실제로 만든 표·도식]을 작성했다. 초안의 [바꾼 표현]을 [근거에 맞게 고친 표현]으로 수정했다. [측정하지 않은 항목]은 직접 확인하지 못했으며, [앞으로 확인할 일]은 후속 계획으로 남겼다.</p></blockquote>\n<p>발표하지 않았다면 발표했다고, 공동 작업 일부만 맡았다면 전체를 주도했다고 쓰지 않습니다. ‘순도를 규명함’, ‘진단 정확도를 높임’, ‘연구자 자질을 입증함’ 대신 원자료에서 확인할 수 있는 행동을 남기세요. 다음 학기에 무엇을 배울지는 학교의 실제 개설 과목을 확인하고 정합니다. 선택과목 이름이나 학년 간 진로 서사를 억지로 붙일 필요는 없습니다.</p>\n<p><strong>자기 설명 연습:</strong> “흰 침전만 보고 무엇까지 말할 수 있었나?”, “거품 높이는 왜 산소량과 같지 않나?”, “체세포와 유전 가능한 편집의 동의 문제는 어떻게 다른가?” 중 내 주제의 질문 하나에 답해 보세요. 막힌 부분은 전문 용어를 더 넣기보다 실제 읽은 원문과 비교표로 돌아가 보완합니다.</p>\n<p>처음 보고서를 구성한다면 <a href=\"./research-report-first-time-writing-guide.html\">탐구보고서 대표 작성 가이드</a>, 생명과학 수업으로 이어가려면 <a href=\"./grade-2-biology-biohealth-research-report.html\">고2 생명과학 탐구 가이드</a>를 함께 읽으세요. <a href=\"./student-record-natural-connection.html\">교사가 확인할 수 있는 활동 사실 정리법</a>과 <a href=\"../columns/research-report-unexpected-results-conclusion.html\">예상과 다른 결과를 쓰는 법</a>은 결과를 과장하지 않고 정리할 때 도움이 됩니다.</p>\n<h2>7. 확인한 원문과 적용 범위</h2>\n<p>확인일: 2026년 11월 10일. 아래 자료의 원리·정의·측정 한계를 참고했으며, 제시한 주제·일정·빈칸 문장·가상 계산은 편집팀의 교육용 제안입니다. 원문 시연을 그대로 따라 하라는 뜻이 아니며 진단·치료 조언, 임상 유효성 검증, 사람 전문가 감수를 대신하지 않습니다.</p>\n<ul><li id=\"source-1\">[1] <a href=\"https://learn.genetics.utah.edu/content/labs/extraction/howto\" target=\"_blank\" rel=\"noopener noreferrer\">University of Utah — How To Extract DNA From Anything Living</a>: 간이 추출 단계와 DNA/RNA 혼합물 문답.</li><li id=\"source-2\">[2] <a href=\"https://www.qiagen.com/nf/products/discovery-and-translational-research/dna-rna-purification/dna-purification/genomic-dna/dneasy-blood-and-tissue-kit\" target=\"_blank\" rel=\"noopener noreferrer\">QIAGEN — DNeasy Blood & Tissue Kits</a>: Principle·Procedure 및 연구용 범위.</li><li id=\"source-3\">[3] <a href=\"https://documents.thermofisher.com/TFS-Assets/CAD/Warranties/Thermo-Scientific-NanoDrop-Products-Nucleic-Acid-Technical-Guide-EN.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Thermo Scientific — NanoDrop Nucleic Acid Technical Guide</a>: 인쇄 쪽 14·17의 순도 비율과 해석 한계.</li><li id=\"source-4\">[4] <a href=\"https://www.addgene.org/guides/crispr\" target=\"_blank\" rel=\"noopener noreferrer\">Addgene — CRISPR Guide</a>: 표적 인식·절단, NHEJ/HDR, 오프타깃.</li><li id=\"source-5\">[5] <a href=\"https://www.genome.gov/about-genomics/policy-issues/what-is-Genome-Editing\" target=\"_blank\" rel=\"noopener noreferrer\">NHGRI — What is genome editing?</a>: 체세포와 생식세포 계열의 개념 구분. 현재 치료제 승인 현황의 근거로 사용하지 않음.</li><li id=\"source-6\">[6] <a href=\"https://www.genome.gov/about-genomics/policy-issues/Genome-Editing/ethical-concerns\" target=\"_blank\" rel=\"noopener noreferrer\">NHGRI — Ethical Concerns of Genome Editing</a>: 안전성·동의·형평성 쟁점. 국내 현행법 안내가 아님.</li><li id=\"source-7\">[7] <a href=\"https://sites.tntech.edu/dcashman/2021/06/29/catalytic-decomposition-of-hydrogen-peroxide-elephants-toothpaste\" target=\"_blank\" rel=\"noopener noreferrer\">Tennessee Tech — Catalytic Decomposition of Hydrogen Peroxide</a>: 아이오딘화물 촉매와 전체 반응식만 참고. 고농도 시연 절차 재현 금지.</li><li id=\"source-8\">[8] <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC5134961\" target=\"_blank\" rel=\"noopener noreferrer\">Bryer (2016) — Exploring Catalase and Invertase Activity Using Sodium Alginate-Encapsulated Yeast</a>: 효모의 카탈레이스와 관찰 지표를 다룬 교육 연구. 이 글에서 해당 실험을 수행한 것은 아님.</li></ul>\n",
+  "publishedAt": "2026-11-10",
+  "updatedAt": "2026-11-10"
 }
 ];
