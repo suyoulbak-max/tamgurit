@@ -166,7 +166,7 @@
   }
 
   function setMeta(title, description) {
-    var siteName = site.config.name || "고교학점제 탐구가이드";
+    var siteName = site.config.name || "탐구 플러스 리터러시";
     document.title = title ? title + " | " + siteName : siteName;
     var meta = document.querySelector('meta[name="description"]');
     if (meta && description) meta.setAttribute("content", description);
@@ -194,12 +194,13 @@
   }
 
   function setSeo(title, description, canonicalPath, type) {
-    var siteName = site.config.name || "고교학점제 탐구가이드";
+    var siteName = site.config.name || "탐구 플러스 리터러시";
     var fullTitle = title ? title + " | " + siteName : siteName;
     var canonical = absoluteUrl(canonicalPath || "index.html");
     setMeta(title, description);
     var canonicalLink = document.querySelector('link[rel="canonical"]');
     if (canonicalLink) canonicalLink.setAttribute("href", canonical);
+    upsertMeta('meta[property="og:site_name"]', "content", siteName);
     upsertMeta('meta[property="og:title"]', "content", fullTitle);
     upsertMeta('meta[property="og:description"]', "content", description || site.config.description || "");
     upsertMeta('meta[property="og:type"]', "content", type || "website");
@@ -238,7 +239,7 @@
   function brand(isFooter) {
     return '<a class="brand' + (isFooter ? ' brand--footer' : '') + '" href="' + url("index.html") + '" aria-label="' + escapeHtml(site.config.brandName || "탐구 플러스 리터러시") + ' 홈">' +
       '<img class="brand-mark" src="' + url("assets/icons/plus-literacy.svg?v=20261016") + '" width="44" height="44" alt="">' +
-      '<span class="brand-type"><strong class="brand-name">' + escapeHtml(site.config.brandName || "탐구 플러스 리터러시") + '</strong></span></a>';
+      '<span class="brand-type"><strong class="brand-name">' + escapeHtml(site.config.brandName || "탐구 플러스 리터러시") + '</strong><span class="brand-tagline">' + escapeHtml(site.config.tagline) + '</span></span></a>';
   }
 
   function header() {
@@ -292,7 +293,7 @@
       footerLink("이용약관", "terms/index.html") +
       footerLink("면책고지", "disclaimer/index.html") +
       "</nav></div>" +
-      '<div class="container footer-bottom"><span>© 2026 ' + escapeHtml(site.config.name || "고교학점제 탐구가이드") + " · 운영자 " + escapeHtml(site.config.ownerName || "운영자") + "</span>" +
+      '<div class="container footer-bottom"><span>© 2026 ' + escapeHtml(site.config.name || "탐구 플러스 리터러시") + " · 운영자 " + escapeHtml(site.config.ownerName || "운영자") + "</span>" +
       '<a href="' + url("contact/index.html") + '">문의 양식으로 연락하기</a></div></footer>';
   }
 
@@ -338,11 +339,12 @@
     var latest = posts.slice(0, 6);
     var columns = publishedColumns().slice(0, 3);
 
-    setMeta(null, site.config.description);
+    setSeo(site.config.homeTitle, site.config.description, "index.html", "website");
+    setJsonLd("website-schema", {"@context":"https://schema.org", "@type":"WebSite", name:site.config.name, url:absoluteUrl("index.html"), description:site.config.description, inLanguage:"ko-KR"});
     layout(
       '<section class="hero"><div class="container hero-grid"><div>' +
       '<span class="eyebrow">고교학점제 탐구 설계</span>' +
-      "<h1>탐구보고서에서<br>세특, 서류기반 면접까지<br>한 흐름으로 정리합니다.</h1>" +
+      "<h1>과목 선택에서 탐구보고서·세특·대입 면접까지</h1>" +
       "<p>" + escapeHtml(site.config.description || "학년, 과목, 계열별로 탐구 주제를 좁히고 학생부와 면접 질문까지 연결하는 교육 정보 가이드입니다.") + "</p>" +
       '<div class="actions"><a class="button primary" href="' + url("posts/index.html") + '">탐구 글 보기</a><a class="button" href="' + url("categories/index.html") + '">분류별 보기</a></div>' +
       "</div><aside class=\"hero-panel\"><h2>핵심 흐름</h2><ol class=\"path-list\">" +
@@ -663,7 +665,7 @@
       },
       "publisher": {
         "@type": "Organization",
-        "name": site.config.name || "고교학점제 탐구가이드",
+        "name": site.config.name || "탐구 플러스 리터러시",
         "url": absoluteUrl("")
       },
       "mainEntityOfPage": canonical,
@@ -773,7 +775,7 @@
     } else if (kind === "terms") {
       extra = '<div class="trust-content">' +
         '<p class="doc-updated">최종 업데이트: 2026-06-06</p>' +
-        "<h2>1. 목적</h2><p>본 약관은 " + escapeHtml(site.config.name || "고교학점제 탐구가이드") + "의 콘텐츠 이용 조건과 사이트 이용 시 필요한 기본 기준을 안내하기 위해 마련되었습니다.</p>" +
+        "<h2>1. 목적</h2><p>본 약관은 " + escapeHtml(site.config.name || "탐구 플러스 리터러시") + "의 콘텐츠 이용 조건과 사이트 이용 시 필요한 기본 기준을 안내하기 위해 마련되었습니다.</p>" +
         "<h2>2. 제공 서비스</h2><p>사이트는 고교학점제 이해, 과목 선택, 탐구보고서 작성, 세특 연결, 서류기반면접 준비와 관련한 일반 교육 정보를 제공합니다.</p>" +
         "<h2>3. 콘텐츠 이용</h2><p>사이트의 글은 개인 학습과 진로 탐색을 위한 참고 자료로 이용할 수 있습니다. 출처 표시 없는 무단 복제, 대량 재배포, 상업적 전재, 자동 수집은 제한됩니다.</p>" +
         "<h2>4. 이용자의 책임</h2><p>이용자는 사이트 정보를 참고하되, 학교 교육과정, 담임교사 또는 교과 담당교사의 안내, 대학 입학처의 공식 자료를 함께 확인해야 합니다. 탐구보고서 작성 시 표절, 허위 작성, 대리 작성은 금지됩니다.</p>" +
@@ -785,7 +787,7 @@
     } else if (kind === "disclaimer") {
       extra = '<div class="trust-content">' +
         '<p class="doc-updated">최종 업데이트: 2026-06-06</p>' +
-        "<h2>1. 정보 제공 목적</h2><p>" + escapeHtml(site.config.name || "고교학점제 탐구가이드") + "의 콘텐츠는 고등학생과 학부모가 고교학점제, 탐구보고서, 세특, 서류기반면접을 이해하도록 돕기 위한 일반 교육 정보입니다.</p>" +
+        "<h2>1. 정보 제공 목적</h2><p>" + escapeHtml(site.config.name || "탐구 플러스 리터러시") + "의 콘텐츠는 고등학생과 학부모가 고교학점제, 탐구보고서, 세특, 서류기반면접을 이해하도록 돕기 위한 일반 교육 정보입니다.</p>" +
         "<h2>2. 보장하지 않는 사항</h2><p>사이트는 특정 대학 합격, 학생부 평가 결과, 면접 점수, 교과 선택의 유불리, 탐구보고서의 평가 결과를 보장하지 않습니다.</p>" +
         "<h2>3. 개별 상황의 차이</h2><p>학교별 교육과정 편성, 교과 담당교사의 평가 기준, 학생의 진로 희망, 대학별 전형 방식에 따라 적용 결과는 달라질 수 있습니다.</p>" +
         "<h2>4. 공식 자료 확인</h2><p>입시 제도, 대학별 전형, 고교학점제 운영 방식, 학교별 과목 개설 상황은 수시로 변동될 수 있습니다. 최종 판단 전에는 학교 공지, 교육청 자료, 대학 입학처 안내를 함께 확인해야 합니다.</p>" +

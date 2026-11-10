@@ -171,6 +171,16 @@ svg {
   letter-spacing: var(--tracking-heading);
 }
 
+.brand .brand-tagline {
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: normal;
+  max-width: 26em;
+}
+
 .brand--footer .brand-mark {
   width: var(--brand-size-compact);
   height: var(--brand-size-compact);
