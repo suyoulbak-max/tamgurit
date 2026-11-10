@@ -1916,9 +1916,10 @@ window.SiteData.posts = [
     "writingSteps": [],
     "avoidExpressions": [],
     "relatedPostSlugs": [
-      "engineering-topic-examples",
-      "document-based-interview-questions"
-    ],
+  "engineering-topic-examples",
+  "document-based-interview-questions",
+  "inquiry-report-template-free-download"
+],
     "authorName": "탐구가이드 편집팀",
     "publishedAt": "2026-08-27",
     "updatedAt": "2026-09-22",
@@ -3733,10 +3734,11 @@ window.SiteData.posts = [
     "공식 자료 확인"
   ],
   "relatedPostSlugs": [
-    "high-school-credit-system-elective-subject-guide",
-    "career-elective-subject-types-assessment-guide",
-    "student-record-natural-connection"
-  ],
+  "high-school-credit-system-elective-subject-guide",
+  "career-elective-subject-types-assessment-guide",
+  "student-record-natural-connection",
+  "2028-university-subject-requirements-document-check"
+],
   "authorName": "탐구가이드 편집팀",
   "status": "published",
   "featured": true,
@@ -3895,5 +3897,111 @@ window.SiteData.posts = [
   "publishedAt": "2026-11-10",
   "updatedAt": "2026-11-10",
   "content": "<figure><img src=\"../assets/images/career-elective-assessment-check-card.webp\" alt=\"진로선택 과목 카드의 유형·평가 정보·학교 이수 조건을 돋보기로 점검하는 그림\" width=\"1200\" height=\"675\" decoding=\"async\" style=\"display:block;width:100%;height:auto;border-radius:16px\"><figcaption>‘진로선택’이라는 이름만으로 등급 표기나 대학의 필수과목 여부를 결정할 수 없습니다.</figcaption></figure>\n<p><strong>진로선택과목은 교과 심화학습과 진로 관련 학습을 위한 선택과목 유형입니다.</strong><a href=\"https://www.moe.go.kr/boardCnts/fileDown.do?m=0204&amp;s=moe&amp;fileSeq=add6e23eb7da4c5b3100c4dcfdb3762c\">[9]</a> 특정 직업을 확정한 학생만 듣는 과목이나 대학 지원의 전국 공통 필수 목록을 뜻하지는 않습니다. 일반·융합선택과의 전체 구조는 <a href=\"./high-school-credit-system-elective-subject-guide.html\">고교학점제 선택과목 가이드</a>에서, 이 글에서는 진로선택의 실제 과목과 평가·이수 판단을 다룹니다.</p>\n<p><strong>‘진로선택은 A·B·C만 기록한다’는 설명은 적용 교육과정부터 확인해야 합니다.</strong> 2026학년도 고3의 2015 개정 교육과정과 고1·고2의 2022 개정 교육과정을 섞으면 잘못된 과목 상담이 됩니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a> 확인 기준일은 2026년 11월 10일이며, 아래는 일반고 보통교과 중심 안내입니다.</p>\n<h2>1. 이름보다 공식 과목 유형을 확인하세요</h2>\n<p>2022 개정 교육과정의 과목표에서 확인한 진로선택 예시는 다음과 같습니다.<a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\">[6]</a> 전공별 권장 조합이나 개인별 추천 순위를 만든 목록은 아닙니다.</p>\n<ul><li><strong>수학:</strong> 기하, 미적분Ⅱ, 경제 수학, 인공지능 수학, 직무 수학.</li><li><strong>사회:</strong> 한국지리 탐구, 정치, 법과 사회, 경제, 윤리와 사상 등.</li><li><strong>과학:</strong> 역학과 에너지, 전자기와 양자, 물질과 에너지, 화학 반응의 세계, 세포와 물질대사, 생물의 유전, 지구시스템과학, 행성우주과학.</li><li><strong>정보:</strong> 인공지능 기초, 데이터 과학.<a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\">[6]</a></li></ul>\n<p>반대로 사회문제 탐구·금융과 경제생활·융합과학 탐구는 융합선택입니다. 수학과제 탐구도 2022 개정에서는 융합선택으로 분류됩니다.<a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\">[6]</a> ‘진로에 도움이 되는 과목’이라는 일상 표현과 공식 유형 ‘진로선택’을 구분하세요. 경제가 진로선택이라고 모든 경제 관련 과목이 같은 유형인 것도 아닙니다.</p>\n<h2>2. 2015와 2022 개정의 평가를 먼저 나누세요</h2>\n<ul><li><strong>2026학년도 고3 · 2015 개정:</strong> 보통교과 진로선택은 원칙적으로 성취도 A~C를 산출하고 석차등급은 산출하지 않습니다. 그렇다고 원점수·과목평균·수강자수·성취도별 분포비율 같은 다른 정보도 모두 사라지는 것은 아닙니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a></li><li><strong>2026학년도 고1·고2 · 2022 개정:</strong> 일반적인 보통교과 선택과목은 성취도 A~E와 석차등급 1~5를 함께 산출하는 것이 원칙입니다. 진로선택도 원칙에 포함되며, 개설 유형 등에 따른 예외는 따로 확인합니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a></li></ul>\n<p>성취도 A~E와 석차등급 1~5는 모두 다섯 구간처럼 보여도 같은 척도가 아닙니다. 성취도와 상대적 석차를 혼동해 ‘A=1등급’이라고 환산하거나, 옛 진로선택 설명을 새 교육과정의 모든 과목에 적용하지 마세요.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a> 이전 졸업생이라면 인터넷 글의 작성연도만이 아니라 본인이 적용받은 교육과정을 먼저 확인해야 합니다.</p>\n<blockquote><p><strong>표현 고치기</strong><br>수정 전: 진로선택은 전부 절대평가라서 등급 부담이 없다.<br>수정 후: 2022 개정 적용 학생의 진로선택은 일반적으로 A~E와 석차 1~5등급을 함께 산출한다. 내가 신청할 과목의 실제 편성과 개설 방식에 따른 예외는 학교 평가계획으로 확인해야 한다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a></p></blockquote>\n<h2>3. 융합선택과 개설 방식의 예외를 구별하세요</h2>\n<p>2026 학생부 기재요령은 사회·과학 교과의 다음 <strong>융합선택 9과목</strong>에 대해 성취도 A~E를 산출하되 석차등급을 산출하지 않도록 안내합니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a></p>\n<ul><li><strong>사회 6과목:</strong> 여행지리, 역사로 탐구하는 현대 세계, 사회문제 탐구, 금융과 경제생활, 윤리문제 탐구, 기후변화와 지속가능한 세계.</li><li><strong>과학 3과목:</strong> 과학의 역사와 문화, 기후변화와 환경생태, 융합과학 탐구.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a></li></ul>\n<p>이 목록을 모든 융합선택의 규칙으로 넓히지 않습니다. 예를 들어 수학의 실용 통계와 정보의 소프트웨어와 생활은 같은 ‘융합선택’이어도 위 9과목에 속하지 않습니다.<a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\">[6]</a><a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a> 석차등급이 없더라도 다른 성적 정보는 남으며, 대학에서의 반영은 해당 전형 기준으로 따로 확인합니다.</p>\n<p>과목 유형 외의 예외도 있습니다. 아래는 대표적인 확인 지점이지 모든 사례를 판정하는 목록은 아닙니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a></p>\n<ul><li><strong>과학탐구실험·체육·예술:</strong> 보통교과의 해당 과목은 성취도 A~C, 석차 미산출 방식이 적용됩니다. 다만 특수목적고의 체육·예술 선택과목까지 이 예외에 일괄 포함하지 않습니다.</li><li><strong>교양:</strong> 성취등급 대신 이수여부 P로 처리합니다.</li><li><strong>공동교육과정·온라인학교:</strong> 해당 유형의 성적을 산출하되 석차등급란에 ‘·’를 입력합니다. 학교 밖 교육과는 기록 방식이 같지 않습니다.</li><li><strong>소인수·특수교육 등:</strong> 수강자수 5명 이하 과목의 석차 표기 선택, 특수교육 전문교과 등의 별도 기준이 있습니다. ‘인원이 적으면 자동으로 무석차’라고 단정하지 말고 학교의 적용 방식을 확인합니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a></li></ul>\n<h2>4. 선택과목 40% 기준 완화는 평가 폐지가 아닙니다</h2>\n<p>국가교육위원회의 교육과정 일부개정 고시일은 <strong>2026년 1월 21일</strong>, 교육부의 후속 지원 대책 발표일은 <strong>2026년 1월 28일</strong>입니다.<a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\">[6]</a><a href=\"https://moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=55e06de53281c675adda4aa299002beb\">[8]</a> 개정일·발표일·학교 적용 시점을 같은 날짜로 쓰지 않습니다.</p>\n<ul><li><strong>공통과목:</strong> 과목 출석률 2/3 이상과 학업성취율 40% 이상이라는 기존 기준을 유지합니다.</li><li><strong>선택과목:</strong> 학점 이수 조건에서 학업성취율을 제외하고 과목 출석률 2/3 이상을 적용합니다.</li><li><strong>적용 학년:</strong> 2026학년도 고1·고2, 2027학년도부터 고1~고3으로 안내됐습니다.<a href=\"https://moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=55e06de53281c675adda4aa299002beb\">[8]</a></li></ul>\n<p><strong>학점을 얻는 조건과 성적을 산출하는 방식은 다릅니다.</strong> 선택과목에서도 시험·수행평가와 성취도·석차 산출은 해당 기준에 따라 이루어집니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a> 이수 기준이 완화됐으니 공부하지 않아도 되거나 성적과 무관하게 자동 졸업한다는 해석은 틀립니다. 출석 미달·미이수·보충·재이수와 특수교육대상학생 등의 적용은 학교가 안내하는 절차와 개별 조건을 확인하세요.</p>\n<h2>5. 진로선택을 고를 때 적을 네 가지</h2>\n<p>아래는 대학의 공식 평가표가 아니라 <strong>편집팀의 상담용 체크리스트</strong>입니다.</p>\n<ol><li><strong>배울 내용:</strong> ‘전공에 좋아 보임’ 대신 어떤 개념을 배우고 싶은지 적습니다. 과목 소개서에서 실제 학습 범위를 확인하세요.</li><li><strong>준비와 부담:</strong> 필요한 기초 개념과 학교의 이수 순서, 다른 과목의 학습량·평가 일정을 함께 점검합니다. 모든 진로선택이 같은 난이도라는 가정은 하지 않습니다.</li><li><strong>수강 조건:</strong> 개설 학년·학기·선택 묶음·정원·변경 기한과 성적 표기를 학교에 확인합니다.</li><li><strong>대학 문서:</strong> 자신의 지원 학년도·전형·모집단위에서 필수·권장·반영·가산점 중 어떤 표현을 썼는지 원문과 쪽수로 구분해 기록합니다.</li></ol>\n<p><strong>교육용 예시:</strong> 데이터 과학을 희망한다면 ‘컴퓨터공학과 필수이므로 선택’이라고 단정하지 않습니다. ‘표 데이터를 정리하고 해석하는 내용을 배우고 싶다 → 학교에서 해당 학기에 개설하는지와 학습 준비를 확인 → 대학의 실제 기준은 별도 확인’으로 적어 보세요. 이 사례는 특정 대학의 이수요건을 검증한 결과가 아닙니다.</p>\n<p>해당 과목이 학교에 없으면 담당교사와 대안을 상담하고, 대학의 기준이 그 상황을 어떻게 다루는지도 해당 학년도 자료로 확인합니다. 미개설이라는 한 가지 사실만으로 자동 불이익 또는 무조건 불이익 없음이라고 약속할 수 없습니다.</p>\n<h2>6. 자주 묻는 질문과 수업 연결</h2>\n<h3>진로선택을 몇 개 들으면 좋나요?</h3><p>전국 공통 정답 개수를 제시할 수 없습니다. 학교 편성·자신의 준비·지원 대학의 실제 기준을 맞춰야 하며, 숫자를 채우려고 무리한 조합을 만들지 않습니다.</p>\n<h3>석차가 없는 과목이면 대학이 보지 않나요?</h3><p>석차등급 미산출과 대학의 평가·반영 여부는 별개입니다. 성취도 등 어떤 정보가 제공되는지와 해당 대학의 반영방법을 각각 확인해야 합니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a></p>\n<h3>선택과목은 성취율 40% 미만이어도 학점을 얻나요?</h3><p>2026학년도 적용 대상의 선택과목 이수 조건에서는 학업성취율 기준이 제외됐습니다. 그러나 과목 출석률 등 해당 이수 조건과 성적 산출은 여전히 확인해야 합니다.<a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\">[7]</a><a href=\"https://moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=55e06de53281c675adda4aa299002beb\">[8]</a> 공통과목까지 같은 규칙으로 묶지 마세요.</p>\n<p>수업에서 생긴 질문을 보고서로 발전시키려면 <a href=\"./research-report-first-time-writing-guide.html\">탐구보고서 대표 작성 가이드</a>, 실제 학습 과정을 남기려면 <a href=\"./student-record-natural-connection.html\">교사가 확인할 수 있는 활동 사실 정리법</a>을 참고하세요. 학생이 교사의 기록 문장을 대신 작성하거나, 보고서 제출만으로 기록을 보장받는 것이 목적은 아닙니다. 대입 제도의 큰 틀은 <a href=\"./2028-admission-changes-csat-school-record-guide.html\">2028 대입 변경사항 가이드</a>에서 지원 학년도와 함께 확인할 수 있습니다.</p>\n<h2>7. 공식 근거와 적용 범위</h2>\n<p>확인일: 2026년 11월 10일. 과목 유형은 2026 일부개정 포함 총론의 과목표, 평가는 2026 학생부 기재요령의 고1·고2 부분과 고3 부분, 이수는 2026년 1월 28일 발표의 공통·선택 구분을 대조했습니다. 학교별 실제 편성·평가·변경 승인과 대학별 과목 요건은 별도 확인 대상입니다. 특수교육·특성화고 등에 일반고의 편성·이수 조건을 그대로 확대하지 않습니다.</p>\n<ul><li>[6] <a href=\"https://www.ne.go.kr/component/file/ND_fileDownload.do?q_fileSn=666&amp;q_fileId=b741961e-773c-4f93-a396-1f3a9608ea11\" target=\"_blank\" rel=\"noopener noreferrer\">국가교육위원회 고시 제2026-1호 일부개정 포함 초·중등학교 교육과정 총론</a></li><li>[7] <a href=\"https://star.moe.go.kr/afile/fileDownload/HtLmn?menuName=m21100&amp;bdId=107752\" target=\"_blank\" rel=\"noopener noreferrer\">2026학년도 학교생활기록부 기재요령 고등학교</a></li><li>[8] <a href=\"https://moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=55e06de53281c675adda4aa299002beb\" target=\"_blank\" rel=\"noopener noreferrer\">교육부 — 고교학점제 안착 지원 대책 발표 (2026-01-28, 보도자료 HWPX)</a></li><li>[9] <a href=\"https://www.moe.go.kr/boardCnts/fileDown.do?m=0204&amp;s=moe&amp;fileSeq=add6e23eb7da4c5b3100c4dcfdb3762c\" target=\"_blank\" rel=\"noopener noreferrer\">2022 개정 교육과정 질의 응답 자료(교육부 2022-12-22 별첨1)</a></li></ul>\n"
+},
+{
+  "id": 56,
+  "title": "탐구보고서 양식 무료 다운로드: 고등학생용 DOCX·PDF 빈칸 템플릿",
+  "slug": "inquiry-report-template-free-download",
+  "categorySlug": "grade-guide",
+  "categorySlugs": [
+    "grade-guide",
+    "student-record"
+  ],
+  "grade": "고1·고2·고3",
+  "subject": "전 과목·보고서 작성",
+  "track": "탐구보고서",
+  "summary": "편집용 DOCX·출력용 PDF를 내려받고 질문·자료·결과·해석·결론·수정 기록을 채우는 방법. 학교 지정 양식과 실제 수행 내용 우선 원칙, 다운로드 전 다섯 가지 확인과 가상 작성 연습을 제공합니다.",
+  "subtitle": "완성 보고서 복사보다 자신의 질문·근거·수정 과정을 적는 양식",
+  "thumbnail": "assets/images/inquiry-report-editable-blank-template.webp",
+  "keyPoints": [
+    "DOCX 편집용과 PDF 출력용을 실제 다운로드",
+    "질문·자료·결과·해석·결론·수정 기록을 구분",
+    "학교 지정 서식과 자신의 실제 수행 사실 우선"
+  ],
+  "tags": [
+    "탐구보고서 양식",
+    "무료 양식 다운로드",
+    "DOCX",
+    "PDF",
+    "수정 기록"
+  ],
+  "relatedPostSlugs": [
+    "research-report-first-time-writing-guide",
+    "student-record-natural-connection"
+  ],
+  "tableOfContents": [
+    "탐구보고서 양식 무료 다운로드",
+    "다운로드 전에 확인할 다섯 가지",
+    "빈칸은 이 순서로 채우세요",
+    "짧은 작성 연습: 책 소개문을 비교한다면",
+    "제출 전에는 빈칸보다 연결을 확인하세요",
+    "자주 묻는 질문과 이용 범위"
+  ],
+  "content": "<figure><img src=\"../assets/images/inquiry-report-editable-blank-template.webp\" alt=\"질문·자료·결론 칸이 나뉜 빈 보고서와 수정 기록 쪽을 펼쳐 놓은 그림\" width=\"1200\" height=\"675\" decoding=\"async\" style=\"display:block;width:100%;height:auto;border-radius:16px\"><figcaption>완성된 보고서를 베끼는 파일이 아니라, 자신이 한 작업을 채워 넣는 빈칸 양식입니다.</figcaption></figure>\n<p><strong>탐구보고서 양식이 필요하다면 아래 DOCX를 편집하거나 PDF를 출력해 쓰세요.</strong> 질문, 자료, 결과, 해석, 결론과 수정 기록을 따로 적도록 만든 자체 제작 학습 보조자료입니다. 로그인이나 결제 없이 파일을 받을 수 있습니다. 학교가 지정한 양식·분량·평가 기준이 있다면 그것을 먼저 따르고 필요한 칸만 옮겨 쓰세요.</p>\n<h2>1. 탐구보고서 양식 무료 다운로드</h2>\n<ul><li><a href=\"../assets/downloads/inquiry-report-template-v1.docx\">편집용 DOCX 양식 받기</a> — 문서 편집기에서 칸을 늘리거나 필요 없는 안내를 지우며 사용합니다.</li><li><a href=\"../assets/downloads/inquiry-report-template-v1.pdf\">출력용 PDF 양식 열기·저장</a> — 빈칸에 손으로 작성하는 용도입니다. PDF 입력 양식이나 DOCX를 그대로 변환한 파일은 아닙니다.</li></ul>\n<p>버전 v1.0, 제작일 2026년 11월 10일. 탐구 플러스 리터러시 편집팀이 만든 자료이며 교육부·학교의 공식 서식이 아닙니다. PDF는 브라우저에서 먼저 열릴 수 있으니 저장 또는 인쇄 메뉴를 이용하세요. DOCX의 글꼴·줄바꿈·페이지 수는 편집 프로그램에 따라 달라질 수 있습니다. HWP 전용 파일은 제공하지 않습니다.</p>\n<h2>2. 다운로드 전에 확인할 다섯 가지</h2>\n<ol><li><strong>학교 지정 서식이 있나요?</strong> 표지, 본문 순서, 인용 방식, 제출 파일 형식이 정해져 있다면 해당 조건을 양식 첫 칸에 먼저 적습니다. 이 파일이 학교 안내를 대신하지 않습니다.</li><li><strong>내 탐구 방식에 맞나요?</strong> 문헌 비교, 작품 해석, 데이터 분석, 실험 중 무엇인지 정합니다. 실험을 하지 않는 글에 독립변인·종속변인 칸을 억지로 만들 필요는 없습니다.</li><li><strong>내가 한 일과 남의 자료가 구분되나요?</strong> 자료에서 옮긴 내용에는 출처·쪽수·주소를 남기고, 자신의 비교·계산·판단은 별도로 적습니다. 아직 하지 않은 일은 계획 칸으로 보냅니다.</li><li><strong>작성할 수 있는 파일인가요?</strong> 화면에서 보기만 할지, 출력해 손으로 쓸지, 문서 편집기에서 표를 늘릴지 정합니다. 이 자료에는 개인정보 입력·파일 업로드·매크로 실행이 필요하지 않습니다.</li><li><strong>완성 예시를 내 결과처럼 옮기고 있지는 않나요?</strong> 양식은 과정 기록을 돕는 빈칸입니다. 글자 수를 채우려고 가상 수치·읽지 않은 출처·수행하지 않은 활동을 넣지 않습니다.</li></ol>\n<h2>3. 빈칸은 이 순서로 채우세요</h2>\n<h3>질문·범위·원래 예상</h3><p>‘환경 문제’처럼 넓은 주제 대신 무엇을 어떤 자료로 비교할지 한 문장으로 적습니다. 자료 수집 전에 정한 기준과 예상이 있다면 날짜와 함께 남기세요. 문헌·작품 탐구라면 실험가설 대신 처음의 잠정적 해석과 검토할 질문을 쓸 수 있습니다. 예상 없이 시작했다면 ‘탐색적 비교, 사전 가설 없음’이라고 적어도 됩니다.</p>\n<h3>자료와 분석 기준</h3><p>어디서 얻은 자료인지, 어떤 조건으로 골랐는지, 무엇을 제외했는지 적습니다. 수치가 있으면 단위와 비교 대상, 비율이라면 분모를 함께 남기세요. 뒷받침되지 않는 값이 나왔다고 지우는 대신 원자료를 보존하고 제외 여부·이유·판단 시점을 기록합니다. 개인정보가 있는 자료는 그대로 붙이지 말고 학교 안내에 따라 처리하세요.</p>\n<h3>결과·해석·결론</h3><p>결과에는 자료에서 직접 확인한 것을, 해석에는 그 의미와 가능한 설명을 씁니다. 결론에서는 처음 질문에 현재 자료가 허용하는 범위만큼 답하세요. ‘새롭게 떠오른 설명’은 처음부터 검증한 가설과 구분하고, 확인하지 못한 부분과 다음에 할 일을 별도로 남깁니다. 숫자 몇 개가 비슷하다고 효과가 없다고 단정하는 문장도 피합니다.</p>\n<h3>출처와 수정 기록</h3><p>자료마다 작성자·기관, 제목, 발행일, 확인일, 주소와 실제 근거 쪽수를 적습니다. 직접 인용은 표시하고 자신의 요약과 구분하세요. 수정 기록에는 바꾸기 전 문장, 바꾼 문장, 바꾼 이유를 함께 씁니다. 마지막에 읽지 않은 자료가 참고문헌에 섞이지 않았는지 점검합니다.</p>\n<h2>4. 짧은 작성 연습: 책 소개문을 비교한다면</h2>\n<p>다음 두 문장은 양식 사용법을 설명하려고 편집팀이 만든 <strong>가상 문장</strong>입니다. 실제 도서·학생 활동·조사 결과가 아닙니다. 실제 보고서에서는 자신이 읽고 출처를 남길 수 있는 자료로 바꾸세요.</p>\n<ul><li>자료 A: ‘정말 재미있는 과학책이다.’</li><li>자료 B: ‘각 장 끝에 관찰 질문이 있어 읽은 내용을 점검해 볼 수 있다.’</li><li>질문 칸: ‘두 소개문은 추천 이유를 어떻게 제시하는가?’</li><li>분석 기준 칸: ‘책의 구체적인 구성 요소를 이유로 언급하는지 비교한다.’ 이는 이번 연습의 자체 기준이며 공식 평가표가 아닙니다.</li><li>결과 칸: ‘A에는 재미있다는 평가가 있고, B에는 장 끝의 관찰 질문이라는 구성 요소가 언급된다.’</li><li>해석 칸: ‘B는 독자가 추천 이유로 제시된 요소를 확인해 볼 단서를 준다. 다만 실제 책에 해당 요소가 있는지는 별도 확인하지 않았다.’</li><li>결론 칸: ‘이 두 가상 문장에서는 B가 추천 이유를 구체적인 구성 요소로 제시했다. 실제 독자의 이해도나 책의 우수성을 조사한 것은 아니므로 더 좋은 책이라고 판단하지 않는다.’</li></ul>\n<p><strong>수정 전:</strong> ‘구체적으로 소개하면 학생들의 독서 능력이 높아진다.’<br><strong>수정 후:</strong> ‘이 연습에서는 추천 이유를 제시하는 방식의 차이를 확인했다. 독서 능력에 미치는 영향은 측정하지 않았다.’<br>바꾼 이유: 자료에 없는 효과를 결론에 넣었기 때문입니다. 실제 자신의 보고서에서는 효과를 측정했는지, 무엇을 직접 확인했는지를 기준으로 고치세요.</p>\n<h2>5. 제출 전에는 빈칸보다 연결을 확인하세요</h2>\n<p>모든 칸을 길게 채우는 것이 목표는 아닙니다. 제목의 질문에 결론이 답하는지, 결과를 뒷받침하는 자료를 다시 찾을 수 있는지, 결론이 자료보다 앞서 나가지 않는지 확인하세요. 하지 않은 실험·독서·인터뷰를 완료형으로 쓰지 않습니다. 이 양식은 학생의 학습 보고서용이며 교사가 작성하는 학생부 문장을 대신 만들어 주는 서식이 아닙니다.</p>\n<p>전체 작성 흐름은 <a href=\"./research-report-first-time-writing-guide.html\">탐구보고서 처음 쓰는 법</a>에서, 결과가 예상과 다를 때의 문장 수정은 <a href=\"../columns/research-report-unexpected-results-conclusion.html\">결과·해석·결론 쓰는 법</a>에서 이어 보세요. 이 페이지는 다운로드와 빈칸 사용법을 맡고, 대표 작성 가이드는 질문에서 한 편의 글을 만드는 과정을 맡습니다.</p>\n<h2>6. 자주 묻는 질문과 이용 범위</h2>\n<h3>그대로 제출해도 되나요?</h3><p>빈칸 상태나 예시를 복사한 상태로 제출하는 자료가 아닙니다. 학교 기준에 맞춰 자신의 자료·작업·결론을 채워야 합니다. 분량을 늘리라는 지시가 아니라 어떤 부분이 아직 확인되지 않았는지 드러내는 도구로 사용하세요.</p>\n<h3>PDF에 바로 타이핑할 수 있나요?</h3><p>이 PDF는 인쇄용이며 입력 필드가 없습니다. 내용을 편집하려면 DOCX를 사용하세요. 편집기에서 표가 길어지면 다음 쪽으로 이어질 수 있으므로 제출 전 미리보기를 확인합니다.</p>\n<h3>어디까지 무료로 쓸 수 있나요?</h3><p>개인 학습, 학교 수업·과제, 비영리 교육을 위한 복사·수정·배포를 허용합니다. 배포할 때는 원출처와 수정 여부를 표시해 주세요. 원본을 유료 상품으로 재판매하거나 편집팀·학교의 공식 서식인 것처럼 표시하는 것은 허용하지 않습니다. 이 범위는 이 페이지의 자체 제작 양식에 적용되며 사이트의 다른 자료나 외부 도서·문헌의 이용허락을 뜻하지 않습니다.</p>\n",
+  "fullArticle": true,
+  "ads": false,
+  "reportFlow": [],
+  "studentRecordPoints": [],
+  "interviewQuestions": [],
+  "followUpQuestions": [],
+  "avoidExpressions": [],
+  "authorName": "탐구가이드 편집팀",
+  "status": "published",
+  "featured": true,
+  "publishedAt": "2026-11-10",
+  "updatedAt": "2026-11-10"
+},
+{
+  "id": 57,
+  "title": "2028 대입 대학별 반영과목 찾는 법: 어디가·입학처 원문 대조",
+  "slug": "2028-university-subject-requirements-document-check",
+  "categorySlug": "credit-system",
+  "categorySlugs": [
+    "credit-system"
+  ],
+  "grade": "2028학년도 대입 준비생·학부모",
+  "subject": "과목 선택·대학별 전형",
+  "track": "전 계열",
+  "summary": "대입정보포털 어디가와 대학 입학처에서 자신의 전형 문서를 찾아 권장과목·필수조건·반영교과를 구분하는 실습. 실제 2028 공식 문서의 근거 위치와 상담용 확인표를 제공합니다.",
+  "subtitle": "과목 이름 목록보다 적용 전형·근거 쪽수·수정 공지를 먼저 확인하세요",
+  "thumbnail": "assets/images/university-subject-source-finding.webp",
+  "keyPoints": [
+    "권장·핵심권장·필수·성적 반영·수능 조건을 분리",
+    "시행계획과 최종 모집요강 및 변경 공지를 대조",
+    "문서명·쪽수·적용 전형·확인일을 남기는 학생용 기록표"
+  ],
+  "tags": [
+    "2028 대입 대학별 반영과목",
+    "어디가",
+    "입학처",
+    "권장과목",
+    "학생부 반영"
+  ],
+  "relatedPostSlugs": [
+    "2028-admission-changes-csat-school-record-guide",
+    "high-school-credit-system-elective-subject-guide",
+    "career-elective-subject-types-assessment-guide"
+  ],
+  "tableOfContents": [
+    "먼저 문서의 학년도와 단계를 맞추세요",
+    "문서는 이렇게 찾으세요",
+    "같은 과목 이름도 다섯 칸에 나눠 적으세요",
+    "학생용 원문 확인표",
+    "수정 전후로 보는 기록 문장",
+    "자주 묻는 질문과 확인 범위"
+  ],
+  "content": "<figure><img src=\"../assets/images/university-subject-source-finding.webp\" alt=\"입학처 공지에서 시행계획을 찾아 권장 과목과 성적 반영 방법을 다른 칸에 옮겨 적는 그림\" width=\"1200\" height=\"675\" decoding=\"async\" style=\"display:block;width:100%;height:auto;border-radius:16px\"><figcaption>같은 대학 문서 안에서도 권장 과목과 성적 반영 방법은 다른 곳에 나옵니다.</figcaption></figure>\n<p><strong>대학별 반영과목은 블로그 요약표보다 지원 대학의 2028학년도 대입전형 시행계획과 전공 연계 과목 안내에서 직접 찾는 것이 정확합니다.</strong> 문서를 찾은 뒤에는 ‘권장 과목’, ‘지원자격’, ‘성적 반영 교과와 산식’, ‘서류평가’, ‘수능 최저’를 서로 다른 칸에 옮겨 적으세요. 같은 과목 이름이 나와도 문서마다 하는 일이 다르기 때문입니다.</p>\n<p>이 글은 2028학년도 지원 대학의 원문을 직접 찾고 읽는 연습입니다. 확인 기준일은 2026년 11월 10일이며, 예시로 서울대와 연세대 서울캠퍼스의 공식 문서만 읽었습니다. 다른 대학이나 모집단위의 조건을 대신 정리한 표가 아니며, 특정 과목 조합의 합격 효과를 판단하지 않습니다.</p>\n<h2>1. 먼저 문서의 학년도와 단계를 맞추세요</h2>\n<p>교육부는 대학의 모집단위별 반영과목이 통상 대학별 대입전형 시행계획으로 입학연도 1년 10개월 전, 2028학년도 기준 2026년 4월까지 공표된다고 안내했습니다.<a href=\"https://www.moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=41b42cdad13b59cbbbc949fc0eef35b2\">[1]</a> 대교협은 2026년 4월 30일 2028학년도 시행계획을 공표하면서 주요사항 자료집을 대입정보포털 어디가에 게재할 계획이라고 밝혔습니다.<a href=\"https://kcue.or.kr/_upload/news/2026/04/30/application_3eb96f4ffbc6cf20a16a3396bd07fe8b.pdf\">[2]</a> 일반적인 3년 진급 기준으로 2028학년도 대입은 2025년 고교 입학생, 곧 2026년 고2가 준비합니다. 2026년 고1은 2029학년도 문서를 따로 확인해야 합니다.</p>\n<p>문서는 보통 다음 순서로 구체해집니다. ① 전공 연계 과목 안내처럼 과목 선택을 돕는 자료 ② 대학별 대입전형 시행계획 ③ 지원 직전의 모집요강 ④ 수정 공지입니다. 연세대 시행계획 첫 쪽은 계획이 교육부 지침과 입시 여건 변화에 따라 변경될 수 있다고 적고, 학생부 교과 반영의 세부 사항은 추후 수시모집 요강을 참고하라고 안내합니다.<a href=\"https://www2.yonsei.ac.kr/entrance/plan/2028_plan.pdf\">[6]</a> 그래서 이번에 읽은 시행계획 내용을 최종 모집요강의 확정 조건처럼 저장하지 않습니다.</p>\n<h2>2. 문서는 이렇게 찾으세요</h2>\n<ol><li><strong>입학처 공지에서 학년도로 검색:</strong> ‘2028’로 검색한 뒤 ‘시행계획’, ‘전공 연계’, ‘모집요강’이 들어간 게시글을 고릅니다. 서울대 입학본부 공지에는 2025년 6월 30일 ‘2028학년도 전공 연계 과목 선택 안내’와 2026년 4월 30일 ‘2028학년도 대학 신입학생 입학전형 시행계획’이 따로 올라와 있었습니다.<a href=\"https://admission.snu.ac.kr/undergraduate/notice?md=down&amp;bbsidx=156194&amp;fileidx=39585\">[3]</a><a href=\"https://admission.snu.ac.kr/undergraduate/notice?md=down&amp;bbsidx=168854&amp;fileidx=51182\">[4]</a> 연세대 입학처에는 2026년 4월 30일 작성일로 시행계획과 전공연계과목 선택 가이드라인이 각각 게시돼 있었습니다.<a href=\"https://www2.yonsei.ac.kr/entrance/plan/2028_guide.pdf\">[5]</a><a href=\"https://www2.yonsei.ac.kr/entrance/plan/2028_plan.pdf\">[6]</a></li><li><strong>첨부파일을 열고 버전을 기록:</strong> 게시일, 파일 제목, 표지 날짜, ‘수정’ 표시 여부를 적습니다. 2026년 11월 10일 서울대 공지 목록과 검색 결과에서 ‘(수정) 2028학년도 시행계획’ 제목은 보이지 않았지만, 이는 그날 확인한 목록 범위의 관찰일 뿐입니다. 지원 시점에는 다시 확인하세요.</li><li><strong>어디가는 교차 확인용:</strong> 여러 대학 자료를 찾는 출발점으로 쓰되, 실제 문구는 해당 대학 원문 쪽수로 다시 확인합니다. 이번 검증 환경에서는 어디가 주소가 404 화면을 반환해 메뉴 경로를 직접 확인하지 못했습니다. 그래서 이 글은 어디가 메뉴 이름을 단계별로 안내하지 않습니다.</li></ol>\n<h2>3. 같은 과목 이름도 다섯 칸에 나눠 적으세요</h2>\n<ul><li><strong>권장 과목:</strong> 서울대 안내는 전공 연계 권장과목이 지원자격과 무관하지만, 모집단위가 권장하는 과목의 이수 여부가 수시 서류평가와 정시 교과역량평가에 반영된다고 적습니다.<a href=\"https://admission.snu.ac.kr/undergraduate/notice?md=down&amp;bbsidx=156194&amp;fileidx=39585\">[3]</a> 시행계획에는 이 반영이 ‘교육과정 이수 맥락을 고려’해 이뤄진다는 문구가 붙어 있습니다(PDF 37쪽, 인쇄 35쪽).<a href=\"https://admission.snu.ac.kr/undergraduate/notice?md=down&amp;bbsidx=168854&amp;fileidx=51182\">[4]</a> ‘권장’은 지원 불가 조건이 아니고, 그렇다고 평가와 무관한 참고 문구도 아닙니다.</li><li><strong>모집단위별 권장 내용:</strong> 서울대 안내에서 자연계열 등 해당 유형의 모집단위는 수학의 기하·미적분Ⅱ와 과학 진로선택 3과목 이상을 권장하며, 의과대학은 ‘세포와 물질대사’, ‘생물의 유전’을 포함하도록 따로 적었습니다. 간호대학과 치의학과는 기하 또는 미적분Ⅱ로 예외를 둡니다.<a href=\"https://admission.snu.ac.kr/undergraduate/notice?md=down&amp;bbsidx=156194&amp;fileidx=39585\">[3]</a> 연세대 가이드라인은 인문계열에 특정 전공연계과목을 지정하지 않고, 자연계열과 의·치·약학 계열 모든 모집단위에 기하·미적분Ⅱ와 과학 진로선택 3과목 이상을 권장합니다.<a href=\"https://www2.yonsei.ac.kr/entrance/plan/2028_guide.pdf\">[5]</a> 대학 이름만 적지 말고 모집단위까지 적어야 하는 이유입니다.</li><li><strong>개설 여건:</strong> 연세대는 학교에 개설됐지만 이수하지 않은 경우와 개설되지 않아 이수할 수 없었던 경우를 구분해 평가한다고 밝혔습니다.<a href=\"https://www2.yonsei.ac.kr/entrance/plan/2028_guide.pdf\">[5]</a> 학교 사정은 상담에서 확인할 정보이지, 혼자 불이익을 단정할 근거가 아닙니다.</li><li><strong>성적 반영 교과와 산식:</strong> 연세대 학생부교과(추천형) 1단계는 전 과목을 반영합니다. 공통·일반선택·진로선택은 ‘반영과목 A’로 등급점수 70%와 성취도 30%를 반영하고, 융합선택과 체육·예술/과학탐구실험은 ‘반영과목 B’로 일정 성취도에 대해 최대 10점까지 감점합니다(PDF 15쪽, 인쇄 11쪽).<a href=\"https://www2.yonsei.ac.kr/entrance/plan/2028_plan.pdf\">[6]</a> 이 표는 권장 과목 목록과 다른 질문, 곧 ‘성적을 어떻게 계산하나’에 답합니다.</li><li><strong>지원자격과 수능 최저:</strong> 같은 연세대 추천형 쪽에는 고교 추천, 졸업 예정 시기, 제외 대상 같은 지원자격과 별도 쪽의 수능 최저학력기준이 있습니다.<a href=\"https://www2.yonsei.ac.kr/entrance/plan/2028_plan.pdf\">[6]</a> 과목 선택 표에 섞어 쓰지 말고 칸을 나눠 기록하세요.</li></ul>\n<h2>4. 학생용 원문 확인표</h2>\n<p>공책이나 스프레드시트에 아래 열을 만들어 보세요. 마지막 열이 가장 중요합니다. 문서 이름과 쪽수를 적지 못한 내용은 아직 확인한 정보가 아닙니다.</p>\n<ol><li><strong>대학·캠퍼스·모집단위·전형:</strong> 예) 연세대 서울캠퍼스, 학생부교과 추천형</li><li><strong>문서 종류와 날짜:</strong> 예) 2028학년도 입학전형 시행계획, 2026년 4월</li><li><strong>문구 유형:</strong> 권장 / 지원자격 / 성적 반영 / 서류·면접 평가 / 수능 최저 중 하나</li><li><strong>원문 요약:</strong> 예) 공통·일반·진로선택은 등급점수와 성취도를 함께 반영</li><li><strong>근거 위치:</strong> 예) PDF 15쪽, 인쇄 11쪽, 확인일 2026-11-10</li><li><strong>내 과목 계획과 미확인 질문:</strong> 예) 우리 학교 진로선택 개설 여부, 최종 모집요강의 세부 산식</li></ol>\n<p>작성 후에는 같은 대학의 다른 전형에 이 줄을 복사하지 마세요. 학생부종합전형, 정시, 특기자 전형은 반영 교과와 평가 방식이 다를 수 있습니다. 실제 수업에서 무엇을 배웠는지는 과목 선택 표와 별도로 정리하는 편이 상담할 때 더 쓸모 있습니다.</p>\n<h2>5. 수정 전후로 보는 기록 문장</h2>\n<p><strong>수정 전:</strong> ‘연세대 공대는 기하가 필수다.’<br><strong>수정 후:</strong> ‘연세대 2028학년도 전공연계과목 가이드라인은 자연계열 모집단위에 기하·미적분Ⅱ 이수를 권장한다. 지원자격 조건 여부는 지원 전형의 지원자격 항목에서 따로 확인한다.’<br>바꾼 이유: 원문 표현은 ‘권장’이고, 가이드라인은 지원자격 문서가 아니기 때문입니다.<a href=\"https://www2.yonsei.ac.kr/entrance/plan/2028_guide.pdf\">[5]</a></p>\n<p><strong>수정 전:</strong> ‘서울대는 권장과목을 안 들으면 지원할 수 없다.’<br><strong>수정 후:</strong> ‘서울대 2028 안내에서 권장과목은 지원자격과 무관하지만, 이수 여부는 교육과정 이수 맥락을 고려해 수시 서류평가와 정시 교과역량평가에 반영된다.’<br>바꾼 이유: 지원 가능 여부와 평가 반영을 구분해야 하기 때문입니다.<a href=\"https://admission.snu.ac.kr/undergraduate/notice?md=down&amp;bbsidx=156194&amp;fileidx=39585\">[3]</a><a href=\"https://admission.snu.ac.kr/undergraduate/notice?md=down&amp;bbsidx=168854&amp;fileidx=51182\">[4]</a></p>\n<p>국가 공통 제도와 학년도 확인은 <a href=\"./2028-admission-changes-csat-school-record-guide.html\">2028 대입 변경사항 총정리</a>, 학교 편성표 읽기는 <a href=\"./high-school-credit-system-elective-subject-guide.html\">고교학점제 선택과목 가이드</a>, 진로선택의 성취도·석차 표기는 <a href=\"./career-elective-subject-types-assessment-guide.html\">진로선택과목 평가 안내</a>에서 이어 보세요.</p>\n<h2>6. 자주 묻는 질문과 확인 범위</h2>\n<h3>2026년 고1도 이 2028 문서를 기준으로 과목을 고르면 되나요?</h3><p>일반적인 진급 기준이라면 2029학년도 지원 대상입니다. 교육부가 안내한 공표 원칙이 같다면 2029학년도 시행계획은 2027년 4월 무렵까지 공표될 것으로 볼 수 있지만, 실제 일정과 내용은 해당 시점의 공지로 확인해야 합니다.<a href=\"https://www.moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=41b42cdad13b59cbbbc949fc0eef35b2\">[1]</a> 2028 문서는 대학이 어떤 방식으로 안내하는지 익히는 참고자료로 쓰세요.</p>\n<h3>권장과목을 모두 들으면 유리한가요?</h3><p>이 글은 그 효과를 판단하지 않습니다. 서울대와 연세대 문서는 이수 여부뿐 아니라 교육과정 맥락이나 학교 개설 여건을 함께 본다고 적고 있습니다.<a href=\"https://admission.snu.ac.kr/undergraduate/notice?md=down&amp;bbsidx=168854&amp;fileidx=51182\">[4]</a><a href=\"https://www2.yonsei.ac.kr/entrance/plan/2028_guide.pdf\">[5]</a> 과목 수를 늘리는 것보다 학습 준비, 학교 개설, 지원 모집단위의 원문 조건을 함께 확인하세요.</p>\n<h3>이번에 확인한 범위</h3><p>교육부·대교협의 공표 안내와 서울대·연세대 서울캠퍼스의 2028학년도 공식 PDF 해당 쪽을 2026년 11월 10일 확인했습니다. 다른 대학, 다른 캠퍼스, 최종 모집요강, 어디가 화면은 검증하지 않았습니다. 확인표와 수정 문장은 편집팀의 학습용 예시이며 학생의 실제 활동이나 상담 결과가 아닙니다.</p>\n<ul><li>[1] <a href=\"https://www.moe.go.kr/boardCnts/fileDown.do?m=020402&amp;s=moe&amp;fileSeq=41b42cdad13b59cbbbc949fc0eef35b2\">교육부 — 2028 수능 예시문항·모집단위별 반영과목 조기 안내 (2025-04-15, 보도자료 HWPX)</a></li><li>[2] <a href=\"https://kcue.or.kr/_upload/news/2026/04/30/application_3eb96f4ffbc6cf20a16a3396bd07fe8b.pdf\">대교협 — 2028학년도 대학입학전형시행계획 공표 (2026-04-30, PDF)</a></li><li>[3] <a href=\"https://admission.snu.ac.kr/undergraduate/notice?md=down&amp;bbsidx=156194&amp;fileidx=39585\">서울대 입학본부 — 2028학년도 전공 연계 과목 선택 안내 (2025-06-30, PDF)</a></li><li>[4] <a href=\"https://admission.snu.ac.kr/undergraduate/notice?md=down&amp;bbsidx=168854&amp;fileidx=51182\">서울대 입학본부 — 2028학년도 대학 신입학생 입학전형 시행계획 (2026-04-30, PDF)</a></li><li>[5] <a href=\"https://www2.yonsei.ac.kr/entrance/plan/2028_guide.pdf\">연세대 입학처 — 2028학년도 전공연계과목 선택 가이드라인 (2026-04, PDF)</a></li><li>[6] <a href=\"https://www2.yonsei.ac.kr/entrance/plan/2028_plan.pdf\">연세대 입학처 — 2028학년도 입학전형 시행계획 서울캠퍼스 (2026-04, PDF)</a></li></ul>\n",
+  "fullArticle": true,
+  "ads": false,
+  "reportFlow": [],
+  "studentRecordPoints": [],
+  "interviewQuestions": [],
+  "followUpQuestions": [],
+  "avoidExpressions": [],
+  "authorName": "탐구가이드 편집팀",
+  "status": "published",
+  "featured": true,
+  "publishedAt": "2026-11-10",
+  "updatedAt": "2026-11-10"
 }
 ];
