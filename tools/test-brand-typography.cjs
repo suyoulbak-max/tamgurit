@@ -36,6 +36,7 @@ const records = [];
       for (const file of pages) {
         await page.goto(base + file, { waitUntil: "load" });
         await page.evaluate(() => document.fonts.ready);
+        assert.equal(await page.locator('.site-header .brand-tagline').textContent(), '고교학점제·탐구보고서·세특 연결 가이드');
         const metrics = await page.evaluate(() => {
           const brand = document.querySelector(".site-header .brand");
           const nav = document.querySelector(".site-header .nav");
@@ -84,6 +85,17 @@ const records = [];
     assert.notEqual(await page.locator(":focus").evaluate(el => getComputedStyle(el).outlineStyle), "none");
     await Promise.all([page.waitForURL(base + "index.html"), page.keyboard.press("Enter")]);
     assert.equal(page.url(), base + "index.html");
+    await page.route(base + 'index.html', async route => {
+      const response = await route.fetch();
+      await route.fulfill({response, body:(await response.text()).replace('data-prerendered="true"', 'data-prerendered="false"')});
+    });
+    await page.goto(base + 'index.html');
+    assert.equal(await page.title(), '탐구보고서 작성·고교학점제 과목 선택 | 탐구 플러스 리터러시');
+    assert.equal(await page.locator('h1').textContent(), '과목 선택에서 탐구보고서·세특·대입 면접까지');
+    assert.equal(await page.locator('meta[property="og:site_name"]').getAttribute('content'), '탐구 플러스 리터러시');
+    const websites = await page.locator('script[type="application/ld+json"]').evaluateAll(nodes => nodes.map(n => JSON.parse(n.textContent)).filter(s => s['@type'] === 'WebSite'));
+    assert.equal(websites.length, 1);
+    assert.equal(websites[0].name, '탐구 플러스 리터러시');
     fs.writeFileSync(path.join(output, "report.json"), JSON.stringify({ pages: pages.length, widths: [390, 1440], records, keyboard: "PASS", themes: "Existing light theme; no dark theme introduced", externalRequests: "blocked" }, null, 2));
     console.log(`Brand/typography PASS: ${pages.length} pages, ${records.length} viewport checks, 5 additional breakpoints, keyboard home link, local font loading.`);
   } finally { await browser.close(); server.close(); }

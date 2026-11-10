@@ -8,7 +8,6 @@ const crypto = require("crypto");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE_URL = "https://plus-literacy.co.kr";
-const SITE_SUFFIX = "고교학점제 탐구보고서 작성 가이드";
 const ADSENSE = "ca-pub-8108040193754389";
 const appHash = crypto.createHash("sha256").update(fs.readFileSync(path.join(ROOT, "assets/js/app.js"))).digest("hex").slice(0, 10);
 const postsHash = crypto.createHash("sha256").update(fs.readFileSync(path.join(ROOT, "data/posts.js"))).digest("hex").slice(0, 10);
@@ -81,7 +80,7 @@ const indexableCategories = categories.filter((category) => publishedPosts.some(
 function brand(prefix, footer = false) {
   return '<a class="brand' + (footer ? ' brand--footer' : '') + '" href="' + prefix + 'index.html" aria-label="' + esc(config.brandName) + ' 홈">' +
     '<img class="brand-mark" src="' + prefix + 'assets/icons/plus-literacy.svg?v=20261016" width="44" height="44" alt="">' +
-    '<span class="brand-type"><strong class="brand-name">' + esc(config.brandName) + '</strong></span></a>';
+    '<span class="brand-type"><strong class="brand-name">' + esc(config.name) + '</strong><span class="brand-tagline">' + esc(config.tagline) + '</span></span></a>';
 }
 
 function header(prefix) {
@@ -123,7 +122,7 @@ function footer(prefix) {
 }
 
 function documentHtml({ title, description, canonical, prefix = "", body, type = "website", schemas = [], naver = false, page = "", slug = "", scripts = false, ads = true }) {
-  const fullTitle = title === SITE_SUFFIX ? title : title + " | " + SITE_SUFFIX;
+  const fullTitle = title === config.name ? title : title + " | " + config.name;
   return '<!doctype html>\n<html lang="ko">\n<head>\n' +
     '<meta name="google-adsense-account" content="' + ADSENSE + '">\n' +
     (ads ? '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + ADSENSE + '" crossorigin="anonymous"></script>\n' : '') +
@@ -145,7 +144,7 @@ function documentHtml({ title, description, canonical, prefix = "", body, type =
     '<meta name="twitter:image:alt" content="' + esc(config.shareImageAlt) + '">\n' +
     '<link rel="icon" href="/favicon.png" type="image/png" sizes="192x192">\n' +
     '<link rel="preload" href="' + prefix + 'assets/fonts/SUIT-Variable.woff2" as="font" type="font/woff2" crossorigin>\n' +
-    schemas.map((schema) => '<script type="application/ld+json">' + jsonld(schema) + '</script>\n').join("") +
+    schemas.map((schema) => '<script type="application/ld+json"' + (schema['@type'] === 'WebSite' ? ' id="website-schema"' : '') + '>' + jsonld(schema) + '</script>\n').join("") +
     '<link rel="stylesheet" href="' + prefix + 'assets/css/style.css?v=' + CSS_VERSION + '">\n</head>\n' +
     '<body' + (page ? ' data-page="' + esc(page) + '"' : '') + (slug ? ' data-slug="' + esc(slug) + '"' : '') + ' data-prerendered="true"><div id="app">' + header(prefix) + '<main id="main-content" tabindex="-1">' + body + '</main>' + footer(prefix) + '</div>\n' +
     (scripts ? '<script src="' + prefix + 'data/site.config.js?v=' + CONFIG_VERSION + '"></script>\n<script src="' + prefix + 'data/categories.js?v=20260708-4"></script>\n<script src="' + prefix + 'data/posts.js?v=' + POSTS_VERSION + '"></script>\n<script src="' + prefix + 'data/columns.js?v=' + COLUMNS_VERSION + '"></script>\n<script src="' + prefix + 'assets/js/app.js?v=' + BUILD_VERSION + '"></script>\n' : '') +
@@ -267,7 +266,7 @@ function renderHome() {
   const featured = sortNewest(publishedPosts.filter((item) => item.featured)).slice(0, 6);
   const issues = sortNewest(publishedColumns.filter((item) => item.kind === "issue")).slice(0, 3);
   const body = '<section class="hero"><div class="container hero-grid"><div><span class="eyebrow">고교학점제 탐구 설계</span>' +
-    '<h1>탐구보고서에서 세특·대입 면접까지, 수업의 근거를 설득력 있게.</h1><p>' + esc(config.description) + '</p><p><strong>결과를 꾸미는 대신, 질문·자료·수정 과정을 남기세요.</strong> 면접 반영 전형에서는 답변이 최종 평가에 영향을 줄 수 있습니다. 본인이 설명할 수 있는 학습 근거를 차근차근 준비하도록 돕습니다.</p>' +
+    '<h1>과목 선택에서 탐구보고서·세특·대입 면접까지</h1><p>' + esc(config.description) + '</p><p><strong>결과를 꾸미는 대신, 질문·자료·수정 과정을 남기세요.</strong> 면접 반영 전형에서는 답변이 최종 평가에 영향을 줄 수 있습니다. 본인이 설명할 수 있는 학습 근거를 차근차근 준비하도록 돕습니다.</p>' +
     '<div class="actions"><a class="button primary" href="posts/research-report-first-time-writing-guide.html">보고서 처음 쓰기</a><a class="button" href="posts/grade-3-interview-ready-report.html">대입 면접 준비하기</a></div></div>' +
     '<aside class="hero-panel"><h2>좋은 탐구의 핵심 흐름</h2><ol class="path-list"><li><b>1</b><span>학년과 수업에서 출발해 탐구 질문을 좁힙니다.</span></li><li><b>2</b><span>자료 선택 이유와 분석 기준을 분명히 기록합니다.</span></li><li><b>3</b><span>한계와 후속 질문을 세특·면접 답변으로 연결합니다.</span></li></ol></aside></div></section>' +
     '<section class="section"><div class="container"><h2>고교학점제·탐구보고서·대입 면접, 왜 연결해서 준비하나요?</h2><div class="grid"><article class="card"><h3>과목 선택은 탐구의 출발점</h3><p>희망 전공 이름만 따라가기보다 학교에서 배울 수 있는 개념과 수업 과제를 먼저 확인하세요. 과목을 선택한 이유가 실제 질문과 분석 방법으로 이어지는지 점검합니다.</p><a href="posts/grade-2-subject-based-report.html">선택과목에서 탐구 질문 찾기</a></article><article class="card"><h3>탐구보고서는 학습 과정의 근거</h3><p>모든 대학·전형이 탐구보고서를 별도로 평가하는 것은 아닙니다. 보고서의 질문·분석·수정 흔적을 수업에서 설명하고, 기록된 활동을 면접에서 복기하는 자료로 활용합니다. 학생부 기록은 담당 교사의 관찰과 학교 기준에 따릅니다.</p><a href="posts/student-record-natural-connection.html">보고서와 세특을 정직하게 연결하기</a></article><article class="card"><h3>면접은 외운 문장보다 설명 가능한 근거</h3><p>서류기반면접에서는 본인의 기록을 설명하는 연습이 필요합니다. 제시문 면접이나 면접 없는 전형과 구분하고, 해당 대학의 모집요강부터 확인하세요.</p><a href="posts/interview-follow-up-checklist.html">꼬리질문에서 막힌 근거 보완하기</a></article></div><div class="notice-box"><strong>공식 전형 사례 · 확인일 2026-10-14</strong><p>서울대학교 2027학년도 수시 지역균형전형은 2단계에서 1단계 성적 70과 면접 30을 합산합니다. 면접이 실제 전형요소인 사례이며, 탐구보고서 점수가 30이라는 뜻은 아닙니다. 이 비율을 다른 대학이나 2028학년도에 그대로 적용하지 마세요. 수능 최저학력기준과 모집단위별 조건도 함께 확인해야 합니다. <a href="https://admission.snu.ac.kr/materials/guide_movie/admission_guide">서울대학교 입학본부 공식 안내</a></p><p>2028 대입의 교육과정·수능 변화는 <a href="https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&amp;boardSeq=103113&amp;lev=0&amp;m=020402&amp;opType=N&amp;page=1">교육부의 2028 대입 준비 안내</a>에서 출발하고, 실제 지원 학년의 대학 모집요강을 다시 확인하세요.</p></div></div></section>' +
@@ -277,7 +276,7 @@ function renderHome() {
     '<section class="section"><div class="container"><div class="section-header"><div><h2>탐구보고서 작성 칼럼</h2><p class="lead">탐구 기록을 더 정직하고 설득력 있게 다듬는 관점을 모았습니다.</p></div><div class="actions"><a class="button" href="columns/index.html#writing">작성 칼럼 보기</a><a class="button" href="columns/index.html#issues">입시·교육 이슈 보기</a></div></div><div class="grid">' + sortNewest(publishedColumns.filter((item) => item.kind !== "issue")).slice(0, 3).map((item) => columnCard(item)).join("") + '</div></div></section>' +
     (issues.length ? '<section class="section"><div class="container"><div class="section-header"><div><h2>입시·교육 이슈 해설</h2><p class="lead">새 발표의 적용 대상과 학생이 준비할 일을 확인합니다.</p></div><a class="button" href="columns/index.html#issues">이슈 해설 전체 보기</a></div><div class="grid">' + issues.map((item) => columnCard(item)).join("") + '</div></div></section>' : '');
   const websiteSchema = { "@context": "https://schema.org", "@type": "WebSite", name: config.name, url: SITE_URL, description: config.description, inLanguage: "ko-KR" };
-  return documentHtml({ title: SITE_SUFFIX, description: config.description, canonical: SITE_URL + "/", body, schemas: [websiteSchema], naver: true, page: "home", scripts: true, ads: config.homeAds !== false });
+  return documentHtml({ title: config.homeTitle, description: config.description, canonical: SITE_URL + "/", body, schemas: [websiteSchema], naver: true, page: "home", scripts: true, ads: config.homeAds !== false });
 }
 
 function renderPostIndex() {

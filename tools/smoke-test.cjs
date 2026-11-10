@@ -101,7 +101,8 @@ async function assertNewBadges(page) {
 
   await page.goto("http://127.0.0.1:8123/", { waitUntil: "networkidle" });
   const homeText = await page.locator("body").innerText();
-  assert(homeText.includes("탐구보고서에서"), "home missing hero text");
+  assert(homeText.includes("과목 선택에서 탐구보고서·세특·대입 면접까지"), "home missing hero text");
+  assert(await page.title() === '탐구보고서 작성·고교학점제 과목 선택 | 탐구 플러스 리터러시', 'home search title must be separate from the brand name');
   assert(homeText.includes("탐구보고서 작성 칼럼"), "home missing columns section");
   assert(await page.locator(".card").count() >= 6, "home should render multiple cards");
   await assertHomeSpacing(page);

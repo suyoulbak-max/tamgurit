@@ -1,9 +1,10 @@
 window.SiteData = window.SiteData || {};
 window.SiteData.config = {
-  name: "고교학점제 탐구보고서 작성 가이드",
+  name: "탐구 플러스 리터러시",
   brandName: "탐구 플러스 리터러시",
-  tagline: "과목 선택부터 탐구보고서, 세특, 서류기반면접까지",
-  description: "고교학점제 과목 선택부터 탐구보고서 작성, 세특의 학습 근거, 학생부 기반 대입 면접까지. 고등학생과 학부모를 위한 작성 예시·수정 사례·공식 전형 확인 가이드입니다.",
+  homeTitle: "탐구보고서 작성·고교학점제 과목 선택",
+  tagline: "고교학점제·탐구보고서·세특 연결 가이드",
+  description: "고등학생과 학부모를 위한 고교학점제 과목 선택, 탐구보고서 양식·작성 예시, 교과세특 연결 가이드입니다. 2028 대입 관련 공식 자료와 수업 탐구의 질문·자료·수정 과정을 함께 안내합니다.",
   homeAds: false,
   url: "https://plus-literacy.co.kr",
   shareImage: "assets/images/tamgu-guide-share-20261013.png",
